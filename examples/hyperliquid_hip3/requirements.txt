@@ -1,0 +1,5 @@
+# Extra dependencies for this example (beyond toraniko's numpy + polars).
+requests~=2.31
+yfinance~=0.2
+pandas~=2.0
+matplotlib~=3.7
