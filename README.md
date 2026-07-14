@@ -1,147 +1,124 @@
-# toraniko on Hyperliquid HIP-3 equity perps
+# toraniko-alpha101
 
-An end-to-end example of running the [`toraniko`](https://github.com/0xfdf/toraniko) factor
-risk model on the single-name equity perpetuals that **trader.xyz** deploys on Hyperliquid via
-[HIP-3](https://hyperliquid.gitbook.io/hyperliquid-docs/hyperliquid-improvement-proposals-hips/hip-3-builder-deployed-perpetuals).
+An independent implementation and audit of all 101 formulaic alphas from the WorldQuant paper,
+integrated with Toraniko's long-form Polars factor framework.
 
-It estimates a market + sector + style (momentum, size, value) factor model with `toraniko`,
-builds a **market- and sector-neutral mean-variance** book from it, and backtests that book —
-realising PnL only on the HIP-3 perps — against a naive momentum book and S&P 500 buy-and-hold.
-A companion tool prints the **target book to hold today** for manual trading.
+- Official paper: [101 Formulaic Alphas (PDF)](https://arxiv.org/pdf/1601.00991)
+- Formula implementation: [`toraniko/alpha101.py`](toraniko/alpha101.py)
+- Formula and neutralization audit tests: [`toraniko/tests/test_alpha101.py`](toraniko/tests/test_alpha101.py)
+- PnL and IC analysis: [`toraniko/alpha101_report.py`](toraniko/alpha101_report.py)
+- Reproducible report runner: [`examples/alpha101_report.py`](examples/alpha101_report.py)
 
-> Educational example, not investment advice or a validated strategy. The HIP-3 history is only
-> a few months long, so every result here is **illustrative, not statistically conclusive** — see
-> [Caveats](#caveats).
+This project is research software. It is not affiliated with WorldQuant and is not investment
+advice. Reported returns exclude transaction costs and are not live trading results.
 
-The example code lives in [`examples/hyperliquid_hip3/`](examples/hyperliquid_hip3/). For the
-underlying `toraniko` factor-model library itself, see [README.toraniko.md](README.toraniko.md).
+## Current Alpha101 report
 
-## Why two data sources
+Dataset: 22 liquid equities, 2023-01-03 to 2026-07-14. Yahoo adjusted OHLCV; typical price
+proxies daily VWAP; point-in-time shares are used for market cap. Classification labels are a
+fixed research taxonomy.
 
-A perp DEX gives you tradeable prices but no market cap and no fundamentals, and HIP-3 is too
-young to even warm up a momentum signal. So responsibilities are split:
+Method: signals at *t*, next-session underlying-equity returns at *t+1*, equal-weight top/bottom
+quintiles, 50% long and 50% short. Returns exclude costs. No formula feature selection is
+applied: all 101 alphas are analyzed independently, and the black composite line equally weights
+all available alpha return streams.
 
-| Quantity | Source | Used for |
-| --- | --- | --- |
-| Tradeable returns | Hyperliquid HIP-3 perps | **Realised PnL only**, and only after a name is listed |
-| Returns for signals | Yahoo underlying (adjusted close) | Momentum, factor returns, covariance |
-| Market cap | Yahoo **raw** price × point-in-time shares | Size factor and WLS weighting |
-| Fundamentals | Yahoo quarterly statements, filing-lagged | Value factor (time-varying) |
-| Sectors | Yahoo | Sector factors |
+Alphas analyzed: 101
 
-The listing rule only limits *where PnL is realised* — you trade the perp once it is live. It
-does not limit the data feeding the signal and risk model, so warming those up on the
-underlying's long history is legitimate and introduces no look-ahead (see below).
+### Highest Sharpe alphas
 
-## Method
+| Alpha | Ann. return | Ann. vol | Sharpe | Max DD | Rank IC | Turnover |
+|---|---:|---:|---:|---:|---:|---:|
+| alpha043 | 17.46% | 13.83% | 1.262 | -10.87% | 0.0186 | 57.88% |
+| alpha067 | 14.64% | 14.43% | 1.014 | -9.53% | 0.0211 | 66.28% |
+| alpha042 | 14.71% | 14.68% | 1.002 | -11.98% | 0.0101 | 47.41% |
+| alpha047 | 15.67% | 15.66% | 1.000 | -14.57% | 0.0193 | 44.81% |
+| alpha024 | 15.26% | 15.54% | 0.982 | -18.16% | 0.0240 | 31.21% |
+| alpha021 | 13.23% | 13.68% | 0.967 | -17.77% | 0.0134 | 41.88% |
+| alpha077 | 12.76% | 13.67% | 0.934 | -13.39% | 0.0045 | 33.71% |
+| alpha023 | 13.53% | 14.53% | 0.931 | -14.50% | 0.0182 | 51.49% |
+| alpha013 | 12.64% | 14.24% | 0.888 | -15.26% | 0.0109 | 38.92% |
+| alpha020 | 12.33% | 15.31% | 0.806 | -14.80% | 0.0132 | 79.12% |
+| alpha005 | 10.88% | 14.40% | 0.756 | -16.84% | 0.0119 | 55.11% |
+| alpha073 | 9.37% | 13.77% | 0.680 | -22.78% | 0.0141 | 50.04% |
+| alpha070 | 9.47% | 14.31% | 0.662 | -18.76% | 0.0126 | 63.01% |
+| alpha093 | 9.32% | 14.26% | 0.654 | -15.50% | 0.0066 | 20.61% |
+| alpha053 | 8.95% | 14.03% | 0.638 | -19.49% | 0.0130 | 80.48% |
+| alpha086 | 8.31% | 13.82% | 0.601 | -14.79% | 0.0036 | 45.54% |
+| alpha016 | 8.53% | 14.75% | 0.578 | -10.54% | 0.0070 | 38.99% |
+| alpha068 | 7.38% | 13.20% | 0.559 | -24.83% | 0.0061 | 48.72% |
+| alpha022 | 7.41% | 13.85% | 0.535 | -16.37% | 0.0076 | 46.17% |
+| alpha052 | 9.01% | 16.88% | 0.534 | -15.48% | 0.0213 | 34.27% |
 
-Each trading day *t*, using only information available at *t*:
+### Lowest Sharpe alphas
 
-1. **Style factors** (`toraniko` functions, unchanged): `factor_mom` (120-day, exp half-life,
-   lagged), `factor_sze` (size / SMB from market cap), `factor_val` (book/sales/cashflow-to-price).
-2. **Factor returns**: `estimate_factor_returns` runs the cross-sectional WLS regression
-   (weights `√cap`, sector sum-to-zero constraint) for market + sectors + styles, with
-   **`residualize_styles=True`** so style returns are orthogonalised to market and sector.
-3. **Risk model**: asset covariance `Σ = B Σ_f Bᵀ + diag(specific var)`, where `B` are the
-   factor exposures, `Σ_f` is the factor-return covariance over a trailing window, and specific
-   risk comes from per-name residuals. Residuals are reconstructed as `winsorize(r) − B·f`
-   (exact for this model).
-4. **Alpha**: equal-weighted composite of the standardised style scores, `z(mom)+z(sze)+z(val)`.
-5. **Portfolio**: market- and sector-neutral mean-variance weights,
-   `w ∝ Σ⁻¹α` projected onto `Cᵀw = 0` (C = market + sector exposures), scaled to a fixed gross
-   book ($1 long / $1 short). This is `backtest.target_weights`, shared by the backtest and the
-   daily report so they never disagree.
+| Alpha | Ann. return | Ann. vol | Sharpe | Max DD | Rank IC | Turnover |
+|---|---:|---:|---:|---:|---:|---:|
+| alpha055 | -19.38% | 14.35% | -1.350 | -51.19% | -0.0067 | 40.41% |
+| alpha048 | -7.51% | 11.79% | -0.637 | -25.90% | -0.0028 | 67.76% |
+| alpha064 | -8.23% | 13.33% | -0.617 | -30.97% | -0.0017 | 25.54% |
+| alpha006 | -8.27% | 14.50% | -0.570 | -38.56% | 0.0065 | 31.75% |
+| alpha078 | -7.92% | 14.23% | -0.557 | -26.86% | -0.0145 | 33.13% |
+| alpha002 | -7.10% | 12.77% | -0.556 | -28.24% | -0.0052 | 37.59% |
+| alpha099 | -6.65% | 12.49% | -0.532 | -34.72% | -0.0045 | 25.53% |
+| alpha017 | -7.53% | 15.54% | -0.484 | -46.15% | -0.0078 | 80.61% |
+| alpha012 | -6.03% | 14.83% | -0.407 | -29.99% | 0.0017 | 71.41% |
+| alpha096 | -5.45% | 14.01% | -0.389 | -26.42% | 0.0072 | 34.93% |
+| alpha098 | -5.22% | 13.62% | -0.383 | -35.24% | -0.0086 | 28.84% |
+| alpha081 | -4.63% | 12.62% | -0.367 | -28.13% | -0.0039 | 25.50% |
+| alpha088 | -5.17% | 15.54% | -0.333 | -26.21% | 0.0095 | 26.94% |
+| alpha033 | -5.55% | 17.02% | -0.326 | -28.34% | 0.0075 | 78.41% |
+| alpha072 | -4.05% | 12.58% | -0.322 | -19.93% | -0.0013 | 29.66% |
+| alpha097 | -4.32% | 13.62% | -0.317 | -28.77% | 0.0052 | 30.19% |
+| alpha063 | -4.28% | 13.88% | -0.308 | -23.92% | -0.0061 | 24.32% |
+| alpha058 | -4.05% | 14.12% | -0.287 | -23.27% | 0.0036 | 49.07% |
+| alpha038 | -4.05% | 15.55% | -0.260 | -36.77% | 0.0098 | 68.19% |
+| alpha060 | -3.80% | 14.68% | -0.259 | -22.80% | -0.0007 | 73.37% |
 
-## No look-ahead
+### Cross-alpha diagnostics
 
-- **Signals** — `factor_mom` lags returns internally; size uses market cap from *raw*
-  (unadjusted) price × point-in-time shares (so split/dividend adjustment can't leak future
-  corporate actions into the cap level); value uses filing-lagged fundamentals (60-day default
-  gap after each fiscal period end). Names without a historical share series are dropped, not
-  back-filled with today's count.
-- **Risk model** — factor covariance and specific risk use only history up to *t*.
-- **Tradability** — a name enters only after its first HIP-3 candle (its listing date), and the
-  book at *t* is restricted to names already priced at *t* (no peeking at *t+1*).
-- **Realisation** — the book formed at the close of *t* earns the perp return *t → t+1*.
+- Median annual return: 2.75%
+- Median Sharpe: 0.188
+- Median rank IC: 0.0065
+- Median one-sided turnover: 43.43%
 
-Residual look-ahead it does **not** remove (data-limited): the traded universe is the *current*
-trader.xyz listing (delisted names are missing — survivorship), sector labels are current, and
-the 60-day filing lag is an assumption, not the actual filing date.
+### PnL and weights
 
-## Layout
+![Alpha101 cumulative PnL](reports/alpha101_pnl.png)
 
-| File | Responsibility |
-| --- | --- |
-| `data.py` | `HyperliquidHIP3` (candles + equity auto-discovery) and `YahooUnderlying` (point-in-time underlying data, per-ticker cache) |
-| `backtest.py` | Build factor inputs, run `estimate_factor_returns`, risk model, `target_weights`, walk-forward backtest |
-| `run.py` | CLI: load → estimate → backtest → stats table + chart (vs naive momentum and SPY) |
-| `report.py` | CLI: today's target book — factor performance, day-over-day changes, full weight list |
+![Alpha101 weights](reports/alpha101_weights.png)
 
-## Usage
+The machine-readable diagnostics are in
+[`reports/alpha101_analysis.csv`](reports/alpha101_analysis.csv), and the standalone generated
+report is retained at [`reports/alpha101_analysis.md`](reports/alpha101_analysis.md).
+
+## Reproduce the report
+
+The data acquisition step is deliberately kept outside the factor library. Supply a wide
+Yahoo-format OHLCV parquet and the point-in-time share caches used by the Toraniko HIP-3 example.
 
 ```bash
+pip install -e .
 pip install -r examples/hyperliquid_hip3/requirements.txt
 
-# Backtest: table + chart vs naive momentum and SPY
-python -m examples.hyperliquid_hip3.run --output /tmp/hip3_backtest.png
-
-# Today's target book for manual trading
-python -m examples.hyperliquid_hip3.report --output /tmp/hip3_today.png
+PYTHONPATH=. python examples/alpha101_report.py \
+  --ohlcv /path/to/alpha101_ohlcv.parquet
 ```
 
-The report prints a per-name table (side, today vs previous weight as % of GMV, Δ, and an
-action — NEW / INCREASE / DECREASE / FLIP / EXIT) and plots three panels: recent factor
-performance, day-over-day weight changes, and the full target-weight list.
+The runner regenerates the Markdown/CSV analysis and both Matplotlib figures under `reports/`.
 
-**Universe** is auto-discovered by default: the live trader.xyz listing minus a non-equity
-blocklist (commodities/FX/indices/ETFs), validated as US equities via Yahoo. New equity
-listings are picked up automatically.
+## Implementation notes
 
-**Caching** (under `.cache/`): the universe scan is cached for `--scan-ttl-days` (default 7);
-Yahoo data is cached **per ticker** and the market caches (Yahoo, HIP-3, SPY) refresh **once per
-calendar day**. So repeated same-day runs are offline, and a newly listed name only fetches that
-one ticker. `--refresh` forces a full re-fetch.
+- All 101 formulas are exposed through `factor_alpha101(...)` in a Toraniko-compatible long-form
+  `date × symbol` panel.
+- Fractional lookbacks follow the paper's floor convention.
+- Time-series ranks, rolling correlations, linear decay, conditional formulas, and warm-up
+  behavior have dedicated tests.
+- The formulas that prescribe sector, industry, or subindustry neutralization are checked against
+  an explicit neutralization manifest.
+- Daily VWAP is approximated by typical price in this report because the Yahoo daily panel does
+  not contain true intraday VWAP.
 
-Useful flags: `--no-auto-discover` (use the curated fallback list), `--tickers …` (pin an
-explicit universe, skips discovery), `--scan-ttl-days`, `--start/--end`, `--warmup-start`,
-`--cost-bps`.
-
-Programmatic use:
-
-```python
-from examples.hyperliquid_hip3.data import YahooUnderlying, HyperliquidHIP3
-from examples.hyperliquid_hip3.backtest import build_base, estimate_factors, run_backtest, target_weights
-
-tickers = HyperliquidHIP3().discover_equities()
-under = YahooUnderlying(cache_dir=".cache").load(tickers, start, end)
-inputs = build_base(under.close, under.market_cap, under.book_price, under.sales_price, under.cf_price, under.sectors)
-model = estimate_factors(inputs)                      # residualize_styles=True
-weights = target_weights(model, inputs.sector_names, date, tradable)  # today's book
-```
-
-## Example output
-
-*Illustrative snapshot (≈6-month window, 46 names) — not a validated result; see Caveats.*
-
-Backtest — full-model MVO vs. naive momentum vs. S&P 500 buy-and-hold:
-
-![backtest](examples/hyperliquid_hip3/images/backtest.png)
-
-Daily target book — factor performance, day-over-day changes, and the weights to hold:
-
-![today's book](examples/hyperliquid_hip3/images/today.png)
-
-## Caveats
-
-- **History depth.** HIP-3 launched October 2025 with staggered listings, so the tradeable
-  window is only a few months. Factor *premia* are not statistically estimable over it (t-stats
-  below 2), and strategy rankings flip with the window. The pipeline is correct; the *edge* is
-  unverified.
-- **Perp ≠ stock.** Realised PnL uses perp mark prices (funding, basis, 24/7 trading); the
-  signal is computed on the underlying. **Funding costs are not modelled** — only a simple
-  per-turnover trading cost.
-- **Universe** relies on a hand-maintained non-equity blocklist (`data.NON_EQUITY_SYMBOLS`) for
-  category symbols that collide with equity tickers (e.g. GOLD, CL); a curated list
-  (`DEFAULT_TICKERS`) is the offline fallback.
-- **No position limits or volatility targeting** — the book is scaled to a fixed gross only.
-- This is **decision support, not an order router.**
+For the underlying Toraniko factor-model documentation, see
+[`README.toraniko.md`](README.toraniko.md). The original HIP-3 repository is
+[`OctopusTakopi/toraniko-hl-hip3`](https://github.com/OctopusTakopi/toraniko-hl-hip3).
