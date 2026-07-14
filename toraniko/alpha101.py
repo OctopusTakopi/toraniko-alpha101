@@ -49,17 +49,20 @@ def _rank_1d(values: Array) -> Array:
     if not valid.any():
         return result
     x = values[valid]
+    n = len(x)
     order = np.argsort(x, kind="mergesort")
     sorted_x = x[order]
-    ranks = np.empty(len(x), dtype=float)
-    start = 0
-    while start < len(x):
-        end = start + 1
-        while end < len(x) and sorted_x[end] == sorted_x[start]:
-            end += 1
-        ranks[order[start:end]] = ((start + 1) + end) / 2.0
-        start = end
-    result[valid] = ranks / len(x)
+    # Average-rank ties without a Python loop: label equal-value runs, then assign
+    # each run the mean of the ordinal ranks (1..n) it spans.
+    is_new = np.empty(n, dtype=bool)
+    is_new[0] = True
+    np.not_equal(sorted_x[1:], sorted_x[:-1], out=is_new[1:])
+    group_id = np.cumsum(is_new) - 1
+    ordinal = np.arange(1, n + 1, dtype=float)
+    group_avg = np.bincount(group_id, weights=ordinal) / np.bincount(group_id)
+    ranks = np.empty(n, dtype=float)
+    ranks[order] = group_avg[group_id]
+    result[valid] = ranks / n
     return result
 
 
@@ -810,16 +813,12 @@ def factor_alpha101(
 
     calculator = Alpha101(data, class_data)
     values = {number: calculator.alpha(number) for number in selected}
-    output: dict[str, list[object]] = {"date": [], "symbol": []}
-    output.update({f"alpha{number:03d}": [] for number in selected})
-    for i, date in enumerate(dates):
-        for j, symbol in enumerate(symbols):
-            if not present[i, j]:
-                continue
-            output["date"].append(date)
-            output["symbol"].append(symbol)
-            for number in selected:
-                output[f"alpha{number:03d}"].append(values[number][i, j])
+    row_dates, row_symbols = np.where(present)
+    output = {
+        "date": [dates[index] for index in row_dates],
+        "symbol": [symbols[index] for index in row_symbols],
+        **{f"alpha{number:03d}": values[number][row_dates, row_symbols] for number in selected},
+    }
     return pl.DataFrame(output).with_columns(
         pl.col("date").cast(market.schema["date"]),
         pl.col("symbol").cast(market.schema["symbol"]),

@@ -12,7 +12,58 @@ integrated with Toraniko's long-form Polars factor framework.
 This project is research software. It is not affiliated with WorldQuant and is not investment
 advice. Reported returns exclude transaction costs and are not live trading results.
 
-## Current Alpha101 report
+## Full-market Alpha101 report
+
+The primary report now runs on a current-constituent
+[S&P Composite 1500](https://www.spglobal.com/spdji/en/indices/equity/sp-composite-1500/) snapshot:
+the S&P 500, MidCap 400, and SmallCap 600, representing approximately 90% of U.S. market
+capitalization. The 2026-07-15 snapshot contains 1,506 securities; 1,502 have complete usable
+Yahoo OHLCV and historical-share histories. The analysis runs from 2023-01-03 through
+2026-07-13 with warm-up data from 2021-12-30.
+
+Method: signals at *t*, next-session returns at *t+1*, equal-weight top/bottom quintiles, 50% long
+and 50% short. Portfolio membership uses information available at *t* only; a missing next-session
+return is realized as zero. All formula-mandated sector, industry, and subindustry neutralizations
+use the current GICS hierarchy.
+
+| Statistic | Full market | Original 22 names | Paper |
+|---|---:|---:|---:|
+| Maximum Sharpe | 2.200 | 1.262 | 4.162 |
+| Median Sharpe | 0.582 | 0.188 | 2.224 |
+| Mean Sharpe | 0.478 | 0.170 | 2.265 |
+| Median rank IC | 0.0040 | 0.0065 | Not reported |
+| Positive-Sharpe alphas | 78/101 | 65/101 | 101/101 |
+
+The wider cross-section materially improves the strongest result: Alpha21 reaches a before-cost
+Sharpe of 2.20. It does not reproduce the paper's entire Sharpe distribution because WorldQuant's
+universe, execution timing, score-to-weight conversion, risk constraints, and selection process
+remain proprietary.
+
+![Full-market Alpha101 cumulative PnL](reports/full_market/alpha101_pnl.png)
+
+![Full-market Alpha101 GICS-sector and largest ticker weights](reports/full_market/alpha101_weights.png)
+
+### Paper figures on the full market
+
+![Full-market paper Figure 1](reports/full_market/paper_figure1_distributions.png)
+
+![Full-market paper Figure 2](reports/full_market/paper_figure2_return_vs_volatility.png)
+
+![Full-market paper Figure 3](reports/full_market/paper_figure3_turnover_vs_correlation.png)
+
+![Full-market paper Figure 4](reports/full_market/paper_figure4_volatility_vs_turnover.png)
+
+The complete results are in [`reports/full_market/alpha101_analysis.md`](reports/full_market/alpha101_analysis.md),
+with the paper regressions in
+[`reports/full_market/alpha101_paper_figures.md`](reports/full_market/alpha101_paper_figures.md),
+the exact constituent snapshot in [`reports/full_market/universe.csv`](reports/full_market/universe.csv),
+and machine-readable CSVs alongside them.
+
+This is a current-constituent backtest and therefore has survivorship bias. Daily typical price
+proxies VWAP, the four delay-0 formulas are conservatively evaluated at the next session, and all
+returns exclude costs and impact.
+
+## Original 22-name comparison
 
 Dataset: 22 liquid equities, 2023-01-03 to 2026-07-14. Yahoo adjusted OHLCV; typical price
 proxies daily VWAP; point-in-time shares are used for market cap. Classification labels are a
@@ -124,6 +175,20 @@ The machine-readable diagnostics are in
 report is retained at [`reports/alpha101_analysis.md`](reports/alpha101_analysis.md).
 
 ## Reproduce the report
+
+For the full-market report:
+
+```bash
+pip install -e .
+pip install -r examples/hyperliquid_hip3/requirements.txt
+
+PYTHONPATH=. python examples/alpha101_full_market/run.py
+```
+
+The first run downloads and caches the current S&P Composite 1500 OHLCV and historical shares,
+then caches the computed Alpha101 score matrix. Later report regenerations reuse both caches.
+
+For the original 22-name comparison:
 
 The data acquisition step is deliberately kept outside the factor library. Supply a wide
 Yahoo-format OHLCV parquet and the point-in-time share caches used by the Toraniko HIP-3 example.
