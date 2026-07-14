@@ -82,6 +82,37 @@ Alphas analyzed: 101
 - Median rank IC: 0.0065
 - Median one-sided turnover: 43.43%
 
+### Paper figures remade with current data
+
+Figures 1-4 from the official [*101 Formulaic Alphas* paper](https://arxiv.org/pdf/1601.00991)
+are reproduced below with this report's 2023-01-03 through 2026-07-14 data. The definitions
+follow Section 3 of the paper: turnover is gross daily dollars traded per dollar of gross
+investment, and cents-per-share is 100 times mean daily PnL divided by mean daily shares traded
+(buys plus sells).
+
+- Mean / median pairwise alpha-return correlation: 0.1149 / 0.0995 across 5,050 pairs
+- `log(Return) ~ log(Volatility)`: slope 3.781, R² 0.064, 65 positive-return alphas
+- Adding `log(Turnover)` to that regression: coefficient 0.027, t-stat 0.083
+- Turnover-tensor correlation model: R² 0.083 across 5,050 alpha pairs
+- `log(Volatility) ~ log(Turnover)`: slope 0.055, R² 0.078
+
+The 36 nonpositive return and CPS observations are excluded only from panels requiring a natural
+log. Signals are not flipped and absolute values are not substituted.
+
+![Paper Figure 1 remade: Sharpe, log turnover, log CPS, log volatility, log return, and correlation](reports/paper_figure1_distributions.png)
+
+![Paper Figure 2 remade: log return versus log volatility](reports/paper_figure2_return_vs_volatility.png)
+
+![Paper Figure 3 remade: demeaned correlation versus turnover-factor contribution](reports/paper_figure3_turnover_vs_correlation.png)
+
+![Paper Figure 4 remade: log volatility versus log turnover](reports/paper_figure4_volatility_vs_turnover.png)
+
+The full regression table and methodology are in
+[`reports/alpha101_paper_figures.md`](reports/alpha101_paper_figures.md). Reusable results are in
+[`reports/alpha101_paper_metrics.csv`](reports/alpha101_paper_metrics.csv),
+[`reports/alpha101_pairwise_correlations.csv`](reports/alpha101_pairwise_correlations.csv), and
+[`reports/alpha101_paper_regressions.csv`](reports/alpha101_paper_regressions.csv).
+
 ### PnL and weights
 
 ![Alpha101 cumulative PnL](reports/alpha101_pnl.png)
@@ -105,7 +136,8 @@ PYTHONPATH=. python examples/alpha101_report.py \
   --ohlcv /path/to/alpha101_ohlcv.parquet
 ```
 
-The runner regenerates the Markdown/CSV analysis and both Matplotlib figures under `reports/`.
+The runner regenerates the Markdown/CSV analyses, PnL and weight charts, and all four paper-style
+Matplotlib figures under `reports/`.
 
 ## Implementation notes
 

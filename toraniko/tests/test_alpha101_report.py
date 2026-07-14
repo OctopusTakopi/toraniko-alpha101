@@ -4,7 +4,9 @@ import polars as pl
 from toraniko.alpha101_report import (
     _corr,
     analyze_alpha101,
+    analyze_alpha101_paper,
     latest_alpha101_weights,
+    plot_alpha101_paper_figures,
     plot_alpha101_pnl,
     plot_alpha101_weights,
     render_alpha101_report,
@@ -23,10 +25,15 @@ def test_analysis_lags_returns_and_reports_expected_direction():
             score_rows.append({"date": date, "symbol": symbol, "alpha001": signal[i]})
             return_rows.append({"date": date, "symbol": symbol, "asset_returns": realized[i]})
         previous_signal = signal
-    summary, daily = analyze_alpha101(pl.DataFrame(score_rows), pl.DataFrame(return_rows))
+    prices = pl.DataFrame(
+        [{"date": row["date"], "symbol": row["symbol"], "close": 10.0} for row in return_rows]
+    )
+    summary, daily = analyze_alpha101(pl.DataFrame(score_rows), pl.DataFrame(return_rows), prices_df=prices)
     assert summary.height == 1
     assert summary["sharpe"][0] > 5
     assert summary["mean_rank_ic"][0] > 0.8
+    assert summary["paper_turnover"][0] > 0
+    assert summary["cents_per_share"][0] > 0
     assert daily["date"].min() == 0
 
 
@@ -45,6 +52,33 @@ def test_markdown_report_contains_performance_sections():
     report = render_alpha101_report(summary)
     assert "Highest Sharpe" in report
     assert "alpha001" in report
+
+
+def test_paper_turnover_and_cents_per_share_follow_section_three_definitions():
+    scores = pl.DataFrame(
+        [
+            {"date": date, "symbol": f"S{symbol}", "alpha001": float(symbol)}
+            for date in range(3)
+            for symbol in range(10)
+        ]
+    )
+    returns = pl.DataFrame(
+        [
+            {
+                "date": date,
+                "symbol": f"S{symbol}",
+                "asset_returns": 0.01 if symbol >= 8 else (-0.01 if symbol < 2 else 0.0),
+            }
+            for date in range(3)
+            for symbol in range(10)
+        ]
+    )
+    prices = returns.select("date", "symbol").with_columns(pl.lit(10.0).alias("close"))
+    summary, daily = analyze_alpha101(scores, returns, prices_df=prices)
+    np.testing.assert_allclose(daily["dollar_volume"], [1.0, 0.0])
+    np.testing.assert_allclose(daily["shares_traded"], [0.1, 0.0])
+    np.testing.assert_allclose(summary["paper_turnover"], 0.5)
+    np.testing.assert_allclose(summary["cents_per_share"], 20.0)
 
 
 def test_ic_correlation_is_stable_for_large_formula_values():
@@ -80,3 +114,35 @@ def test_latest_weights_are_dollar_neutral_and_plots_are_generated(tmp_path):
     plot_alpha101_weights(weights, weights_path)
     assert pnl_path.stat().st_size > 10_000
     assert weights_path.stat().st_size > 10_000
+
+
+def test_paper_analysis_and_all_four_figures_are_generated(tmp_path):
+    alphas = [f"alpha{i:03d}" for i in range(1, 5)]
+    summary = pl.DataFrame(
+        {
+            "alpha": alphas,
+            "annual_return": [0.05, 0.08, 0.03, 0.11],
+            "annual_volatility": [0.12, 0.15, 0.10, 0.17],
+            "sharpe": [0.42, 0.53, 0.30, 0.65],
+            "paper_turnover": [0.3, 0.5, 0.8, 1.1],
+            "cents_per_share": [0.2, 0.4, 0.3, 0.5],
+        }
+    )
+    daily = pl.DataFrame(
+        [
+            {
+                "date": date,
+                "alpha": alpha,
+                "pnl": 0.001 * np.sin(date / (index + 2)) + 0.0001 * (index + 1),
+            }
+            for date in range(40)
+            for index, alpha in enumerate(alphas)
+        ]
+    )
+    metrics, pairs, regressions = analyze_alpha101_paper(summary, daily)
+    assert metrics.height == 4
+    assert pairs.height == 6
+    assert regressions["model"].n_unique() == 4
+    paths = plot_alpha101_paper_figures(metrics, pairs, tmp_path)
+    assert set(paths) == {"figure1", "figure2", "figure3", "figure4"}
+    assert all(path.stat().st_size > 10_000 for path in paths.values())

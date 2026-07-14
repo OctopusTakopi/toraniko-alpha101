@@ -16,9 +16,12 @@ import polars as pl
 from toraniko.alpha101 import factor_alpha101
 from toraniko.alpha101_report import (
     analyze_alpha101,
+    analyze_alpha101_paper,
     latest_alpha101_weights,
+    plot_alpha101_paper_figures,
     plot_alpha101_pnl,
     plot_alpha101_weights,
+    render_alpha101_paper_report,
     render_alpha101_report,
 )
 
@@ -56,6 +59,7 @@ def build_market_data(ohlcv_path: Path, shares_cache: Path) -> tuple[pl.DataFram
         adjustment = bars["Adj Close"] / bars["Close"]
         shares = pl.read_parquet(shares_cache / f"yh_{ticker}.parquet").to_pandas().set_index("Date")
         bars["market_cap"] = shares["close_raw"] * shares["shares"]
+        bars["execution_price"] = bars["Close"]
         bars["symbol"] = ticker
         bars["date"] = bars.index
         bars["returns"] = bars["Adj Close"].pct_change(fill_method=None)
@@ -64,7 +68,19 @@ def build_market_data(ohlcv_path: Path, shares_cache: Path) -> tuple[pl.DataFram
         bars["vwap"] = (bars["High"] + bars["Low"] + bars["Close"]) / 3
         frames.append(
             bars.rename(columns=str.lower)[
-                ["date", "symbol", "open", "high", "low", "close", "volume", "vwap", "returns", "market_cap"]
+                [
+                    "date",
+                    "symbol",
+                    "open",
+                    "high",
+                    "low",
+                    "close",
+                    "volume",
+                    "vwap",
+                    "returns",
+                    "market_cap",
+                    "execution_price",
+                ]
             ]
         )
     market = pl.from_pandas(pd.concat(frames, ignore_index=True)).sort("date", "symbol")
@@ -84,11 +100,17 @@ def main() -> None:
     parser.add_argument("--output", type=Path, default=Path("reports/alpha101_analysis.md"))
     parser.add_argument("--pnl-output", type=Path, default=Path("reports/alpha101_pnl.png"))
     parser.add_argument("--weights-output", type=Path, default=Path("reports/alpha101_weights.png"))
+    parser.add_argument("--paper-output", type=Path, default=Path("reports/alpha101_paper_figures.md"))
     args = parser.parse_args()
 
     market, classifications = build_market_data(args.ohlcv, args.shares_cache)
     scores = factor_alpha101(market, classifications).collect()
-    summary, daily = analyze_alpha101(scores, market.select("date", "symbol", pl.col("returns").alias("asset_returns")))
+    summary, daily = analyze_alpha101(
+        scores,
+        market.select("date", "symbol", pl.col("returns").alias("asset_returns")),
+        prices_df=market.select("date", "symbol", pl.col("execution_price").alias("close")),
+    )
+    paper_metrics, pairwise_correlations, paper_regressions = analyze_alpha101_paper(summary, daily)
     weights = latest_alpha101_weights(scores)
     note = (
         f"Dataset: {len(CLASSIFICATIONS)} liquid equities, {market['date'].min().date()} to "
@@ -105,6 +127,14 @@ def main() -> None:
     summary.write_csv(args.output.with_suffix(".csv"))
     plot_alpha101_pnl(summary, daily, args.pnl_output)
     plot_alpha101_weights(weights, args.weights_output)
+    args.paper_output.parent.mkdir(parents=True, exist_ok=True)
+    args.paper_output.write_text(
+        render_alpha101_paper_report(paper_metrics, pairwise_correlations, paper_regressions)
+    )
+    paper_metrics.write_csv(args.paper_output.with_name("alpha101_paper_metrics.csv"))
+    pairwise_correlations.write_csv(args.paper_output.with_name("alpha101_pairwise_correlations.csv"))
+    paper_regressions.write_csv(args.paper_output.with_name("alpha101_paper_regressions.csv"))
+    plot_alpha101_paper_figures(paper_metrics, pairwise_correlations, args.paper_output.parent)
 
 
 if __name__ == "__main__":
