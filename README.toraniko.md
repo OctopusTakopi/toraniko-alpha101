@@ -118,6 +118,36 @@ Similarly:
 
 <img width="624" alt="Screenshot 2024-08-05 at 12 30 08 AM" src="https://github.com/user-attachments/assets/ca5c1afc-128e-4cd6-9871-6d7eb0e77ebc">
 
+#### WorldQuant Alpha101
+
+All 101 formulaic alphas from Kakushadze (2016) are available as a style-score frame. The
+implementation preserves the paper's separate sector, industry and subindustry neutralization
+operators; computing the complete set requires all three classifications.
+
+```python
+from toraniko.styles import factor_alpha101
+
+scores = factor_alpha101(
+    market_df,  # date, symbol, open, high, low, close, volume, vwap, asset_returns, market_cap
+    classifications_df,  # symbol[, date], sector, industry, subindustry
+).collect()
+```
+
+The output contains `date`, `symbol`, and `alpha001` through `alpha101`, and can be passed
+directly as the `style_df` argument of `estimate_factor_returns`. A subset can be calculated
+with `alphas=[1, 5, 48, 101]`; only the classification levels required by that subset are then
+mandatory.
+
+Next-day equal-weight long-short PnL, information coefficients, turnover, coverage and summary
+statistics can be generated without look-ahead:
+
+```python
+from toraniko.alpha101_report import analyze_alpha101, render_alpha101_report
+
+summary, daily = analyze_alpha101(scores, returns_df)
+markdown = render_alpha101_report(summary)
+```
+
 #### Factor return estimation
 
 Let's say you've estimated three style factors: value, momentum, size.
