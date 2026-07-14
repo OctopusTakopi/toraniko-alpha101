@@ -14,7 +14,13 @@ import pandas as pd
 import polars as pl
 
 from toraniko.alpha101 import factor_alpha101
-from toraniko.alpha101_report import analyze_alpha101, render_alpha101_report
+from toraniko.alpha101_report import (
+    analyze_alpha101,
+    latest_alpha101_weights,
+    plot_alpha101_pnl,
+    plot_alpha101_weights,
+    render_alpha101_report,
+)
 
 CLASSIFICATIONS = {
     "AAPL": ("Technology", "Hardware", "Computing Hardware"),
@@ -76,20 +82,29 @@ def main() -> None:
     parser.add_argument("--ohlcv", type=Path, required=True)
     parser.add_argument("--shares-cache", type=Path, default=Path("examples/hyperliquid_hip3/.cache"))
     parser.add_argument("--output", type=Path, default=Path("reports/alpha101_analysis.md"))
+    parser.add_argument("--pnl-output", type=Path, default=Path("reports/alpha101_pnl.png"))
+    parser.add_argument("--weights-output", type=Path, default=Path("reports/alpha101_weights.png"))
     args = parser.parse_args()
 
     market, classifications = build_market_data(args.ohlcv, args.shares_cache)
     scores = factor_alpha101(market, classifications).collect()
-    summary, _ = analyze_alpha101(scores, market.select("date", "symbol", pl.col("returns").alias("asset_returns")))
+    summary, daily = analyze_alpha101(scores, market.select("date", "symbol", pl.col("returns").alias("asset_returns")))
+    weights = latest_alpha101_weights(scores)
     note = (
         f"Dataset: {len(CLASSIFICATIONS)} liquid equities, {market['date'].min().date()} to "
         f"{market['date'].max().date()}. Yahoo adjusted OHLCV; typical price proxies daily VWAP; "
         "point-in-time shares are used for market cap. Classification labels are a fixed research taxonomy."
     )
     report = render_alpha101_report(summary, dataset_note=note)
+    report += (
+        "\n## Charts\n\n![Alpha101 cumulative PnL](alpha101_pnl.png)\n\n"
+        "![Alpha101 weights](alpha101_weights.png)\n"
+    )
     args.output.parent.mkdir(parents=True, exist_ok=True)
     args.output.write_text(report)
     summary.write_csv(args.output.with_suffix(".csv"))
+    plot_alpha101_pnl(summary, daily, args.pnl_output)
+    plot_alpha101_weights(weights, args.weights_output)
 
 
 if __name__ == "__main__":

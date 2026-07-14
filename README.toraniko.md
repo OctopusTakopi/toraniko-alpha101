@@ -142,11 +142,22 @@ Next-day equal-weight long-short PnL, information coefficients, turnover, covera
 statistics can be generated without look-ahead:
 
 ```python
-from toraniko.alpha101_report import analyze_alpha101, render_alpha101_report
+from toraniko.alpha101_report import (
+    analyze_alpha101,
+    latest_alpha101_weights,
+    plot_alpha101_pnl,
+    plot_alpha101_weights,
+    render_alpha101_report,
+)
 
 summary, daily = analyze_alpha101(scores, returns_df)
 markdown = render_alpha101_report(summary)
+weights = latest_alpha101_weights(scores)
+plot_alpha101_pnl(summary, daily, "reports/alpha101_pnl.png")
+plot_alpha101_weights(weights, "reports/alpha101_weights.png")
 ```
+
+The plotting helpers use Matplotlib, which is included in the development requirements.
 
 #### Factor return estimation
 

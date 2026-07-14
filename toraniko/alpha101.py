@@ -39,8 +39,8 @@ _NEUTRALIZED_ALPHAS = {
 
 
 def _window(value: int | float) -> int:
-    """Convert paper's fractional lookbacks to the nearest trading day."""
-    return max(1, int(np.floor(float(value) + 0.5)))
+    """Convert fractional lookbacks with floor, as specified in paper A.1."""
+    return max(1, int(np.floor(float(value))))
 
 
 def _rank_1d(values: Array) -> Array:
@@ -185,6 +185,21 @@ def _safe_div(numerator: Array, denominator: Array) -> Array:
     return out
 
 
+def _if_else(condition: Array, when_true: Array | float, when_false: Array | float, *condition_values: Array) -> Array:
+    """Vectorized conditional that preserves undefined condition inputs as NaN."""
+    out = np.asarray(np.where(condition, when_true, when_false), dtype=float)
+    valid = np.ones(out.shape, dtype=bool)
+    for value in condition_values:
+        valid &= np.isfinite(value)
+    out[~valid] = np.nan
+    return out
+
+
+def _less(left: Array, right: Array) -> Array:
+    """Numeric less-than result with NaN propagation."""
+    return _if_else(left < right, 1.0, 0.0, left, right)
+
+
 def indneutralize(x: Array, groups: Array) -> Array:
     """Residualize each date against classification dummies (group demean)."""
     if groups.shape != x.shape:
@@ -222,7 +237,7 @@ class Alpha101:
         return getattr(self, f"alpha{number:03d}")()
 
     def alpha001(self) -> Array:
-        base = np.where(self.returns < 0, stddev(self.returns, 20), self.close)
+        base = _if_else(self.returns < 0, stddev(self.returns, 20), self.close, self.returns)
         return rank(ts_argmax(signed_power(base, 2.0), 5)) - 0.5
 
     def alpha002(self) -> Array:
@@ -242,7 +257,8 @@ class Alpha101:
 
     def alpha007(self) -> Array:
         change = delta(self.close, 7)
-        return np.where(self._adv(20) < self.volume, -ts_rank(np.abs(change), 60) * np.sign(change), -1.0)
+        adv20 = self._adv(20)
+        return _if_else(adv20 < self.volume, -ts_rank(np.abs(change), 60) * np.sign(change), -1.0, adv20, self.volume)
 
     def alpha008(self) -> Array:
         value = ts_sum(self.open, 5) * ts_sum(self.returns, 5)
@@ -250,11 +266,15 @@ class Alpha101:
 
     def alpha009(self) -> Array:
         change = delta(self.close, 1)
-        return np.where(ts_min(change, 5) > 0, change, np.where(ts_max(change, 5) < 0, change, -change))
+        minimum, maximum = ts_min(change, 5), ts_max(change, 5)
+        fallback = _if_else(maximum < 0, change, -change, maximum)
+        return _if_else(minimum > 0, change, fallback, minimum)
 
     def alpha010(self) -> Array:
         change = delta(self.close, 1)
-        value = np.where(ts_min(change, 4) > 0, change, np.where(ts_max(change, 4) < 0, change, -change))
+        minimum, maximum = ts_min(change, 4), ts_max(change, 4)
+        fallback = _if_else(maximum < 0, change, -change, maximum)
+        value = _if_else(minimum > 0, change, fallback, minimum)
         return rank(value)
 
     def alpha011(self) -> Array:
@@ -301,17 +321,20 @@ class Alpha101:
     def alpha021(self) -> Array:
         mean8, mean2, sd8 = sma(self.close, 8), sma(self.close, 2), stddev(self.close, 8)
         ratio = _safe_div(self.volume, self._adv(20))
-        return np.where(mean8 + sd8 < mean2, -1.0, np.where(mean2 < mean8 - sd8, 1.0, np.where(ratio >= 1, 1.0, -1.0)))
+        volume_case = _if_else(ratio >= 1, 1.0, -1.0, ratio)
+        lower_case = _if_else(mean2 < mean8 - sd8, 1.0, volume_case, mean2, mean8, sd8)
+        return _if_else(mean8 + sd8 < mean2, -1.0, lower_case, mean8, sd8, mean2)
 
     def alpha022(self) -> Array:
         return -delta(correlation(self.high, self.volume, 5), 5) * rank(stddev(self.close, 20))
 
     def alpha023(self) -> Array:
-        return np.where(sma(self.high, 20) < self.high, -delta(self.high, 2), 0.0)
+        mean_high = sma(self.high, 20)
+        return _if_else(mean_high < self.high, -delta(self.high, 2), 0.0, mean_high, self.high)
 
     def alpha024(self) -> Array:
         trend = _safe_div(delta(sma(self.close, 100), 100), delay(self.close, 100))
-        return np.where(trend <= 0.05, -(self.close - ts_min(self.close, 100)), -delta(self.close, 3))
+        return _if_else(trend <= 0.05, -(self.close - ts_min(self.close, 100)), -delta(self.close, 3), trend)
 
     def alpha025(self) -> Array:
         return rank(-self.returns * self._adv(20) * self.vwap * (self.high - self.close))
@@ -321,7 +344,7 @@ class Alpha101:
 
     def alpha027(self) -> Array:
         value = rank(sma(correlation(rank(self.volume), rank(self.vwap), 6), 2))
-        return np.where(value > 0.5, -1.0, 1.0)
+        return _if_else(value > 0.5, -1.0, 1.0, value)
 
     def alpha028(self) -> Array:
         return scale(correlation(self._adv(20), self.low, 5) + (self.high + self.low) / 2 - self.close)
@@ -399,7 +422,8 @@ class Alpha101:
 
     def alpha046(self) -> Array:
         trend = (delay(self.close, 20) - delay(self.close, 10)) / 10 - (delay(self.close, 10) - self.close) / 10
-        return np.where(trend > 0.25, -1.0, np.where(trend < 0, 1.0, -delta(self.close, 1)))
+        fallback = _if_else(trend < 0, 1.0, -delta(self.close, 1), trend)
+        return _if_else(trend > 0.25, -1.0, fallback, trend)
 
     def alpha047(self) -> Array:
         first = _safe_div(rank(1 / self.close) * self.volume, self._adv(20))
@@ -414,14 +438,14 @@ class Alpha101:
 
     def alpha049(self) -> Array:
         trend = (delay(self.close, 20) - delay(self.close, 10)) / 10 - (delay(self.close, 10) - self.close) / 10
-        return np.where(trend < -0.1, 1.0, -delta(self.close, 1))
+        return _if_else(trend < -0.1, 1.0, -delta(self.close, 1), trend)
 
     def alpha050(self) -> Array:
         return -ts_max(rank(correlation(rank(self.volume), rank(self.vwap), 5)), 5)
 
     def alpha051(self) -> Array:
         trend = (delay(self.close, 20) - delay(self.close, 10)) / 10 - (delay(self.close, 10) - self.close) / 10
-        return np.where(trend < -0.05, 1.0, -delta(self.close, 1))
+        return _if_else(trend < -0.05, 1.0, -delta(self.close, 1), trend)
 
     def alpha052(self) -> Array:
         return (
@@ -462,14 +486,14 @@ class Alpha101:
         return -(2 * scale(rank(position)) - scale(rank(ts_argmax(self.close, 10))))
 
     def alpha061(self) -> Array:
-        return (
-            rank(self.vwap - ts_min(self.vwap, 16.1219)) < rank(correlation(self.vwap, self._adv(180), 17.9282))
-        ).astype(float)
+        left = rank(self.vwap - ts_min(self.vwap, 16.1219))
+        right = rank(correlation(self.vwap, self._adv(180), 17.9282))
+        return _less(left, right)
 
     def alpha062(self) -> Array:
         left = rank(correlation(self.vwap, ts_sum(self._adv(20), 22.4101), 9.91009))
-        comparison = (rank(self.open) + rank(self.open)) < (rank((self.high + self.low) / 2) + rank(self.high))
-        return -((left < rank(comparison.astype(float))).astype(float))
+        comparison = _less(rank(self.open) + rank(self.open), rank((self.high + self.low) / 2) + rank(self.high))
+        return -_less(left, rank(comparison))
 
     def alpha063(self) -> Array:
         first = rank(decay_linear(delta(self._ind(self.close, "industry"), 2.25164), 8.22237))
@@ -481,12 +505,12 @@ class Alpha101:
         mixed1 = self.open * 0.178404 + self.low * (1 - 0.178404)
         left = rank(correlation(ts_sum(mixed1, 12.7054), ts_sum(self._adv(120), 12.7054), 16.6208))
         mixed2 = ((self.high + self.low) / 2) * 0.178404 + self.vwap * (1 - 0.178404)
-        return -((left < rank(delta(mixed2, 3.69741))).astype(float))
+        return -_less(left, rank(delta(mixed2, 3.69741)))
 
     def alpha065(self) -> Array:
         mixed = self.open * 0.00817205 + self.vwap * (1 - 0.00817205)
         left = rank(correlation(mixed, ts_sum(self._adv(60), 8.6911), 6.40374))
-        return -((left < rank(self.open - ts_min(self.open, 13.635))).astype(float))
+        return -_less(left, rank(self.open - ts_min(self.open, 13.635)))
 
     def alpha066(self) -> Array:
         first = rank(decay_linear(delta(self.vwap, 3.51013), 7.23052))
@@ -504,7 +528,7 @@ class Alpha101:
     def alpha068(self) -> Array:
         left = ts_rank(correlation(rank(self.high), rank(self._adv(15)), 8.91644), 13.9333)
         right = rank(delta(self.close * 0.518371 + self.low * (1 - 0.518371), 1.06157))
-        return -((left < right).astype(float))
+        return -_less(left, right)
 
     def alpha069(self) -> Array:
         base = rank(ts_max(delta(self._ind(self.vwap, "industry"), 2.72412), 4.79344))
@@ -542,12 +566,12 @@ class Alpha101:
         first = rank(correlation(self.close, ts_sum(self._adv(30), 37.4843), 15.1365))
         mixed = self.high * 0.0261661 + self.vwap * (1 - 0.0261661)
         second = rank(correlation(rank(mixed), rank(self.volume), 11.4791))
-        return -((first < second).astype(float))
+        return -_less(first, second)
 
     def alpha075(self) -> Array:
         left = rank(correlation(self.vwap, self.volume, 4.24304))
         right = rank(correlation(rank(self.low), rank(self._adv(50)), 12.4413))
-        return (left < right).astype(float)
+        return _less(left, right)
 
     def alpha076(self) -> Array:
         first = rank(decay_linear(delta(self.vwap, 1.24383), 11.8259))
@@ -570,7 +594,7 @@ class Alpha101:
         mixed = self.close * 0.60733 + self.open * (1 - 0.60733)
         left = rank(delta(self._ind(mixed, "sector"), 1.23438))
         right = rank(correlation(ts_rank(self.vwap, 3.60973), ts_rank(self._adv(150), 9.18637), 14.6644))
-        return (left < right).astype(float)
+        return _less(left, right)
 
     def alpha080(self) -> Array:
         mixed = self.open * 0.868128 + self.high * (1 - 0.868128)
@@ -583,7 +607,7 @@ class Alpha101:
         with np.errstate(divide="ignore", invalid="ignore"):
             left = rank(np.log(product(rank(signed_power(rank(corr), 4)), 14.9655)))
         right = rank(correlation(rank(self.vwap), rank(self.volume), 5.07914))
-        return -((left < right).astype(float))
+        return -_less(left, right)
 
     def alpha082(self) -> Array:
         first = rank(decay_linear(delta(self.open, 1.46063), 14.8717))
@@ -611,7 +635,7 @@ class Alpha101:
     def alpha086(self) -> Array:
         left = ts_rank(correlation(self.close, ts_sum(self._adv(20), 14.7444), 6.00049), 20.4195)
         right = rank(self.open + self.close - self.vwap - self.open)
-        return -((left < right).astype(float))
+        return -_less(left, right)
 
     def alpha087(self) -> Array:
         mixed = self.close * 0.369701 + self.vwap * (1 - 0.369701)
@@ -643,7 +667,7 @@ class Alpha101:
         return -(first - second)
 
     def alpha092(self) -> Array:
-        condition = (((self.high + self.low) / 2 + self.close) < (self.low + self.open)).astype(float)
+        condition = _less((self.high + self.low) / 2 + self.close, self.low + self.open)
         first = ts_rank(decay_linear(condition, 14.7221), 18.8683)
         second = ts_rank(decay_linear(correlation(rank(self.low), rank(self._adv(30)), 7.58555), 6.94024), 6.80584)
         return np.minimum(first, second)
@@ -665,7 +689,7 @@ class Alpha101:
         left = rank(self.open - ts_min(self.open, 12.4105))
         corr = correlation(ts_sum((self.high + self.low) / 2, 19.1351), ts_sum(self._adv(40), 19.1351), 12.8742)
         right = ts_rank(signed_power(rank(corr), 5), 11.7584)
-        return (left < right).astype(float)
+        return _less(left, right)
 
     def alpha096(self) -> Array:
         first = ts_rank(decay_linear(correlation(rank(self.vwap), rank(self.volume), 3.83878), 4.16783), 8.38151)
@@ -689,7 +713,7 @@ class Alpha101:
     def alpha099(self) -> Array:
         first = rank(correlation(ts_sum((self.high + self.low) / 2, 19.8975), ts_sum(self._adv(60), 19.8975), 8.8136))
         second = rank(correlation(self.low, self.volume, 6.28259))
-        return -((first < second).astype(float))
+        return -_less(first, second)
 
     def alpha100(self) -> Array:
         position = _safe_div((self.close - self.low) - (self.high - self.close), self.high - self.low) * self.volume

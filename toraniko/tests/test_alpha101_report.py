@@ -1,7 +1,14 @@
 import numpy as np
 import polars as pl
 
-from toraniko.alpha101_report import _corr, analyze_alpha101, render_alpha101_report
+from toraniko.alpha101_report import (
+    _corr,
+    analyze_alpha101,
+    latest_alpha101_weights,
+    plot_alpha101_pnl,
+    plot_alpha101_weights,
+    render_alpha101_report,
+)
 
 
 def test_analysis_lags_returns_and_reports_expected_direction():
@@ -43,3 +50,33 @@ def test_markdown_report_contains_performance_sections():
 def test_ic_correlation_is_stable_for_large_formula_values():
     x = np.array([1e250, 2e250, 3e250])
     np.testing.assert_allclose(_corr(x, x), 1.0)
+
+
+def test_latest_weights_are_dollar_neutral_and_plots_are_generated(tmp_path):
+    scores = pl.DataFrame(
+        [
+            {"date": date, "symbol": f"S{i}", "alpha001": float(i + date), "alpha002": float(9 - i + date)}
+            for date in range(3)
+            for i in range(10)
+        ]
+    )
+    weights = latest_alpha101_weights(scores)
+    totals = weights.group_by("alpha").agg(
+        pl.col("weight").sum().alias("net"), pl.col("weight").abs().sum().alias("gross")
+    )
+    np.testing.assert_allclose(totals["net"], 0.0, atol=1e-12)
+    np.testing.assert_allclose(totals["gross"], 1.0)
+
+    summary = pl.DataFrame({"alpha": ["alpha001", "alpha002"], "sharpe": [1.0, -0.5]})
+    daily = pl.DataFrame(
+        [
+            {"date": date, "alpha": alpha, "pnl": (0.001 if alpha == "alpha001" else -0.0005) * (date + 1)}
+            for date in range(5)
+            for alpha in ("alpha001", "alpha002")
+        ]
+    )
+    pnl_path, weights_path = tmp_path / "pnl.png", tmp_path / "weights.png"
+    plot_alpha101_pnl(summary, daily, pnl_path)
+    plot_alpha101_weights(weights, weights_path)
+    assert pnl_path.stat().st_size > 10_000
+    assert weights_path.stat().st_size > 10_000

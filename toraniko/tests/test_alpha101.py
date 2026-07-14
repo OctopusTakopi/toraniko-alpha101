@@ -8,6 +8,7 @@ from toraniko.alpha101 import (
     _window,
     alpha_neutralization_levels,
     correlation,
+    decay_linear,
     factor_alpha101,
     indneutralize,
     rank,
@@ -56,9 +57,10 @@ def _market_panel(days: int = 320, symbols: int = 6) -> tuple[pl.DataFrame, pl.D
     return market, classes
 
 
-def test_fractional_windows_round_to_nearest_day():
+def test_fractional_windows_use_paper_floor_rule():
     assert _window(3.49) == 3
-    assert _window(3.50) == 4
+    assert _window(3.99) == 3
+    assert _window(4.0) == 4
 
 
 def test_cross_sectional_and_time_series_rank_semantics():
@@ -80,6 +82,13 @@ def test_correlation_of_constant_defined_window_is_zero():
     np.testing.assert_allclose(result[2:], 0.0)
 
 
+def test_decay_linear_gives_the_most_recent_observation_the_largest_weight():
+    values = np.array([[1.0, 4.0], [2.0, 3.0], [3.0, 2.0]])
+    result = decay_linear(values, 3)
+    assert np.isnan(result[:2]).all()
+    np.testing.assert_allclose(result[-1], [14 / 6, 16 / 6])
+
+
 def test_indneutralize_is_group_demeaning():
     values = np.array([[1.0, 3.0, 10.0, 14.0]])
     groups = np.array([["a", "a", "b", "b"]], dtype=object)
@@ -99,6 +108,15 @@ def test_all_101_alphas_integrate_with_toraniko_long_form():
     assert result.select(pl.exclude("date", "symbol").is_finite().any()).row(0).count(True) == 101
 
 
+def test_conditional_alphas_do_not_emit_signals_before_warmup():
+    market, classes = _market_panel()
+    result = factor_alpha101(market, classes, alphas=[9, 24, 61]).collect()
+    assert result.filter(pl.col("date") < 5)["alpha009"].is_nan().all()
+    assert result.filter(pl.col("date") < 199)["alpha024"].is_nan().all()
+    assert result.filter(pl.col("date") < 195)["alpha061"].is_nan().all()
+    assert result.filter(pl.col("date") == 199)["alpha024"].is_finite().all()
+
+
 def test_neutralized_alpha_requires_its_paper_classification():
     market, classes = _market_panel(20)
     with pytest.raises(ValueError, match="subindustry"):
@@ -112,23 +130,23 @@ def test_toraniko_asset_returns_alias_is_supported():
 
 
 def test_neutralization_manifest_covers_all_paper_formulas():
-    assert set(alpha_neutralization_levels()) == {
-        48,
-        58,
-        59,
-        63,
-        67,
-        69,
-        70,
-        76,
-        79,
-        80,
-        82,
-        87,
-        89,
-        90,
-        91,
-        93,
-        97,
-        100,
+    assert alpha_neutralization_levels() == {
+        48: ("subindustry",),
+        58: ("sector",),
+        59: ("industry",),
+        63: ("industry",),
+        67: ("sector", "subindustry"),
+        69: ("industry",),
+        70: ("industry",),
+        76: ("sector",),
+        79: ("sector",),
+        80: ("industry",),
+        82: ("sector",),
+        87: ("industry",),
+        89: ("industry",),
+        90: ("subindustry",),
+        91: ("industry",),
+        93: ("industry",),
+        97: ("industry",),
+        100: ("subindustry",),
     }
