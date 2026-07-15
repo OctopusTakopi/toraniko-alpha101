@@ -1,0 +1,5 @@
+# Extra dependencies for the full-market Alpha101 report (beyond toraniko's numpy + polars).
+requests~=2.31
+yfinance~=0.2
+pandas~=2.0
+matplotlib~=3.7
