@@ -1,0 +1,10 @@
+{
+  "universe_snapshot": "2026-07-15",
+  "constituents": 1506,
+  "price_histories": 1502,
+  "share_histories": 1502,
+  "warmup_start": "2021-12-30",
+  "analysis_start": "2023-01-03",
+  "data_end_exclusive": "2026-07-16",
+  "last_observation": "2026-07-14"
+}

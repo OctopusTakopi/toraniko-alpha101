@@ -81,6 +81,34 @@ def test_paper_turnover_and_cents_per_share_follow_section_three_definitions():
     np.testing.assert_allclose(summary["cents_per_share"], 20.0)
 
 
+def test_portfolio_membership_does_not_use_future_return_availability():
+    scores = pl.DataFrame(
+        [
+            {"date": date, "symbol": f"S{symbol}", "alpha001": float(symbol)}
+            for date in range(3)
+            for symbol in range(10)
+        ]
+    )
+    returns = pl.DataFrame(
+        [
+            {
+                "date": date,
+                "symbol": f"S{symbol}",
+                "asset_returns": (
+                    np.nan
+                    if date == 1 and symbol == 9
+                    else (0.01 if symbol >= 8 else (-0.01 if symbol < 2 else 0.0))
+                ),
+            }
+            for date in range(3)
+            for symbol in range(10)
+        ]
+    )
+    _, daily = analyze_alpha101(scores, returns)
+    np.testing.assert_allclose(daily["pnl"][0], 0.0075)
+    np.testing.assert_allclose(daily["return_coverage"][0], 0.9)
+
+
 def test_ic_correlation_is_stable_for_large_formula_values():
     x = np.array([1e250, 2e250, 3e250])
     np.testing.assert_allclose(_corr(x, x), 1.0)
@@ -146,3 +174,25 @@ def test_paper_analysis_and_all_four_figures_are_generated(tmp_path):
     paths = plot_alpha101_paper_figures(metrics, pairs, tmp_path)
     assert set(paths) == {"figure1", "figure2", "figure3", "figure4"}
     assert all(path.stat().st_size > 10_000 for path in paths.values())
+
+
+def test_large_universe_weight_plot_aggregates_by_sector(tmp_path):
+    symbols = [f"S{i:03d}" for i in range(100)]
+    weights = pl.DataFrame(
+        [
+            {
+                "date": 1,
+                "alpha": alpha,
+                "symbol": symbol,
+                "weight": (1 if index % 2 else -1) / 100,
+            }
+            for alpha in ("alpha001", "alpha002")
+            for index, symbol in enumerate(symbols)
+        ]
+    )
+    classifications = pl.DataFrame(
+        {"symbol": symbols, "sector": [f"sector{index % 5}" for index in range(len(symbols))]}
+    )
+    output = tmp_path / "large_weights.png"
+    plot_alpha101_weights(weights, output, classifications)
+    assert output.stat().st_size > 10_000

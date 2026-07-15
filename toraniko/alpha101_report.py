@@ -26,6 +26,8 @@ def analyze_alpha101(
     ``prices_df`` supplies execution close prices, the analysis also reconstructs
     gross dollar volume and shares traded for the paper's turnover and
     cents-per-share definitions, assuming one dollar of gross investment.
+    Portfolio membership depends only on signal availability at ``t``;
+    missing next-session returns are conservatively realized as zero.
     """
     if not 0 < quantile <= 0.5:
         raise ValueError("`quantile` must be in (0, 0.5]")
@@ -62,65 +64,85 @@ def analyze_alpha101(
     symbol_index = {symbol: i for i, symbol in enumerate(symbols)}
     daily_rows: list[dict[str, object]] = []
 
+    # Per-date state that does not depend on the alpha (each row's global symbol
+    # position, next-day returns and execution prices) is materialized once here
+    # and reused across all alphas, rather than rebuilt inside the alpha loop.
+    date_context: list[dict[str, object]] = []
+    for date_group in date_groups:
+        positions = np.fromiter(
+            (symbol_index[symbol] for symbol in date_group["symbol"].to_list()),
+            dtype=np.intp,
+            count=date_group.height,
+        )
+        context: dict[str, object] = {
+            "date": date_group["date"][0],
+            "group": date_group,
+            "positions": positions,
+            "future": date_group["forward_return"].to_numpy(),
+        }
+        if has_prices:
+            price_vector = np.full(len(symbols), np.nan, dtype=float)
+            price_vector[positions] = date_group["close"].to_numpy()
+            context["price_vector"] = price_vector
+        date_context.append(context)
+
     for alpha in alpha_cols:
         previous = np.zeros(len(symbols), dtype=float)
         previous_shares = np.zeros(len(symbols), dtype=float)
-        for date_group in date_groups:
-            date = date_group["date"][0]
-            columns = ["symbol", alpha, "forward_return"]
-            if has_prices:
-                columns.append("close")
-            cross = date_group.select(columns)
-            signal = cross[alpha].to_numpy()
-            future = cross["forward_return"].to_numpy()
-            valid = np.isfinite(signal) & np.isfinite(future)
+        for context in date_context:
+            signal = context["group"][alpha].to_numpy()
+            future = context["future"]
+            valid = np.isfinite(signal)
             if valid.sum() < 5:
                 continue
             s, r = signal[valid], future[valid]
-            percentile = _rank_1d(s)
+            valid_ic = np.isfinite(r)
+            if valid_ic.sum() < 5:
+                continue
+            valid_positions = context["positions"][valid]
             tail = max(1, int(np.floor(len(s) * quantile)))
             order = np.argsort(s, kind="mergesort")
             short_idx, long_idx = order[:tail], order[-tail:]
             weights = np.zeros(len(symbols), dtype=float)
-            valid_symbols = np.asarray(cross["symbol"].to_list(), dtype=object)[valid]
-            for index in long_idx:
-                weights[symbol_index[valid_symbols[index]]] = 0.5 / tail
-            for index in short_idx:
-                weights[symbol_index[valid_symbols[index]]] = -0.5 / tail
+            weights[valid_positions[long_idx]] = 0.5 / tail
+            weights[valid_positions[short_idx]] = -0.5 / tail
             turnover = 0.5 * np.abs(weights - previous).sum()
             previous = weights
-            pnl = 0.5 * (r[long_idx].mean() - r[short_idx].mean())
-            ic = _corr(s, r)
-            rank_ic = _corr(percentile, _rank_1d(r))
+            filled_returns = np.where(valid_ic, r, 0.0)
+            pnl = 0.5 * (filled_returns[long_idx].mean() - filled_returns[short_idx].mean())
+            ic = _corr(s[valid_ic], r[valid_ic])
+            rank_ic = _corr(_rank_1d(s[valid_ic]), _rank_1d(r[valid_ic]))
             row: dict[str, object] = {
-                "date": date,
+                "date": context["date"],
                 "alpha": alpha,
                 "pnl": pnl,
                 "ic": ic,
                 "rank_ic": rank_ic,
                 "turnover": turnover,
                 "coverage": float(valid.mean()),
+                "return_coverage": float(valid_ic.mean()),
             }
             if has_prices:
-                price_vector = np.full(len(symbols), np.nan, dtype=float)
-                for symbol, price in zip(cross["symbol"].to_list(), cross["close"].to_numpy()):
-                    price_vector[symbol_index[symbol]] = price
+                price_vector = context["price_vector"]
                 tradable = np.isfinite(price_vector) & (price_vector > 0)
                 required = (weights != 0) | (previous_shares != 0)
+                # Rebalance to target where a price exists and carry the prior share
+                # count elsewhere, so the book always advances even on days we cannot
+                # fully price (reported as NaN rather than diffed against a stale,
+                # many-days-old share vector).
+                target_shares = np.where(
+                    tradable,
+                    np.divide(weights, price_vector, out=np.zeros_like(weights), where=tradable),
+                    previous_shares,
+                )
                 if np.all(tradable[required]):
-                    target_shares = np.divide(
-                        weights,
-                        price_vector,
-                        out=np.zeros_like(weights),
-                        where=tradable,
-                    )
                     shares_traded = np.abs(target_shares - previous_shares)
                     row["shares_traded"] = float(shares_traded.sum())
                     row["dollar_volume"] = float(np.dot(shares_traded, np.where(tradable, price_vector, 0.0)))
-                    previous_shares = target_shares
                 else:
                     row["shares_traded"] = np.nan
                     row["dollar_volume"] = np.nan
+                previous_shares = target_shares
             daily_rows.append(row)
 
     daily = pl.DataFrame(daily_rows)
@@ -244,8 +266,14 @@ def plot_alpha101_pnl(
     plt.close(fig)
 
 
-def plot_alpha101_weights(weights: pl.DataFrame, output: str | Path) -> None:
-    """Plot the latest symbol weights for all Alpha101 long-short portfolios."""
+def plot_alpha101_weights(
+    weights: pl.DataFrame,
+    output: str | Path,
+    classifications: pl.DataFrame | None = None,
+    *,
+    max_composite_symbols: int = 30,
+) -> None:
+    """Plot latest Alpha101 weights, aggregating large universes by sector."""
     import matplotlib
 
     matplotlib.use("Agg")
@@ -253,32 +281,48 @@ def plot_alpha101_weights(weights: pl.DataFrame, output: str | Path) -> None:
     from matplotlib.ticker import PercentFormatter
 
     latest = weights.sort("alpha", "symbol")
-    matrix = latest.pivot(on="symbol", index="alpha", values="weight").sort("alpha")
-    symbols = [column for column in matrix.columns if column != "alpha"]
-    values = matrix.select(symbols).to_numpy()
+    symbol_matrix = latest.pivot(on="symbol", index="alpha", values="weight").sort("alpha")
+    symbols = [column for column in symbol_matrix.columns if column != "alpha"]
+    symbol_values = symbol_matrix.select(symbols).to_numpy()
+    composite = symbol_values.mean(axis=0)
+    display_matrix = symbol_matrix
+    display_labels = symbols
+    display_title = "Latest Alpha101 portfolio weights: short red, long green"
+    if classifications is not None and len(symbols) > 80:
+        if not {"symbol", "sector"} <= set(classifications.columns):
+            raise ValueError("classifications must contain symbol and sector")
+        grouped = (
+            latest.join(classifications.select("symbol", "sector").unique(), on="symbol", how="left")
+            .group_by("alpha", "sector")
+            .agg(pl.col("weight").sum())
+        )
+        display_matrix = grouped.pivot(on="sector", index="alpha", values="weight").sort("alpha")
+        display_labels = [column for column in display_matrix.columns if column != "alpha"]
+        display_title = "Latest Alpha101 net weights by GICS sector: short red, long green"
+    values = display_matrix.select(display_labels).to_numpy()
     limit = np.max(np.abs(values)) if values.size else 1.0
-    composite = values.mean(axis=0)
 
     fig = plt.figure(figsize=(18, 15))
     grid = fig.add_gridspec(1, 2, width_ratios=[4.7, 1.3], wspace=0.2)
     ax = fig.add_subplot(grid[0, 0])
     image = ax.imshow(values, aspect="auto", cmap="RdYlGn", vmin=-limit, vmax=limit, interpolation="nearest")
-    ax.set_xticks(np.arange(len(symbols)), labels=symbols, rotation=60, ha="right", fontsize=8)
-    rows = np.arange(0, matrix.height, 5)
-    ax.set_yticks(rows, labels=[matrix["alpha"][int(row)] for row in rows], fontsize=7)
-    ax.set_xlabel("symbol")
+    ax.set_xticks(np.arange(len(display_labels)), labels=display_labels, rotation=45, ha="right", fontsize=8)
+    rows = np.arange(0, display_matrix.height, 5)
+    ax.set_yticks(rows, labels=[display_matrix["alpha"][int(row)] for row in rows], fontsize=7)
+    ax.set_xlabel("GICS sector" if display_labels != symbols else "symbol")
     ax.set_ylabel("alpha (every fifth label shown)")
-    ax.set_title("Latest Alpha101 portfolio weights: short red, long green")
+    ax.set_title(display_title)
     colorbar = fig.colorbar(image, ax=ax, fraction=0.025, pad=0.01)
     colorbar.ax.yaxis.set_major_formatter(PercentFormatter(xmax=1.0))
 
     ax = fig.add_subplot(grid[0, 1])
-    order = np.argsort(composite)
+    selected = np.argsort(np.abs(composite))[-max_composite_symbols:]
+    order = selected[np.argsort(composite[selected])]
     colors = np.where(composite[order] >= 0, "#2ca02c", "#d62728")
     ax.barh(np.asarray(symbols)[order], composite[order], color=colors)
     ax.axvline(0, color="0.3", linewidth=0.6)
     ax.xaxis.set_major_formatter(PercentFormatter(xmax=1.0))
-    ax.set_title("Mean weight across 101 alphas")
+    ax.set_title(f"Largest {len(order)} mean weights across 101 alphas")
     ax.set_xlabel("portfolio weight")
     ax.grid(True, axis="x", color="0.9", linewidth=0.5)
 
@@ -325,9 +369,12 @@ def analyze_alpha101_paper(
         )
         .sort("alpha")
         .with_columns(pl.col("turnover").log().alias("log_turnover"))
-        .with_columns(
-            (pl.col("log_turnover") - pl.col("log_turnover").mean()).alias("centered_log_turnover")
-        )
+    )
+    log_turnover = metrics["log_turnover"].to_numpy()
+    finite_log_turnover = log_turnover[np.isfinite(log_turnover)]
+    log_turnover_center = float(np.mean(finite_log_turnover)) if finite_log_turnover.size else 0.0
+    metrics = metrics.with_columns(
+        pl.Series("centered_log_turnover", log_turnover - log_turnover_center)
     )
     alpha_names = metrics["alpha"].to_list()
     turnover_loading = dict(zip(alpha_names, metrics["centered_log_turnover"].to_list()))
@@ -529,13 +576,15 @@ def render_alpha101_paper_report(
     regressions: pl.DataFrame,
 ) -> str:
     """Render the remade paper-figure statistics as Markdown."""
-    positive_returns = int((metrics["annual_return"] > 0).sum())
-    positive_cps = int((metrics["cents_per_share"] > 0).sum())
+    annual_returns = metrics["annual_return"].to_numpy()
+    cents_per_share = metrics["cents_per_share"].to_numpy()
+    positive_returns = int((np.isfinite(annual_returns) & (annual_returns > 0)).sum())
+    positive_cps = int((np.isfinite(cents_per_share) & (cents_per_share > 0)).sum())
     lines = [
         "# Alpha101 paper figures remade with current data",
         "",
-        "Definitions follow [*101 Formulaic Alphas*](https://arxiv.org/pdf/1601.00991), Section 3. ",
-        "Turnover is gross daily dollars traded per dollar of gross investment; cents-per-share is ",
+        "Definitions follow [*101 Formulaic Alphas*](https://arxiv.org/pdf/1601.00991), Section 3.",
+        "Turnover is gross daily dollars traded per dollar of gross investment; cents-per-share is",
         "100 times mean daily PnL divided by mean daily shares traded (buys plus sells).",
         "",
         f"- Alphas: {metrics.height}",
@@ -544,7 +593,7 @@ def render_alpha101_paper_report(
         f"- Positive-return alphas used in log-return panels: {positive_returns}/{metrics.height}",
         f"- Positive-CPS alphas used in the log-CPS panel: {positive_cps}/{metrics.height}",
         "",
-        "Nonpositive return and CPS observations are excluded only from panels where the paper takes a natural log; ",
+        "Nonpositive return and CPS observations are excluded only from panels where the paper takes a natural log;",
         "signals are not flipped and absolute values are not substituted.",
         "",
         "## Regressions",
@@ -726,10 +775,11 @@ def _summarize(group: pl.DataFrame, annualization: int) -> dict[str, object]:
         "rank_ic_ir": _information_ratio(rank_ic, annualization),
         "mean_turnover": float(group["turnover"].mean()),
         "mean_coverage": float(group["coverage"].mean()),
+        "mean_return_coverage": float(group["return_coverage"].mean()),
     }
     if {"dollar_volume", "shares_traded"} <= set(group.columns):
-        mean_shares = float(group["shares_traded"].mean())
-        result["paper_turnover"] = float(group["dollar_volume"].mean())
+        mean_shares = float(np.nanmean(group["shares_traded"].to_numpy()))
+        result["paper_turnover"] = float(np.nanmean(group["dollar_volume"].to_numpy()))
         result["cents_per_share"] = float(100 * np.nanmean(pnl) / mean_shares) if mean_shares > 0 else np.nan
     return result
 

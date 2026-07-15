@@ -1,0 +1,1507 @@
+symbol,source_symbol,security,index,sector,industry,subindustry,snapshot_date
+A,A,Agilent Technologies,S&P 500,Health Care,Life Sciences Tools & Services,Life Sciences Tools & Services,2026-07-15
+AA,AA,Alcoa,S&P MidCap 400,Materials,Metals & Mining,Aluminum,2026-07-15
+AAL,AAL,American Airlines Group,S&P MidCap 400,Industrials,Passenger Airlines,Passenger Airlines,2026-07-15
+AAMI,AAMI,Acadian Asset Management Inc.,S&P SmallCap 600,Financials,Capital Markets,Asset Management & Custody Banks,2026-07-15
+AAON,AAON,AAON,S&P MidCap 400,Industrials,Building Products,Building Products,2026-07-15
+AAP,AAP,"Advance Auto Parts, Inc.",S&P SmallCap 600,Consumer Discretionary,Specialty Retail,Automotive Retail,2026-07-15
+AAPL,AAPL,Apple Inc.,S&P 500,Information Technology,"Technology Hardware, Storage & Peripherals","Technology Hardware, Storage & Peripherals",2026-07-15
+AAT,AAT,American Assets Trust,S&P SmallCap 600,Real Estate,Diversified REITs,Diversified REITs,2026-07-15
+ABBV,ABBV,AbbVie,S&P 500,Health Care,Biotechnology,Biotechnology,2026-07-15
+ABCB,ABCB,Ameris Bancorp,S&P SmallCap 600,Financials,Banks,Regional Banks,2026-07-15
+ABG,ABG,Asbury Automotive Group,S&P SmallCap 600,Consumer Discretionary,Specialty Retail,Automotive Retail,2026-07-15
+ABM,ABM,"ABM Industries, Inc.",S&P SmallCap 600,Industrials,Commercial Services & Supplies,Environmental & Facilities Services,2026-07-15
+ABNB,ABNB,Airbnb,S&P 500,Consumer Discretionary,"Hotels, Restaurants & Leisure","Hotels, Resorts & Cruise Lines",2026-07-15
+ABR,ABR,Arbor Realty Trust,S&P SmallCap 600,Financials,Mortgage Real Estate Investment Trusts (REITs),Mortgage REITs,2026-07-15
+ABT,ABT,Abbott Laboratories,S&P 500,Health Care,Health Care Equipment & Supplies,Health Care Equipment,2026-07-15
+ACA,ACA,"Arcosa, Inc.",S&P SmallCap 600,Industrials,Construction & Engineering,Construction & Engineering,2026-07-15
+ACAD,ACAD,Acadia Pharmaceuticals,S&P SmallCap 600,Health Care,Pharmaceuticals,Pharmaceuticals,2026-07-15
+ACGL,ACGL,Arch Capital Group,S&P 500,Financials,Insurance,Property & Casualty Insurance,2026-07-15
+ACHC,ACHC,Acadia Healthcare,S&P SmallCap 600,Health Care,Health Care Providers & Services,Health Care Facilities,2026-07-15
+ACI,ACI,Albertsons,S&P MidCap 400,Consumer Staples,Consumer Staples Distribution & Retail,Food Retail,2026-07-15
+ACIW,ACIW,ACI Worldwide,S&P SmallCap 600,Information Technology,Software,Application Software,2026-07-15
+ACLS,ACLS,"Axcelis Technologies, Inc.",S&P SmallCap 600,Information Technology,Semiconductors & Semiconductor Equipment,Semiconductor Materials & Equipment,2026-07-15
+ACM,ACM,AECOM,S&P MidCap 400,Industrials,Construction & Engineering,Construction & Engineering,2026-07-15
+ACMR,ACMR,"ACM Research, Inc.",S&P SmallCap 600,Information Technology,Semiconductors & Semiconductor Equipment,Semiconductor Materials & Equipment,2026-07-15
+ACN,ACN,Accenture,S&P 500,Information Technology,IT Services,IT Consulting & Other Services,2026-07-15
+ACT,ACT,"Enact Holdings, Inc.",S&P SmallCap 600,Financials,Financial Services,Commercial & Residential Mortgage Finance,2026-07-15
+ADAM,ADAM,"Adamas Trust, Inc.",S&P SmallCap 600,Financials,Mortgage Real Estate Investment Trusts (REITs),Mortgage REITs,2026-07-15
+ADBE,ADBE,Adobe Inc.,S&P 500,Information Technology,Software,Application Software,2026-07-15
+ADC,ADC,Agree Realty,S&P MidCap 400,Real Estate,Retail REITs,Retail REITs,2026-07-15
+ADEA,ADEA,"Adeia, Inc.",S&P SmallCap 600,Information Technology,IT Services,IT Consulting & Other Services,2026-07-15
+ADI,ADI,Analog Devices,S&P 500,Information Technology,Semiconductors & Semiconductor Equipment,Semiconductors,2026-07-15
+ADM,ADM,Archer Daniels Midland,S&P 500,Consumer Staples,Food Products,Agricultural Products & Services,2026-07-15
+ADMA,ADMA,"ADMA Biologics, Inc.",S&P SmallCap 600,Health Care,Biotechnology,Biotechnology,2026-07-15
+ADNT,ADNT,Adient,S&P SmallCap 600,Consumer Discretionary,Automobile Components,Automotive Parts & Equipment,2026-07-15
+ADP,ADP,Automatic Data Processing,S&P 500,Industrials,Professional Services,Human Resource & Employment Services,2026-07-15
+ADSK,ADSK,Autodesk,S&P 500,Information Technology,Software,Application Software,2026-07-15
+ADT,ADT,ADT Inc.,S&P SmallCap 600,Consumer Discretionary,Diversified Consumer Services,Specialized Consumer Services,2026-07-15
+ADUS,ADUS,Addus HomeCare Corp.,S&P SmallCap 600,Health Care,Health Care Providers & Services,Health Care Services,2026-07-15
+AEE,AEE,Ameren,S&P 500,Utilities,Multi-Utilities,Multi-Utilities,2026-07-15
+AEIS,AEIS,Advanced Energy,S&P MidCap 400,Information Technology,Semiconductors & Semiconductor Equipment,Semiconductor Materials & Equipment,2026-07-15
+AEO,AEO,American Eagle Outfitters,S&P SmallCap 600,Consumer Discretionary,Specialty Retail,Apparel Retail,2026-07-15
+AEP,AEP,American Electric Power,S&P 500,Utilities,Electric Utilities,Electric Utilities,2026-07-15
+AES,AES,AES Corporation,S&P 500,Utilities,Independent Power and Renewable Electricity Producers,Independent Power Producers & Energy Traders,2026-07-15
+AESI,AESI,"Atlas Energy Solutions, Inc.",S&P SmallCap 600,Energy,Energy Equipment & Services,Oil & Gas Equipment & Services,2026-07-15
+AFG,AFG,American Financial Group,S&P MidCap 400,Financials,Insurance,Multi-line Insurance,2026-07-15
+AFL,AFL,Aflac,S&P 500,Financials,Insurance,Life & Health Insurance,2026-07-15
+AGCO,AGCO,AGCO,S&P MidCap 400,Industrials,Machinery,Agricultural & Farm Machinery,2026-07-15
+AGNT,AGNT,"eXp World Holdings, Inc.",S&P SmallCap 600,Real Estate,Real Estate Management & Development,Real Estate Services,2026-07-15
+AGO,AGO,Assured Guaranty Ltd.,S&P SmallCap 600,Financials,Insurance,Property & Casualty Insurance,2026-07-15
+AGX,AGX,"Argan, Inc.",S&P SmallCap 600,Industrials,Construction & Engineering,Construction & Engineering,2026-07-15
+AGYS,AGYS,"Agilysys, Inc.",S&P SmallCap 600,Information Technology,Software,Application Software,2026-07-15
+AHCO,AHCO,AdaptHealth Corp.,S&P SmallCap 600,Health Care,Health Care Equipment & Supplies,Health Care Equipment,2026-07-15
+AHR,AHR,American Healthcare REIT,S&P MidCap 400,Real Estate,Health Care REITs,Health Care REITs,2026-07-15
+AIG,AIG,American International Group,S&P 500,Financials,Insurance,Multi-line Insurance,2026-07-15
+AIN,AIN,Albany International Corp.,S&P SmallCap 600,Industrials,Machinery,Industrial Machinery & Supplies & Components,2026-07-15
+AIR,AIR,AAR CORP.,S&P SmallCap 600,Industrials,Aerospace & Defense,Aerospace & Defense,2026-07-15
+AIT,AIT,Applied Industrial Technologies,S&P MidCap 400,Industrials,Trading Companies & Distributors,Trading Companies & Distributors,2026-07-15
+AIZ,AIZ,Assurant,S&P 500,Financials,Insurance,Multi-line Insurance,2026-07-15
+AJG,AJG,Arthur J. Gallagher & Co.,S&P 500,Financials,Insurance,Insurance Brokers,2026-07-15
+AKAM,AKAM,Akamai Technologies,S&P 500,Information Technology,IT Services,Internet Services & Infrastructure,2026-07-15
+AKR,AKR,Acadia Realty Trust,S&P SmallCap 600,Real Estate,Retail REITs,Retail REITs,2026-07-15
+ALB,ALB,Albemarle Corporation,S&P 500,Materials,Chemicals,Specialty Chemicals,2026-07-15
+ALG,ALG,Alamo Group,S&P SmallCap 600,Industrials,Machinery,Construction Machinery & Heavy Transportation Equipment,2026-07-15
+ALGM,ALGM,Allegro MicroSystems,S&P MidCap 400,Information Technology,Semiconductors & Semiconductor Equipment,Semiconductors,2026-07-15
+ALGN,ALGN,Align Technology,S&P 500,Health Care,Health Care Equipment & Supplies,Health Care Supplies,2026-07-15
+ALGT,ALGT,Allegiant Travel Company,S&P SmallCap 600,Industrials,Passenger Airlines,Passenger Airlines,2026-07-15
+ALHC,ALHC,"Alignment Healthcare, Inc.",S&P SmallCap 600,Health Care,Health Care Providers & Services,Health Care Services,2026-07-15
+ALK,ALK,Alaska Air Group,S&P MidCap 400,Industrials,Passenger Airlines,Passenger Airlines,2026-07-15
+ALKS,ALKS,Alkermes plc,S&P SmallCap 600,Health Care,Pharmaceuticals,Pharmaceuticals,2026-07-15
+ALL,ALL,Allstate,S&P 500,Financials,Insurance,Property & Casualty Insurance,2026-07-15
+ALLE,ALLE,Allegion,S&P 500,Industrials,Building Products,Building Products,2026-07-15
+ALLY,ALLY,Ally Financial,S&P MidCap 400,Financials,Consumer Finance,Consumer Finance,2026-07-15
+ALRM,ALRM,"Alarm.Com, Inc.",S&P SmallCap 600,Information Technology,Software,Application Software,2026-07-15
+ALSN,ALSN,Allison Transmission,S&P MidCap 400,Industrials,Machinery,Construction Machinery & Heavy Transportation Equipment,2026-07-15
+ALV,ALV,Autoliv,S&P MidCap 400,Consumer Discretionary,Automobile Components,Automotive Parts & Equipment,2026-07-15
+AM,AM,Antero Midstream,S&P MidCap 400,Energy,"Oil, Gas & Consumable Fuels",Oil & Gas Storage & Transportation,2026-07-15
+AMAT,AMAT,Applied Materials,S&P 500,Information Technology,Semiconductors & Semiconductor Equipment,Semiconductor Materials & Equipment,2026-07-15
+AMCR,AMCR,Amcor,S&P 500,Materials,Containers & Packaging,Paper & Plastic Packaging Products & Materials,2026-07-15
+AMD,AMD,Advanced Micro Devices,S&P 500,Information Technology,Semiconductors & Semiconductor Equipment,Semiconductors,2026-07-15
+AME,AME,Ametek,S&P 500,Industrials,Electrical Equipment,Electrical Components & Equipment,2026-07-15
+AMG,AMG,Affiliated Managers Group,S&P MidCap 400,Financials,Capital Markets,Asset Management & Custody Banks,2026-07-15
+AMGN,AMGN,Amgen,S&P 500,Health Care,Biotechnology,Biotechnology,2026-07-15
+AMH,AMH,American Homes 4 Rent,S&P MidCap 400,Real Estate,Residential REITs,Single-Family Residential REITs,2026-07-15
+AMKR,AMKR,Amkor Technology,S&P MidCap 400,Information Technology,Semiconductors & Semiconductor Equipment,Semiconductors,2026-07-15
+AMN,AMN,"Amn Healthcare Services, Inc.",S&P SmallCap 600,Health Care,Health Care Providers & Services,Health Care Services,2026-07-15
+AMP,AMP,Ameriprise Financial,S&P 500,Financials,Capital Markets,Asset Management & Custody Banks,2026-07-15
+AMPH,AMPH,"Amphstar Pharmaceuticals, Inc.",S&P SmallCap 600,Health Care,Pharmaceuticals,Pharmaceuticals,2026-07-15
+AMR,AMR,"Alpha Metallurgical Resources, Inc.",S&P SmallCap 600,Materials,Metals & Mining,Steel,2026-07-15
+AMRX,AMRX,Amneal Pharmaceuticals,S&P SmallCap 600,Health Care,Pharmaceuticals,Pharmaceuticals,2026-07-15
+AMSF,AMSF,"Amerisafe, Inc.",S&P SmallCap 600,Financials,Insurance,Property & Casualty Insurance,2026-07-15
+AMT,AMT,American Tower,S&P 500,Real Estate,Specialized REITs,Telecom Tower REITs,2026-07-15
+AMTM,AMTM,Amentum,S&P SmallCap 600,Industrials,Commercial Services & Supplies,Diversified Support Services,2026-07-15
+AMZN,AMZN,Amazon,S&P 500,Consumer Discretionary,Broadline Retail,Broadline Retail,2026-07-15
+AN,AN,AutoNation,S&P MidCap 400,Consumer Discretionary,Specialty Retail,Automotive Retail,2026-07-15
+ANDE,ANDE,"The Andersons, Inc.",S&P SmallCap 600,Consumer Staples,Consumer Staples Distribution & Retail,Food Distributors,2026-07-15
+ANET,ANET,Arista Networks,S&P 500,Information Technology,Communications Equipment,Communications Equipment,2026-07-15
+ANF,ANF,Abercrombie & Fitch,S&P MidCap 400,Consumer Discretionary,Specialty Retail,Apparel Retail,2026-07-15
+ANIP,ANIP,"ANI Pharmaceuticals, Inc.",S&P SmallCap 600,Health Care,Pharmaceuticals,Pharmaceuticals,2026-07-15
+AON,AON,Aon plc,S&P 500,Financials,Insurance,Insurance Brokers,2026-07-15
+AORT,AORT,Artivion,S&P SmallCap 600,Health Care,Health Care Equipment & Supplies,Health Care Equipment,2026-07-15
+AOS,AOS,A. O. Smith,S&P 500,Industrials,Building Products,Building Products,2026-07-15
+AOSL,AOSL,"Alpha and Omega Semiconductor, Ltd.",S&P SmallCap 600,Information Technology,Semiconductors & Semiconductor Equipment,Semiconductors,2026-07-15
+APA,APA,APA Corporation,S&P 500,Energy,"Oil, Gas & Consumable Fuels",Oil & Gas Exploration & Production,2026-07-15
+APAM,APAM,"Artisan Partners Asset Management, Inc.",S&P SmallCap 600,Financials,Capital Markets,Asset Management & Custody Banks,2026-07-15
+APD,APD,Air Products,S&P 500,Materials,Chemicals,Industrial Gases,2026-07-15
+APG,APG,APi Group,S&P MidCap 400,Industrials,Construction & Engineering,Construction & Engineering,2026-07-15
+APH,APH,Amphenol,S&P 500,Information Technology,"Electronic Equipment, Instruments & Components",Electronic Components,2026-07-15
+APLE,APLE,"Apple Hospitality REIT, Inc.",S&P SmallCap 600,Real Estate,Hotel & Resort REITs,Hotel & Resort REITs,2026-07-15
+APO,APO,Apollo Global Management,S&P 500,Financials,Capital Markets,Asset Management & Custody Banks,2026-07-15
+APOG,APOG,"Apogee Enterprises, Inc.",S&P SmallCap 600,Industrials,Building Products,Building Products,2026-07-15
+APP,APP,AppLovin,S&P 500,Information Technology,Software,Application Software,2026-07-15
+APPF,APPF,AppFolio,S&P MidCap 400,Information Technology,Software,Application Software,2026-07-15
+APTV,APTV,Aptiv,S&P 500,Consumer Discretionary,Automobile Components,Automotive Parts & Equipment,2026-07-15
+AR,AR,Antero Resources,S&P MidCap 400,Energy,"Oil, Gas & Consumable Fuels",Oil & Gas Exploration & Production,2026-07-15
+ARCB,ARCB,ArcBest Corp.,S&P SmallCap 600,Industrials,Ground Transportation,Cargo Ground Transportation,2026-07-15
+ARE,ARE,Alexandria Real Estate Equities,S&P 500,Real Estate,Office REITs,Office REITs,2026-07-15
+ARES,ARES,Ares Management,S&P 500,Financials,Capital Markets,Asset Management & Custody Banks,2026-07-15
+ARLO,ARLO,Arlo Technologies,S&P SmallCap 600,Information Technology,Communications Equipment,Communications Equipment,2026-07-15
+ARMK,ARMK,Aramark,S&P MidCap 400,Consumer Discretionary,Distributors,Distributors,2026-07-15
+AROC,AROC,"Archrock, Inc.",S&P SmallCap 600,Energy,Energy Equipment & Services,Oil & Gas Equipment & Services,2026-07-15
+ARR,ARR,Armour Residential REIT,S&P SmallCap 600,Financials,Mortgage Real Estate Investment Trusts (REITs),Mortgage REITs,2026-07-15
+ARW,ARW,Arrow Electronics,S&P MidCap 400,Information Technology,"Electronic Equipment, Instruments & Components",Technology Distributors,2026-07-15
+ARWR,ARWR,Arrowhead Pharmaceuticals,S&P MidCap 400,Health Care,Biotechnology,Biotechnology,2026-07-15
+ASB,ASB,Associated Bank,S&P MidCap 400,Financials,Banks,Regional Banks,2026-07-15
+ASH,ASH,Ashland Global,S&P MidCap 400,Materials,Chemicals,Diversified Chemicals,2026-07-15
+ASO,ASO,Academy Sports + Outdoors,S&P SmallCap 600,Consumer Discretionary,Specialty Retail,Other Specialty Retail,2026-07-15
+ASTE,ASTE,"Astec Industries, Inc.",S&P SmallCap 600,Industrials,Machinery,Construction Machinery & Heavy Transportation Equipment,2026-07-15
+ASTH,ASTH,"Astrana Health, Inc.",S&P SmallCap 600,Health Care,Health Care Providers & Services,Health Care Facilities,2026-07-15
+ATEN,ATEN,"A10 Networks, Inc.",S&P SmallCap 600,Information Technology,Software,Systems Software,2026-07-15
+ATI,ATI,ATI Inc.,S&P MidCap 400,Industrials,Aerospace & Defense,Aerospace & Defense,2026-07-15
+ATMU,ATMU,Atmus Filtration Technologies Inc.,S&P SmallCap 600,Industrials,Machinery,Industrial Machinery & Supplies & Components,2026-07-15
+ATO,ATO,Atmos Energy,S&P 500,Utilities,Gas Utilities,Gas Utilities,2026-07-15
+ATR,ATR,AptarGroup,S&P MidCap 400,Materials,Containers & Packaging,"Metal, Glass & Plastic Containers",2026-07-15
+AUB,AUB,"Atlantic Union Bankshares, Corp.",S&P SmallCap 600,Financials,Banks,Regional Banks,2026-07-15
+AVA,AVA,Avista Corporation,S&P SmallCap 600,Utilities,Multi-Utilities,Multi-Utilities,2026-07-15
+AVAV,AVAV,AeroVironment,S&P MidCap 400,Industrials,Aerospace & Defense,Aerospace & Defense,2026-07-15
+AVB,AVB,AvalonBay Communities,S&P 500,Real Estate,Residential REITs,Multi-Family Residential REITs,2026-07-15
+AVGO,AVGO,Broadcom,S&P 500,Information Technology,Semiconductors & Semiconductor Equipment,Semiconductors,2026-07-15
+AVNS,AVNS,"Avanos Medical, Inc.",S&P SmallCap 600,Health Care,Health Care Equipment & Supplies,Health Care Supplies,2026-07-15
+AVNT,AVNT,Avient,S&P MidCap 400,Materials,Chemicals,Specialty Chemicals,2026-07-15
+AVT,AVT,Avnet,S&P MidCap 400,Information Technology,"Electronic Equipment, Instruments & Components",Technology Distributors,2026-07-15
+AVTR,AVTR,Avantor,S&P MidCap 400,Health Care,Life Sciences Tools & Services,Life Sciences Tools & Services,2026-07-15
+AVY,AVY,Avery Dennison,S&P 500,Materials,Containers & Packaging,Paper & Plastic Packaging Products & Materials,2026-07-15
+AWI,AWI,"Armstrong World Industries, Inc.",S&P SmallCap 600,Industrials,Building Products,Building Products,2026-07-15
+AWK,AWK,American Water Works,S&P 500,Utilities,Water Utilities,Water Utilities,2026-07-15
+AWR,AWR,American States Water Company,S&P SmallCap 600,Utilities,Water Utilities,Water Utilities,2026-07-15
+AX,AX,"Axos Financial, Inc.",S&P SmallCap 600,Financials,Banks,Regional Banks,2026-07-15
+AXON,AXON,Axon Enterprise,S&P 500,Industrials,Aerospace & Defense,Aerospace & Defense,2026-07-15
+AXP,AXP,American Express,S&P 500,Financials,Consumer Finance,Consumer Finance,2026-07-15
+AXTA,AXTA,Axalta,S&P MidCap 400,Materials,Chemicals,Specialty Chemicals,2026-07-15
+AYI,AYI,Acuity Brands,S&P MidCap 400,Industrials,Electrical Equipment,Electrical Components & Equipment,2026-07-15
+AZO,AZO,AutoZone,S&P 500,Consumer Discretionary,Specialty Retail,Automotive Retail,2026-07-15
+AZTA,AZTA,"Azenta, Inc.",S&P SmallCap 600,Health Care,Life Sciences Tools & Services,Life Sciences Tools & Services,2026-07-15
+AZZ,AZZ,"AZZ, Inc.",S&P SmallCap 600,Industrials,Electrical Equipment,Heavy Electrical Equipment,2026-07-15
+BA,BA,Boeing,S&P 500,Industrials,Aerospace & Defense,Aerospace & Defense,2026-07-15
+BAC,BAC,Bank of America,S&P 500,Financials,Banks,Diversified Banks,2026-07-15
+BAH,BAH,Booz Allen Hamilton,S&P MidCap 400,Industrials,Professional Services,Research & Consulting Services,2026-07-15
+BALL,BALL,Ball Corporation,S&P 500,Materials,Containers & Packaging,"Metal, Glass & Plastic Containers",2026-07-15
+BANC,BANC,"Banc Of California, Inc.",S&P SmallCap 600,Financials,Banks,Regional Banks,2026-07-15
+BANF,BANF,Bancfirst Corp,S&P SmallCap 600,Financials,Banks,Regional Banks,2026-07-15
+BANR,BANR,Banner Corporation,S&P SmallCap 600,Financials,Banks,Regional Banks,2026-07-15
+BAX,BAX,Baxter International,S&P 500,Health Care,Health Care Equipment & Supplies,Health Care Equipment,2026-07-15
+BBT,BBT,Beacon Financial Corp.,S&P SmallCap 600,Financials,Banks,Regional Banks,2026-07-15
+BBWI,BBWI,"Bath & Body Works, Inc.",S&P MidCap 400,Consumer Discretionary,Specialty Retail,Other Specialty Retail,2026-07-15
+BBY,BBY,Best Buy,S&P 500,Consumer Discretionary,Specialty Retail,Computer & Electronics Retail,2026-07-15
+BC,BC,Brunswick,S&P MidCap 400,Consumer Discretionary,Leisure Products,Leisure Products,2026-07-15
+BCC,BCC,Boise Cascade,S&P SmallCap 600,Industrials,Building Products,Building Products,2026-07-15
+BCO,BCO,Brink's,S&P MidCap 400,Industrials,Commercial Services & Supplies,Security & Alarm Services,2026-07-15
+BCPC,BCPC,Balchem Corporation,S&P SmallCap 600,Materials,Chemicals,Specialty Chemicals,2026-07-15
+BDC,BDC,Belden Inc.,S&P MidCap 400,Information Technology,"Electronic Equipment, Instruments & Components",Electronic Components,2026-07-15
+BDX,BDX,Becton Dickinson,S&P 500,Health Care,Health Care Equipment & Supplies,Health Care Equipment,2026-07-15
+BEN,BEN,Franklin Resources,S&P 500,Financials,Capital Markets,Asset Management & Custody Banks,2026-07-15
+BF-B,BF.B,Brown–Forman,S&P 500,Consumer Staples,Beverages,Distillers & Vintners,2026-07-15
+BFAM,BFAM,Bright Horizons Family Solutions Inc.,S&P SmallCap 600,Consumer Discretionary,Diversified Consumer Services,Specialized Consumer Services,2026-07-15
+BFH,BFH,"Bread Financial Holdings, Inc.",S&P SmallCap 600,Financials,Consumer Finance,Consumer Finance,2026-07-15
+BFS,BFS,"Saul Centers, Inc.",S&P SmallCap 600,Real Estate,Retail REITs,Retail REITs,2026-07-15
+BG,BG,Bunge Global,S&P 500,Consumer Staples,Food Products,Agricultural Products & Services,2026-07-15
+BGC,BGC,"BGC Group, Inc.",S&P SmallCap 600,Financials,Capital Markets,Investment Banking & Brokerage,2026-07-15
+BHE,BHE,"Benchmark Electronics, Inc.",S&P SmallCap 600,Information Technology,"Electronic Equipment, Instruments & Components",Electronic Manufacturing Services,2026-07-15
+BHF,BHF,Brighthouse Financial,S&P MidCap 400,Financials,Insurance,Life & Health Insurance,2026-07-15
+BIIB,BIIB,Biogen,S&P 500,Health Care,Biotechnology,Biotechnology,2026-07-15
+BILL,BILL,Bill Holdings,S&P MidCap 400,Information Technology,Software,Application Software,2026-07-15
+BIO,BIO,Bio-Rad Laboratories,S&P MidCap 400,Health Care,Life Sciences Tools & Services,Life Sciences Tools & Services,2026-07-15
+BJ,BJ,BJ's Wholesale Club,S&P MidCap 400,Consumer Staples,Consumer Staples Distribution & Retail,Consumer Staples Merchandise Retail,2026-07-15
+BJRI,BJRI,"BJ's Restaurants, Inc.",S&P SmallCap 600,Consumer Discretionary,"Hotels, Restaurants & Leisure",Restaurants,2026-07-15
+BKE,BKE,"The Buckle, Inc.",S&P SmallCap 600,Consumer Discretionary,Specialty Retail,Apparel Retail,2026-07-15
+BKH,BKH,Black Hills Corporation,S&P MidCap 400,Utilities,Multi-Utilities,Multi-Utilities,2026-07-15
+BKNG,BKNG,Booking Holdings,S&P 500,Consumer Discretionary,"Hotels, Restaurants & Leisure","Hotels, Resorts & Cruise Lines",2026-07-15
+BKR,BKR,Baker Hughes,S&P 500,Energy,Energy Equipment & Services,Oil & Gas Equipment & Services,2026-07-15
+BKU,BKU,"BankUnited, Inc.",S&P SmallCap 600,Financials,Banks,Regional Banks,2026-07-15
+BL,BL,"BlackLine Systems, Inc.",S&P SmallCap 600,Information Technology,Software,Application Software,2026-07-15
+BLD,BLD,TopBuild Corp.,S&P MidCap 400,Consumer Discretionary,Household Durables,Homebuilding,2026-07-15
+BLDR,BLDR,Builders FirstSource,S&P 500,Industrials,Building Products,Building Products,2026-07-15
+BLFS,BLFS,"BioLife Solutions, Inc.",S&P SmallCap 600,Health Care,Health Care Equipment & Supplies,Health Care Supplies,2026-07-15
+BLK,BLK,BlackRock,S&P 500,Financials,Capital Markets,Asset Management & Custody Banks,2026-07-15
+BLKB,BLKB,Blackbaud,S&P SmallCap 600,Information Technology,Software,Application Software,2026-07-15
+BMI,BMI,"Badger Meter, Inc.",S&P SmallCap 600,Information Technology,"Electronic Equipment, Instruments & Components",Electronic Equipment & Instruments,2026-07-15
+BMRN,BMRN,BioMarin Pharmaceutical,S&P MidCap 400,Health Care,Biotechnology,Biotechnology,2026-07-15
+BMY,BMY,Bristol Myers Squibb,S&P 500,Health Care,Pharmaceuticals,Pharmaceuticals,2026-07-15
+BNL,BNL,"Broadstone Net Lease, Inc.",S&P SmallCap 600,Real Estate,Industrial REITs,Industrial REITs,2026-07-15
+BNY,BNY,BNY Mellon,S&P 500,Financials,Capital Markets,Asset Management & Custody Banks,2026-07-15
+BOH,BOH,Bank of Hawaii,S&P SmallCap 600,Financials,Banks,Regional Banks,2026-07-15
+BOOT,BOOT,"Boot Barn Holdings, Inc.",S&P SmallCap 600,Consumer Discretionary,Specialty Retail,Apparel Retail,2026-07-15
+BOX,BOX,"Box, Inc.",S&P SmallCap 600,Information Technology,Software,Application Software,2026-07-15
+BR,BR,Broadridge Financial Solutions,S&P 500,Industrials,Professional Services,Data Processing & Outsourced Services,2026-07-15
+BRC,BRC,Brady Corporation,S&P SmallCap 600,Industrials,Commercial Services & Supplies,Commercial Printing,2026-07-15
+BRK-B,BRK.B,Berkshire Hathaway,S&P 500,Financials,Financial Services,Multi-Sector Holdings,2026-07-15
+BRKR,BRKR,Bruker,S&P MidCap 400,Health Care,Health Care Equipment & Supplies,Health Care Equipment,2026-07-15
+BRO,BRO,Brown & Brown,S&P 500,Financials,Insurance,Insurance Brokers,2026-07-15
+BROS,BROS,Dutch Bros Inc.,S&P MidCap 400,Consumer Discretionary,"Hotels, Restaurants & Leisure",Restaurants,2026-07-15
+BRX,BRX,Brixmor Property Group,S&P MidCap 400,Real Estate,Retail REITs,Retail REITs,2026-07-15
+BSX,BSX,Boston Scientific,S&P 500,Health Care,Health Care Equipment & Supplies,Health Care Equipment,2026-07-15
+BSY,BSY,Bentley Systems,S&P MidCap 400,Information Technology,Software,Application Software,2026-07-15
+BTSG,BTSG,"BrightSpring Health Services, Inc.",S&P SmallCap 600,Health Care,Health Care Providers & Services,Health Care Services,2026-07-15
+BTU,BTU,"Peabody Energy, Inc.",S&P SmallCap 600,Energy,"Oil, Gas & Consumable Fuels",Coal & Consumable Fuels,2026-07-15
+BURL,BURL,Burlington Stores,S&P MidCap 400,Consumer Discretionary,Specialty Retail,Apparel Retail,2026-07-15
+BWA,BWA,BorgWarner,S&P MidCap 400,Consumer Discretionary,Automobile Components,Automotive Parts & Equipment,2026-07-15
+BWXT,BWXT,BWX Technologies,S&P MidCap 400,Industrials,Aerospace & Defense,Aerospace & Defense,2026-07-15
+BX,BX,Blackstone Inc.,S&P 500,Financials,Capital Markets,Asset Management & Custody Banks,2026-07-15
+BXMT,BXMT,"Blackstone Mortgage Trust, Inc.",S&P SmallCap 600,Financials,Mortgage Real Estate Investment Trusts (REITs),Mortgage REITs,2026-07-15
+BXP,BXP,"BXP, Inc.",S&P 500,Real Estate,Office REITs,Office REITs,2026-07-15
+BYD,BYD,Boyd Gaming,S&P MidCap 400,Consumer Discretionary,"Hotels, Restaurants & Leisure",Casinos & Gaming,2026-07-15
+C,C,Citigroup,S&P 500,Financials,Banks,Diversified Banks,2026-07-15
+CACC,CACC,Credit Acceptance,S&P SmallCap 600,Financials,Financial Services,Specialized Finance,2026-07-15
+CACI,CACI,CACI International,S&P MidCap 400,Industrials,Commercial Services & Supplies,Diversified Support Services,2026-07-15
+CAG,CAG,Conagra Brands,S&P SmallCap 600,Consumer Staples,Food Products,Packaged Foods & Meats,2026-07-15
+CAH,CAH,Cardinal Health,S&P 500,Health Care,Health Care Providers & Services,Health Care Distributors,2026-07-15
+CAKE,CAKE,"The Cheesecake Factory, Inc.",S&P SmallCap 600,Consumer Discretionary,"Hotels, Restaurants & Leisure",Restaurants,2026-07-15
+CALM,CALM,"Cal-Maine Foods, Inc.",S&P SmallCap 600,Consumer Staples,Food Products,Packaged Foods & Meats,2026-07-15
+CALX,CALX,Calix,S&P SmallCap 600,Information Technology,Software,Application Software,2026-07-15
+CALY,CALY,Callaway Golf Company,S&P SmallCap 600,Consumer Discretionary,Leisure Products,Leisure Products,2026-07-15
+CAR,CAR,Avis Budget Group,S&P MidCap 400,Industrials,Ground Transportation,Passenger Ground Transportation,2026-07-15
+CARG,CARG,CarGurus,S&P SmallCap 600,Communication Services,Interactive Media & Services,Interactive Media & Services,2026-07-15
+CARR,CARR,Carrier Global,S&P 500,Industrials,Building Products,Building Products,2026-07-15
+CART,CART,Maplebear Inc.,S&P MidCap 400,Consumer Staples,Consumer Staples Distribution & Retail,Food Retail,2026-07-15
+CASH,CASH,"Pathward Financial, Inc.",S&P SmallCap 600,Financials,Banks,Regional Banks,2026-07-15
+CASY,CASY,Casey's,S&P 500,Consumer Staples,Consumer Staples Distribution & Retail,Food Retail,2026-07-15
+CAT,CAT,Caterpillar Inc.,S&P 500,Industrials,Machinery,Construction Machinery & Heavy Transportation Equipment,2026-07-15
+CATY,CATY,Cathay General Bancorp,S&P SmallCap 600,Financials,Banks,Regional Banks,2026-07-15
+CAVA,CAVA,Cava Group,S&P MidCap 400,Consumer Discretionary,"Hotels, Restaurants & Leisure",Restaurants,2026-07-15
+CB,CB,Chubb Limited,S&P 500,Financials,Insurance,Property & Casualty Insurance,2026-07-15
+CBOE,CBOE,Cboe Global Markets,S&P 500,Financials,Capital Markets,Financial Exchanges & Data,2026-07-15
+CBRE,CBRE,CBRE Group,S&P 500,Real Estate,Real Estate Management & Development,Real Estate Services,2026-07-15
+CBRL,CBRL,Cracker Barrel,S&P SmallCap 600,Consumer Discretionary,"Hotels, Restaurants & Leisure",Restaurants,2026-07-15
+CBSH,CBSH,Commerce Bancshares,S&P MidCap 400,Financials,Banks,Regional Banks,2026-07-15
+CBT,CBT,Cabot Corp,S&P MidCap 400,Materials,Chemicals,Diversified Chemicals,2026-07-15
+CBU,CBU,"Community Bank System, Inc.",S&P SmallCap 600,Financials,Banks,Regional Banks,2026-07-15
+CC,CC,Chemours,S&P SmallCap 600,Materials,Chemicals,Diversified Chemicals,2026-07-15
+CCI,CCI,Crown Castle,S&P 500,Real Estate,Specialized REITs,Telecom Tower REITs,2026-07-15
+CCK,CCK,Crown Holdings,S&P MidCap 400,Materials,Containers & Packaging,Paper & Plastic Packaging Products & Materials,2026-07-15
+CCL,CCL,Carnival Corporation,S&P 500,Consumer Discretionary,"Hotels, Restaurants & Leisure","Hotels, Resorts & Cruise Lines",2026-07-15
+CCOI,CCOI,"Cogent Communications Holdings, Inc.",S&P SmallCap 600,Communication Services,Diversified Telecommunication Services,Alternative Carriers,2026-07-15
+CCS,CCS,"Century Communities, Inc.",S&P SmallCap 600,Consumer Discretionary,Household Durables,Homebuilding,2026-07-15
+CDE,CDE,Coeur Mining,S&P MidCap 400,Materials,Metals & Mining,Gold,2026-07-15
+CDNS,CDNS,Cadence Design Systems,S&P 500,Information Technology,Software,Application Software,2026-07-15
+CDP,CDP,COPT Defense Properties,S&P MidCap 400,Real Estate,Office REITs,Office REITs,2026-07-15
+CDW,CDW,CDW Corporation,S&P 500,Information Technology,"Electronic Equipment, Instruments & Components",Technology Distributors,2026-07-15
+CE,CE,Celanese,S&P SmallCap 600,Materials,Chemicals,Specialty Chemicals,2026-07-15
+CEG,CEG,Constellation Energy,S&P 500,Utilities,Electric Utilities,Electric Utilities,2026-07-15
+CELH,CELH,Celsius Holdings,S&P MidCap 400,Consumer Staples,Beverages,Soft Drinks & Non-alcoholic Beverages,2026-07-15
+CENT,CENT,Central Garden & Pet Company,S&P SmallCap 600,Consumer Staples,Household Products,Household Products,2026-07-15
+CENTA,CENTA,Central Garden & Pet Company (Class A),S&P SmallCap 600,Consumer Staples,Household Products,Household Products,2026-07-15
+CENX,CENX,Century Aluminum Company,S&P SmallCap 600,Materials,Metals & Mining,Aluminum,2026-07-15
+CERT,CERT,"Certara, Inc.",S&P SmallCap 600,Health Care,Health Care Technology,Health Care Technology,2026-07-15
+CF,CF,CF Industries,S&P 500,Materials,Chemicals,Fertilizers & Agricultural Chemicals,2026-07-15
+CFFN,CFFN,Capitol Federal Savings Bank,S&P SmallCap 600,Financials,Banks,Regional Banks,2026-07-15
+CFG,CFG,Citizens Financial Group,S&P 500,Financials,Banks,Regional Banks,2026-07-15
+CFR,CFR,Frost Bank,S&P MidCap 400,Financials,Banks,Regional Banks,2026-07-15
+CG,CG,Carlyle Group (The),S&P MidCap 400,Financials,Capital Markets,Asset Management & Custody Banks,2026-07-15
+CGNX,CGNX,Cognex,S&P MidCap 400,Information Technology,"Electronic Equipment, Instruments & Components",Electronic Equipment & Instruments,2026-07-15
+CHCO,CHCO,City Holding Company,S&P SmallCap 600,Financials,Banks,Regional Banks,2026-07-15
+CHD,CHD,Church & Dwight,S&P 500,Consumer Staples,Household Products,Household Products,2026-07-15
+CHDN,CHDN,Churchill Downs Inc.,S&P MidCap 400,Consumer Discretionary,"Hotels, Restaurants & Leisure",Casinos & Gaming,2026-07-15
+CHE,CHE,Chemed Corp.,S&P MidCap 400,Health Care,Health Care Providers & Services,Health Care Services,2026-07-15
+CHEF,CHEF,"Chefs' Warehouse, Inc.",S&P SmallCap 600,Consumer Staples,Consumer Staples Distribution & Retail,Food Distributors,2026-07-15
+CHH,CHH,Choice Hotels,S&P MidCap 400,Consumer Discretionary,"Hotels, Restaurants & Leisure","Hotels, Resorts & Cruise Lines",2026-07-15
+CHRD,CHRD,Chord Energy,S&P MidCap 400,Energy,"Oil, Gas & Consumable Fuels",Oil & Gas Exploration & Production,2026-07-15
+CHRW,CHRW,C.H. Robinson,S&P 500,Industrials,Air Freight & Logistics,Air Freight & Logistics,2026-07-15
+CHTR,CHTR,Charter Communications,S&P 500,Communication Services,Media,Cable & Satellite,2026-07-15
+CHWY,CHWY,Chewy,S&P MidCap 400,Consumer Discretionary,Specialty Retail,Other Specialty Retail,2026-07-15
+CI,CI,Cigna,S&P 500,Health Care,Health Care Providers & Services,Health Care Services,2026-07-15
+CIEN,CIEN,Ciena,S&P 500,Information Technology,Communications Equipment,Communications Equipment,2026-07-15
+CINF,CINF,Cincinnati Financial,S&P 500,Financials,Insurance,Property & Casualty Insurance,2026-07-15
+CL,CL,Colgate-Palmolive,S&P 500,Consumer Staples,Household Products,Household Products,2026-07-15
+CLF,CLF,Cleveland-Cliffs,S&P MidCap 400,Materials,Metals & Mining,Steel,2026-07-15
+CLH,CLH,Clean Harbors,S&P MidCap 400,Industrials,Commercial Services & Supplies,Environmental & Facilities Services,2026-07-15
+CLSK,CLSK,"CleanSpark, Inc.",S&P SmallCap 600,Information Technology,IT Services,Internet Services & Infrastructure,2026-07-15
+CLX,CLX,Clorox,S&P 500,Consumer Staples,Household Products,Household Products,2026-07-15
+CMC,CMC,Commercial Metals,S&P MidCap 400,Materials,Metals & Mining,Steel,2026-07-15
+CMCSA,CMCSA,Comcast,S&P 500,Communication Services,Media,Cable & Satellite,2026-07-15
+CME,CME,CME Group,S&P 500,Financials,Capital Markets,Financial Exchanges & Data,2026-07-15
+CMG,CMG,Chipotle Mexican Grill,S&P 500,Consumer Discretionary,"Hotels, Restaurants & Leisure",Restaurants,2026-07-15
+CMI,CMI,Cummins,S&P 500,Industrials,Machinery,Construction Machinery & Heavy Transportation Equipment,2026-07-15
+CMS,CMS,CMS Energy,S&P 500,Utilities,Multi-Utilities,Multi-Utilities,2026-07-15
+CNC,CNC,Centene Corporation,S&P 500,Health Care,Health Care Providers & Services,Managed Health Care,2026-07-15
+CNH,CNH,CNH Industrial,S&P MidCap 400,Industrials,Machinery,Agricultural & Farm Machinery,2026-07-15
+CNK,CNK,"Cinemark Holdings, Inc.",S&P SmallCap 600,Communication Services,Entertainment,Movies & Entertainment,2026-07-15
+CNM,CNM,Core & Main,S&P MidCap 400,Industrials,Trading Companies & Distributors,Trading Companies & Distributors,2026-07-15
+CNMD,CNMD,CONMED Corporation,S&P SmallCap 600,Health Care,Health Care Equipment & Supplies,Health Care Equipment,2026-07-15
+CNO,CNO,CNO Financial Group,S&P MidCap 400,Financials,Insurance,Life & Health Insurance,2026-07-15
+CNP,CNP,CenterPoint Energy,S&P 500,Utilities,Multi-Utilities,Multi-Utilities,2026-07-15
+CNR,CNR,"Core Natural Resources, Inc.",S&P SmallCap 600,Energy,"Oil, Gas & Consumable Fuels",Coal & Consumable Fuels,2026-07-15
+CNS,CNS,"Cohen & Steers, Inc.",S&P SmallCap 600,Financials,Capital Markets,Asset Management & Custody Banks,2026-07-15
+CNX,CNX,CNX Resources,S&P MidCap 400,Energy,"Oil, Gas & Consumable Fuels",Oil & Gas Exploration & Production,2026-07-15
+CNXC,CNXC,Concentrix,S&P SmallCap 600,Industrials,Professional Services,Data Processing & Outsourced Services,2026-07-15
+CNXN,CNXN,"PC Connection, Inc.",S&P SmallCap 600,Information Technology,"Electronic Equipment, Instruments & Components",Technology Distributors,2026-07-15
+COCO,COCO,The Vita Coco Company,S&P SmallCap 600,Consumer Staples,Beverages,Soft Drinks & Non-alcoholic Beverages,2026-07-15
+COF,COF,Capital One,S&P 500,Financials,Consumer Finance,Consumer Finance,2026-07-15
+COHR,COHR,Coherent Corp.,S&P 500,Information Technology,"Electronic Equipment, Instruments & Components",Electronic Components,2026-07-15
+COHU,COHU,"Cohu, Inc.",S&P SmallCap 600,Information Technology,Semiconductors & Semiconductor Equipment,Semiconductor Materials & Equipment,2026-07-15
+COIN,COIN,Coinbase,S&P 500,Financials,Capital Markets,Financial Exchanges & Data,2026-07-15
+COKE,COKE,Coca-Cola Consolidated,S&P MidCap 400,Consumer Staples,Beverages,Soft Drinks & Non-alcoholic Beverages,2026-07-15
+COLB,COLB,Columbia Banking System,S&P MidCap 400,Financials,Banks,Regional Banks,2026-07-15
+COLL,COLL,"Collegium Pharmaceutical, Inc.",S&P SmallCap 600,Health Care,Pharmaceuticals,Pharmaceuticals,2026-07-15
+COLM,COLM,Columbia Sportswear,S&P MidCap 400,Consumer Discretionary,"Textiles, Apparel & Luxury Goods","Apparel, Accessories & Luxury Goods",2026-07-15
+CON,CON,"Concentra Group Holdings Parent, Inc.",S&P SmallCap 600,Health Care,Health Care Providers & Services,Health Care Services,2026-07-15
+COO,COO,Cooper Companies (The),S&P 500,Health Care,Health Care Equipment & Supplies,Health Care Supplies,2026-07-15
+COP,COP,ConocoPhillips,S&P 500,Energy,"Oil, Gas & Consumable Fuels",Oil & Gas Exploration & Production,2026-07-15
+COR,COR,Cencora,S&P 500,Health Care,Health Care Providers & Services,Health Care Distributors,2026-07-15
+CORT,CORT,Corcept Therapeutics Incorporated,S&P SmallCap 600,Health Care,Pharmaceuticals,Pharmaceuticals,2026-07-15
+COST,COST,Costco,S&P 500,Consumer Staples,Consumer Staples Distribution & Retail,Consumer Staples Merchandise Retail,2026-07-15
+COTY,COTY,Coty,S&P SmallCap 600,Consumer Staples,Personal Care Products,Personal Care Products,2026-07-15
+CPAY,CPAY,Corpay,S&P 500,Financials,Financial Services,Transaction & Payment Processing Services,2026-07-15
+CPB,CPB,The Campbell's Company,S&P SmallCap 600,Consumer Staples,Food Products,Packaged Foods & Meats,2026-07-15
+CPF,CPF,Central Pacific Financial Corp.,S&P SmallCap 600,Financials,Banks,Regional Banks,2026-07-15
+CPK,CPK,Chesapeake Utilities Corp.,S&P SmallCap 600,Utilities,Gas Utilities,Gas Utilities,2026-07-15
+CPRI,CPRI,Capri Holdings,S&P MidCap 400,Consumer Discretionary,"Textiles, Apparel & Luxury Goods","Apparel, Accessories & Luxury Goods",2026-07-15
+CPRT,CPRT,Copart,S&P 500,Industrials,Commercial Services & Supplies,Diversified Support Services,2026-07-15
+CPRX,CPRX,"Catalyst Pharmaceuticals Partners, Inc.",S&P SmallCap 600,Health Care,Biotechnology,Biotechnology,2026-07-15
+CPT,CPT,Camden Property Trust,S&P 500,Real Estate,Residential REITs,Multi-Family Residential REITs,2026-07-15
+CR,CR,Crane,S&P MidCap 400,Industrials,Machinery,Industrial Machinery & Supplies & Components,2026-07-15
+CRBG,CRBG,Corebridge Financial,S&P MidCap 400,Financials,Capital Markets,Asset Management & Custody Banks,2026-07-15
+CRC,CRC,California Resources Corporation,S&P SmallCap 600,Energy,"Oil, Gas & Consumable Fuels",Oil & Gas Exploration & Production,2026-07-15
+CRGY,CRGY,Crescent Energy Company,S&P SmallCap 600,Energy,"Oil, Gas & Consumable Fuels",Oil & Gas Exploration & Production,2026-07-15
+CRH,CRH,CRH plc,S&P 500,Materials,Construction Materials,Construction Materials,2026-07-15
+CRI,CRI,"Carter's, Inc.",S&P SmallCap 600,Consumer Discretionary,"Textiles, Apparel & Luxury Goods","Apparel, Accessories & Luxury Goods",2026-07-15
+CRK,CRK,"Comstock Resources, Inc.",S&P SmallCap 600,Energy,"Oil, Gas & Consumable Fuels",Oil & Gas Exploration & Production,2026-07-15
+CRL,CRL,Charles River Laboratories,S&P 500,Health Care,Life Sciences Tools & Services,Life Sciences Tools & Services,2026-07-15
+CRM,CRM,Salesforce,S&P 500,Information Technology,Software,Application Software,2026-07-15
+CROX,CROX,Crocs,S&P MidCap 400,Consumer Discretionary,"Textiles, Apparel & Luxury Goods",Footwear,2026-07-15
+CRS,CRS,Carpenter Technology,S&P MidCap 400,Industrials,Machinery,Industrial Machinery & Supplies & Components,2026-07-15
+CRSR,CRSR,Corsair Gaming,S&P SmallCap 600,Information Technology,"Technology Hardware, Storage & Peripherals","Technology Hardware, Storage & Peripherals",2026-07-15
+CRUS,CRUS,Cirrus Logic,S&P MidCap 400,Information Technology,Semiconductors & Semiconductor Equipment,Semiconductors,2026-07-15
+CRVL,CRVL,CorVel Corporation,S&P SmallCap 600,Health Care,Health Care Providers & Services,Health Care Services,2026-07-15
+CRWD,CRWD,CrowdStrike,S&P 500,Information Technology,Software,Systems Software,2026-07-15
+CSCO,CSCO,Cisco,S&P 500,Information Technology,Communications Equipment,Communications Equipment,2026-07-15
+CSGP,CSGP,CoStar Group,S&P 500,Real Estate,Real Estate Management & Development,Real Estate Services,2026-07-15
+CSL,CSL,Carlisle Companies,S&P MidCap 400,Industrials,Industrial Conglomerates,Industrial Conglomerates,2026-07-15
+CSR,CSR,Centerspace Trust,S&P SmallCap 600,Real Estate,Residential REITs,Multi-Family Residential REITs,2026-07-15
+CSW,CSW,"CSW Industrials, Inc.",S&P SmallCap 600,Industrials,Industrial Conglomerates,Industrial Conglomerates,2026-07-15
+CSX,CSX,CSX Corporation,S&P 500,Industrials,Ground Transportation,Rail Transportation,2026-07-15
+CTAS,CTAS,Cintas,S&P 500,Industrials,Commercial Services & Supplies,Diversified Support Services,2026-07-15
+CTRE,CTRE,CareTrust REIT,S&P MidCap 400,Real Estate,Health Care REITs,Health Care REITs,2026-07-15
+CTS,CTS,CTS Corporation,S&P SmallCap 600,Information Technology,"Electronic Equipment, Instruments & Components",Electronic Manufacturing Services,2026-07-15
+CTSH,CTSH,Cognizant,S&P 500,Information Technology,IT Services,IT Consulting & Other Services,2026-07-15
+CTVA,CTVA,Corteva,S&P 500,Materials,Chemicals,Fertilizers & Agricultural Chemicals,2026-07-15
+CUBE,CUBE,CubeSmart,S&P MidCap 400,Real Estate,Industrial REITs,Industrial REITs,2026-07-15
+CUBI,CUBI,"Customers Bancorp, Inc.",S&P SmallCap 600,Financials,Banks,Regional Banks,2026-07-15
+CURB,CURB,Curbline Properties Corp.,S&P SmallCap 600,Real Estate,Retail REITs,Retail REITs,2026-07-15
+CUZ,CUZ,Cousins Properties,S&P MidCap 400,Real Estate,Office REITs,Office REITs,2026-07-15
+CVBF,CVBF,CVB Financial Corp.,S&P SmallCap 600,Financials,Banks,Regional Banks,2026-07-15
+CVCO,CVCO,"Cavco Industries, Inc.",S&P SmallCap 600,Consumer Discretionary,Household Durables,Homebuilding,2026-07-15
+CVI,CVI,"CVR Energy, Inc.",S&P SmallCap 600,Energy,"Oil, Gas & Consumable Fuels",Oil & Gas Refining & Marketing,2026-07-15
+CVLT,CVLT,CommVault Systems,S&P MidCap 400,Information Technology,Software,Systems Software,2026-07-15
+CVNA,CVNA,Carvana,S&P 500,Consumer Discretionary,Specialty Retail,Automotive Retail,2026-07-15
+CVS,CVS,CVS Health,S&P 500,Health Care,Health Care Providers & Services,Health Care Services,2026-07-15
+CVSA,CVSA,Covista Inc.,S&P SmallCap 600,Consumer Discretionary,Diversified Consumer Services,Education Services,2026-07-15
+CVX,CVX,Chevron Corporation,S&P 500,Energy,"Oil, Gas & Consumable Fuels",Integrated Oil & Gas,2026-07-15
+CW,CW,Curtiss-Wright,S&P MidCap 400,Industrials,Aerospace & Defense,Aerospace & Defense,2026-07-15
+CWEN,CWEN,"Clearway Energy, Inc. (Class C)",S&P SmallCap 600,Utilities,Independent Power and Renewable Electricity Producers,Renewable Electricity,2026-07-15
+CWEN-A,CWEN.A,"Clearway Energy, Inc. (Class A)",S&P SmallCap 600,Utilities,Independent Power and Renewable Electricity Producers,Renewable Electricity,2026-07-15
+CWK,CWK,Cushman & Wakefield plc,S&P SmallCap 600,Real Estate,Real Estate Management & Development,Real Estate Services,2026-07-15
+CWST,CWST,"Casella Waste Systems, Inc.",S&P SmallCap 600,Industrials,Commercial Services & Supplies,Environmental & Facilities Services,2026-07-15
+CWT,CWT,California Water Service Group,S&P SmallCap 600,Utilities,Water Utilities,Water Utilities,2026-07-15
+CXM,CXM,"Sprinklr, Inc.",S&P SmallCap 600,Information Technology,Software,Application Software,2026-07-15
+CXT,CXT,Crane NXT,S&P MidCap 400,Information Technology,"Electronic Equipment, Instruments & Components",Electronic Equipment & Instruments,2026-07-15
+CXW,CXW,CoreCivic,S&P SmallCap 600,Industrials,Commercial Services & Supplies,Diversified Support Services,2026-07-15
+CYTK,CYTK,Cytokinetics,S&P MidCap 400,Health Care,Biotechnology,Biotechnology,2026-07-15
+CZR,CZR,Caesars Entertainment,S&P SmallCap 600,Consumer Discretionary,"Hotels, Restaurants & Leisure",Casinos & Gaming,2026-07-15
+D,D,Dominion Energy,S&P 500,Utilities,Multi-Utilities,Multi-Utilities,2026-07-15
+DAL,DAL,Delta Air Lines,S&P 500,Industrials,Passenger Airlines,Passenger Airlines,2026-07-15
+DAN,DAN,Dana Incorporated,S&P SmallCap 600,Consumer Discretionary,Automobile Components,Automotive Parts & Equipment,2026-07-15
+DAR,DAR,Darling Ingredients,S&P MidCap 400,Consumer Staples,Food Products,Agricultural Products & Services,2026-07-15
+DASH,DASH,DoorDash,S&P 500,Consumer Discretionary,Diversified Consumer Services,Specialized Consumer Services,2026-07-15
+DAVE,DAVE,"Dave, Inc.",S&P SmallCap 600,Financials,Consumer Finance,Consumer Finance,2026-07-15
+DBD,DBD,Diebold Nixdorf,S&P SmallCap 600,Information Technology,"Electronic Equipment, Instruments & Components",Electronic Equipment & Instruments,2026-07-15
+DBX,DBX,Dropbox,S&P MidCap 400,Information Technology,Software,Application Software,2026-07-15
+DCH,DCH,Dauch Corporation,S&P SmallCap 600,Consumer Discretionary,Automobile Components,Automotive Parts & Equipment,2026-07-15
+DCI,DCI,Donaldson Company,S&P MidCap 400,Industrials,Machinery,Industrial Machinery & Supplies & Components,2026-07-15
+DCOM,DCOM,"Dime Community Bancshares, Inc.",S&P SmallCap 600,Financials,Banks,Regional Banks,2026-07-15
+DD,DD,DuPont,S&P 500,Materials,Chemicals,Specialty Chemicals,2026-07-15
+DDOG,DDOG,Datadog,S&P 500,Information Technology,Software,Application Software,2026-07-15
+DE,DE,Deere & Company,S&P 500,Industrials,Machinery,Agricultural & Farm Machinery,2026-07-15
+DEA,DEA,"Easterly Government Properties, Inc.",S&P SmallCap 600,Real Estate,Office REITs,Office REITs,2026-07-15
+DECK,DECK,Deckers Brands,S&P 500,Consumer Discretionary,"Textiles, Apparel & Luxury Goods",Footwear,2026-07-15
+DEI,DEI,Douglas Emmett,S&P SmallCap 600,Real Estate,Office REITs,Office REITs,2026-07-15
+DELL,DELL,Dell Technologies,S&P 500,Information Technology,"Technology Hardware, Storage & Peripherals","Technology Hardware, Storage & Peripherals",2026-07-15
+DFH,DFH,"Dream Finders Homes, Inc.",S&P SmallCap 600,Consumer Discretionary,Household Durables,Homebuilding,2026-07-15
+DFIN,DFIN,"Donnelley Financial Solutions, Inc.",S&P SmallCap 600,Financials,Capital Markets,Financial Exchanges & Data,2026-07-15
+DG,DG,Dollar General,S&P 500,Consumer Staples,Consumer Staples Distribution & Retail,Consumer Staples Merchandise Retail,2026-07-15
+DGII,DGII,Digi International Inc.,S&P SmallCap 600,Information Technology,Communications Equipment,Communications Equipment,2026-07-15
+DGX,DGX,Quest Diagnostics,S&P 500,Health Care,Health Care Providers & Services,Health Care Services,2026-07-15
+DHI,DHI,D. R. Horton,S&P 500,Consumer Discretionary,Household Durables,Homebuilding,2026-07-15
+DHR,DHR,Danaher Corporation,S&P 500,Health Care,Life Sciences Tools & Services,Life Sciences Tools & Services,2026-07-15
+DINO,DINO,HF Sinclair,S&P MidCap 400,Energy,"Oil, Gas & Consumable Fuels",Oil & Gas Refining & Marketing,2026-07-15
+DIOD,DIOD,Diodes Incorporated,S&P SmallCap 600,Information Technology,Semiconductors & Semiconductor Equipment,Semiconductors,2026-07-15
+DIS,DIS,Walt Disney Company (The),S&P 500,Communication Services,Entertainment,Movies & Entertainment,2026-07-15
+DKS,DKS,Dick's Sporting Goods,S&P MidCap 400,Consumer Discretionary,Specialty Retail,Other Specialty Retail,2026-07-15
+DLB,DLB,Dolby,S&P MidCap 400,Information Technology,Software,Application Software,2026-07-15
+DLR,DLR,Digital Realty,S&P 500,Real Estate,Specialized REITs,Data Center REITs,2026-07-15
+DLTR,DLTR,Dollar Tree,S&P 500,Consumer Staples,Consumer Staples Distribution & Retail,Consumer Staples Merchandise Retail,2026-07-15
+DLX,DLX,Deluxe Corporation,S&P SmallCap 600,Industrials,Commercial Services & Supplies,Commercial Printing,2026-07-15
+DMC,DMC,Del Monte Corporation,S&P SmallCap 600,Consumer Staples,Food Products,Packaged Foods & Meats,2026-07-15
+DNOW,DNOW,NOW Inc,S&P SmallCap 600,Industrials,Trading Companies & Distributors,Trading Companies & Distributors,2026-07-15
+DOC,DOC,Healthpeak Properties,S&P 500,Real Estate,Health Care REITs,Health Care REITs,2026-07-15
+DOCN,DOCN,DigitalOcean,S&P MidCap 400,Information Technology,IT Services,Internet Services & Infrastructure,2026-07-15
+DOCS,DOCS,Doximity,S&P MidCap 400,Health Care,Health Care Technology,Health Care Technology,2026-07-15
+DOCU,DOCU,Docusign,S&P MidCap 400,Information Technology,Software,Application Software,2026-07-15
+DORM,DORM,"Dorman Products, Inc.",S&P SmallCap 600,Consumer Discretionary,Automobile Components,Automotive Parts & Equipment,2026-07-15
+DOV,DOV,Dover Corporation,S&P 500,Industrials,Machinery,Industrial Machinery & Supplies & Components,2026-07-15
+DOW,DOW,Dow Inc.,S&P 500,Materials,Chemicals,Commodity Chemicals,2026-07-15
+DPZ,DPZ,Domino's,S&P 500,Consumer Discretionary,"Hotels, Restaurants & Leisure",Restaurants,2026-07-15
+DRH,DRH,DiamondRock Hospitality Company,S&P SmallCap 600,Real Estate,Hotel & Resort REITs,Hotel & Resort REITs,2026-07-15
+DRI,DRI,Darden Restaurants,S&P 500,Consumer Discretionary,"Hotels, Restaurants & Leisure",Restaurants,2026-07-15
+DT,DT,Dynatrace,S&P MidCap 400,Information Technology,Software,Application Software,2026-07-15
+DTE,DTE,DTE Energy,S&P 500,Utilities,Multi-Utilities,Multi-Utilities,2026-07-15
+DTM,DTM,DT Midstream,S&P MidCap 400,Energy,"Oil, Gas & Consumable Fuels",Oil & Gas Storage & Transportation,2026-07-15
+DUK,DUK,Duke Energy,S&P 500,Utilities,Electric Utilities,Electric Utilities,2026-07-15
+DUOL,DUOL,Duolingo,S&P MidCap 400,Consumer Discretionary,Diversified Consumer Services,Education Services,2026-07-15
+DV,DV,"DoubleVerify Holdings, Inc.",S&P SmallCap 600,Communication Services,Media,Advertising,2026-07-15
+DVA,DVA,DaVita,S&P 500,Health Care,Health Care Providers & Services,Health Care Services,2026-07-15
+DVN,DVN,Devon Energy,S&P 500,Energy,"Oil, Gas & Consumable Fuels",Oil & Gas Exploration & Production,2026-07-15
+DXC,DXC,DXC Technology,S&P SmallCap 600,Information Technology,IT Services,IT Consulting & Other Services,2026-07-15
+DXCM,DXCM,Dexcom,S&P 500,Health Care,Health Care Equipment & Supplies,Health Care Equipment,2026-07-15
+DXPE,DXPE,"DXP Enterprises, Inc.",S&P SmallCap 600,Industrials,Trading Companies & Distributors,Trading Companies & Distributors,2026-07-15
+DY,DY,Dycom Industries,S&P MidCap 400,Industrials,Construction & Engineering,Construction & Engineering,2026-07-15
+EA,EA,Electronic Arts,S&P 500,Communication Services,Entertainment,Interactive Home Entertainment,2026-07-15
+EAT,EAT,"Brinker International, Inc.",S&P SmallCap 600,Consumer Discretionary,"Hotels, Restaurants & Leisure",Restaurants,2026-07-15
+EBAY,EBAY,eBay Inc.,S&P 500,Consumer Discretionary,Broadline Retail,Broadline Retail,2026-07-15
+EBC,EBC,"Eastern Bankshares, Inc.",S&P SmallCap 600,Financials,Banks,Regional Banks,2026-07-15
+ECG,ECG,"Everus Construction Group, Inc.",S&P SmallCap 600,Industrials,Construction & Engineering,Construction & Engineering,2026-07-15
+ECHO,ECHO,EchoStar,S&P 500,Communication Services,Wireless Telecommunication Services,Wireless Telecommunication Services,2026-07-15
+ECL,ECL,Ecolab,S&P 500,Materials,Chemicals,Specialty Chemicals,2026-07-15
+ECPG,ECPG,"Encore Capital Group, Inc.",S&P SmallCap 600,Financials,Consumer Finance,Consumer Finance,2026-07-15
+ED,ED,Consolidated Edison,S&P 500,Utilities,Multi-Utilities,Multi-Utilities,2026-07-15
+EEFT,EEFT,Euronet Worldwide,S&P MidCap 400,Financials,Financial Services,Transaction & Payment Processing Services,2026-07-15
+EFC,EFC,"Ellington Financial, Inc.",S&P SmallCap 600,Financials,Financial Services,Specialized Finance,2026-07-15
+EFOR,EFOR,Everforth Inc.,S&P SmallCap 600,Information Technology,IT Services,IT Consulting & Other Services,2026-07-15
+EFX,EFX,Equifax,S&P 500,Industrials,Professional Services,Research & Consulting Services,2026-07-15
+EG,EG,Everest Group,S&P 500,Financials,Insurance,Reinsurance,2026-07-15
+EGBN,EGBN,Eagle Bancorp Inc,S&P SmallCap 600,Financials,Banks,Regional Banks,2026-07-15
+EGP,EGP,EastGroup Properties,S&P MidCap 400,Real Estate,Industrial REITs,Industrial REITs,2026-07-15
+EHC,EHC,Encompass Health,S&P MidCap 400,Health Care,Health Care Providers & Services,Health Care Facilities,2026-07-15
+EIG,EIG,"Employers Holdings, Inc.",S&P SmallCap 600,Financials,Insurance,Property & Casualty Insurance,2026-07-15
+EIX,EIX,Edison International,S&P 500,Utilities,Electric Utilities,Electric Utilities,2026-07-15
+EL,EL,Estée Lauder Companies (The),S&P 500,Consumer Staples,Personal Care Products,Personal Care Products,2026-07-15
+ELAN,ELAN,Elanco,S&P MidCap 400,Health Care,Pharmaceuticals,Pharmaceuticals,2026-07-15
+ELF,ELF,e.l.f. Beauty,S&P MidCap 400,Consumer Staples,Personal Care Products,Personal Care Products,2026-07-15
+ELS,ELS,Equity Lifestyle Properties,S&P MidCap 400,Real Estate,Residential REITs,Single-Family Residential REITs,2026-07-15
+ELV,ELV,Elevance Health,S&P 500,Health Care,Health Care Providers & Services,Managed Health Care,2026-07-15
+EME,EME,Emcor,S&P 500,Industrials,Construction & Engineering,Construction & Engineering,2026-07-15
+EMN,EMN,Eastman Chemical Company,S&P SmallCap 600,Materials,Chemicals,Specialty Chemicals,2026-07-15
+EMR,EMR,Emerson Electric,S&P 500,Industrials,Electrical Equipment,Electrical Components & Equipment,2026-07-15
+ENOV,ENOV,Enovis,S&P SmallCap 600,Health Care,Health Care Equipment & Supplies,Health Care Equipment,2026-07-15
+ENPH,ENPH,Enphase Energy,S&P SmallCap 600,Information Technology,Semiconductors & Semiconductor Equipment,Semiconductor Materials & Equipment,2026-07-15
+ENR,ENR,Energizer,S&P SmallCap 600,Consumer Staples,Household Products,Household Products,2026-07-15
+ENS,ENS,EnerSys,S&P MidCap 400,Industrials,Electrical Equipment,Electrical Components & Equipment,2026-07-15
+ENSG,ENSG,Ensign Group,S&P MidCap 400,Health Care,Health Care Providers & Services,Health Care Facilities,2026-07-15
+ENTG,ENTG,Entegris,S&P MidCap 400,Information Technology,Semiconductors & Semiconductor Equipment,Semiconductor Materials & Equipment,2026-07-15
+ENVA,ENVA,"Enova International, Inc.",S&P SmallCap 600,Financials,Consumer Finance,Consumer Finance,2026-07-15
+EOG,EOG,EOG Resources,S&P 500,Energy,"Oil, Gas & Consumable Fuels",Oil & Gas Exploration & Production,2026-07-15
+EPAC,EPAC,Enerpac Tool Group,S&P SmallCap 600,Industrials,Machinery,Industrial Machinery & Supplies & Components,2026-07-15
+EPAM,EPAM,EPAM Systems,S&P SmallCap 600,Information Technology,IT Services,IT Consulting & Other Services,2026-07-15
+EPC,EPC,Edgewell Personal Care,S&P SmallCap 600,Consumer Staples,Household Products,Household Products,2026-07-15
+EPR,EPR,EPR Properties,S&P MidCap 400,Real Estate,Specialized REITs,Other Specialized REITs,2026-07-15
+EPRT,EPRT,"Essential Properties Realty Trust, Inc.",S&P SmallCap 600,Real Estate,Diversified REITs,Diversified REITs,2026-07-15
+EQH,EQH,Equitable Holdings,S&P MidCap 400,Financials,Financial Services,Diversified Financial Services,2026-07-15
+EQIX,EQIX,Equinix,S&P 500,Real Estate,Specialized REITs,Data Center REITs,2026-07-15
+EQR,EQR,Equity Residential,S&P 500,Real Estate,Residential REITs,Multi-Family Residential REITs,2026-07-15
+EQT,EQT,EQT Corporation,S&P 500,Energy,"Oil, Gas & Consumable Fuels",Oil & Gas Exploration & Production,2026-07-15
+ERIE,ERIE,Erie Indemnity,S&P 500,Financials,Insurance,Insurance Brokers,2026-07-15
+ES,ES,Eversource Energy,S&P 500,Utilities,Electric Utilities,Electric Utilities,2026-07-15
+ESAB,ESAB,ESAB,S&P MidCap 400,Industrials,Machinery,Industrial Machinery & Supplies & Components,2026-07-15
+ESE,ESE,ESCO Technologies Inc.,S&P SmallCap 600,Industrials,Machinery,Industrial Machinery & Supplies & Components,2026-07-15
+ESI,ESI,Element Solutions,S&P SmallCap 600,Materials,Chemicals,Specialty Chemicals,2026-07-15
+ESNT,ESNT,Essent Group Ltd.,S&P MidCap 400,Financials,Financial Services,Commercial & Residential Mortgage Finance,2026-07-15
+ESS,ESS,Essex Property Trust,S&P 500,Real Estate,Residential REITs,Multi-Family Residential REITs,2026-07-15
+ETN,ETN,Eaton Corporation,S&P 500,Industrials,Electrical Equipment,Electrical Components & Equipment,2026-07-15
+ETR,ETR,Entergy,S&P 500,Utilities,Electric Utilities,Electric Utilities,2026-07-15
+ETSY,ETSY,Etsy,S&P SmallCap 600,Consumer Discretionary,Broadline Retail,Broadline Retail,2026-07-15
+EVR,EVR,Evercore,S&P MidCap 400,Financials,Capital Markets,Investment Banking & Brokerage,2026-07-15
+EVRG,EVRG,Evergy,S&P 500,Utilities,Electric Utilities,Electric Utilities,2026-07-15
+EVTC,EVTC,"EVERTEC, Inc.",S&P SmallCap 600,Financials,Financial Services,Transaction & Payment Processing Services,2026-07-15
+EW,EW,Edwards Lifesciences,S&P 500,Health Care,Health Care Equipment & Supplies,Health Care Equipment,2026-07-15
+EWBC,EWBC,East West Bancorp,S&P MidCap 400,Financials,Banks,Regional Banks,2026-07-15
+EXC,EXC,Exelon,S&P 500,Utilities,Electric Utilities,Electric Utilities,2026-07-15
+EXE,EXE,Expand Energy,S&P 500,Energy,"Oil, Gas & Consumable Fuels",Oil & Gas Exploration & Production,2026-07-15
+EXEL,EXEL,Exelixis,S&P MidCap 400,Health Care,Biotechnology,Biotechnology,2026-07-15
+EXLS,EXLS,EXL Service,S&P MidCap 400,Industrials,Professional Services,Data Processing & Outsourced Services,2026-07-15
+EXP,EXP,Eagle Materials,S&P MidCap 400,Materials,Construction Materials,Construction Materials,2026-07-15
+EXPD,EXPD,Expeditors International,S&P 500,Industrials,Air Freight & Logistics,Air Freight & Logistics,2026-07-15
+EXPE,EXPE,Expedia Group,S&P 500,Consumer Discretionary,"Hotels, Restaurants & Leisure","Hotels, Resorts & Cruise Lines",2026-07-15
+EXPO,EXPO,"Exponent, Inc.",S&P MidCap 400,Industrials,Professional Services,Research & Consulting Services,2026-07-15
+EXR,EXR,Extra Space Storage,S&P 500,Real Estate,Specialized REITs,Self-Storage REITs,2026-07-15
+EXTR,EXTR,"Extreme Networks, Inc.",S&P SmallCap 600,Information Technology,Communications Equipment,Communications Equipment,2026-07-15
+EYE,EYE,National Vision Holdings,S&P SmallCap 600,Consumer Discretionary,Specialty Retail,Other Specialty Retail,2026-07-15
+EZPW,EZPW,"EZCORP, Inc.",S&P SmallCap 600,Financials,Consumer Finance,Consumer Finance,2026-07-15
+F,F,Ford Motor Company,S&P 500,Consumer Discretionary,Automobiles,Automobile Manufacturers,2026-07-15
+FA,FA,First Advantage Corporation,S&P SmallCap 600,Industrials,Professional Services,Human Resource & Employment Services,2026-07-15
+FAF,FAF,First American Financial Corporation,S&P MidCap 400,Financials,Insurance,Property & Casualty Insurance,2026-07-15
+FANG,FANG,Diamondback Energy,S&P 500,Energy,"Oil, Gas & Consumable Fuels",Oil & Gas Exploration & Production,2026-07-15
+FAST,FAST,Fastenal,S&P 500,Industrials,Trading Companies & Distributors,Trading Companies & Distributors,2026-07-15
+FBIN,FBIN,Fortune Brands Innovations,S&P MidCap 400,Industrials,Building Products,Building Products,2026-07-15
+FBK,FBK,FB Financial Corp.,S&P SmallCap 600,Financials,Banks,Regional Banks,2026-07-15
+FBNC,FBNC,First Bancorp (Southern Pines NC),S&P SmallCap 600,Financials,Banks,Regional Banks,2026-07-15
+FBP,FBP,First BanCorp (Puerto Rico),S&P SmallCap 600,Financials,Banks,Regional Banks,2026-07-15
+FBRT,FBRT,"Franklin BSP Realty Trust, Inc.",S&P SmallCap 600,Financials,Mortgage Real Estate Investment Trusts (REITs),Mortgage REITs,2026-07-15
+FCF,FCF,"First Commonwealth Financial, Corp.",S&P SmallCap 600,Financials,Banks,Regional Banks,2026-07-15
+FCFS,FCFS,FirstCash,S&P MidCap 400,Financials,Consumer Finance,Consumer Finance,2026-07-15
+FCN,FCN,FTI Consulting,S&P MidCap 400,Industrials,Professional Services,Research & Consulting Services,2026-07-15
+FCPT,FCPT,"Four Corners Property Trust, Inc.",S&P SmallCap 600,Real Estate,Specialized REITs,Other Specialized REITs,2026-07-15
+FCX,FCX,Freeport-McMoRan,S&P 500,Materials,Metals & Mining,Copper,2026-07-15
+FDS,FDS,FactSet,S&P 500,Financials,Capital Markets,Financial Exchanges & Data,2026-07-15
+FDX,FDX,FedEx,S&P 500,Industrials,Air Freight & Logistics,Air Freight & Logistics,2026-07-15
+FDXF,FDXF,FedEx Freight,S&P 500,Industrials,Ground Transportation,Cargo Ground Transportation,2026-07-15
+FE,FE,FirstEnergy,S&P 500,Utilities,Electric Utilities,Electric Utilities,2026-07-15
+FELE,FELE,Franklin Electric,S&P SmallCap 600,Industrials,Machinery,Industrial Machinery & Supplies & Components,2026-07-15
+FFBC,FFBC,First Financial Bancorp,S&P SmallCap 600,Financials,Banks,Regional Banks,2026-07-15
+FFIN,FFIN,First Financial Bankshares,S&P MidCap 400,Financials,Banks,Regional Banks,2026-07-15
+FFIV,FFIV,"F5, Inc.",S&P 500,Information Technology,Communications Equipment,Communications Equipment,2026-07-15
+FG,FG,"F&G Annuities & Life, Inc.",S&P SmallCap 600,Financials,Insurance,Life & Health Insurance,2026-07-15
+FHB,FHB,"First Hawaiian, Inc.",S&P SmallCap 600,Financials,Banks,Regional Banks,2026-07-15
+FHI,FHI,Federated Hermes,S&P MidCap 400,Financials,Capital Markets,Asset Management & Custody Banks,2026-07-15
+FHN,FHN,First Horizon,S&P MidCap 400,Financials,Banks,Regional Banks,2026-07-15
+FIBK,FIBK,"First Interstate BancSystem, Inc.",S&P SmallCap 600,Financials,Banks,Regional Banks,2026-07-15
+FICO,FICO,Fair Isaac,S&P 500,Information Technology,Software,Application Software,2026-07-15
+FIS,FIS,Fidelity National Information Services,S&P 500,Financials,Financial Services,Transaction & Payment Processing Services,2026-07-15
+FISV,FISV,Fiserv,S&P 500,Financials,Financial Services,Transaction & Payment Processing Services,2026-07-15
+FITB,FITB,Fifth Third Bancorp,S&P 500,Financials,Banks,Regional Banks,2026-07-15
+FIVE,FIVE,Five Below,S&P MidCap 400,Consumer Discretionary,Specialty Retail,Other Specialty Retail,2026-07-15
+FIX,FIX,Comfort Systems USA,S&P 500,Industrials,Construction & Engineering,Construction & Engineering,2026-07-15
+FIZZ,FIZZ,National Beverage Corp.,S&P SmallCap 600,Consumer Staples,Beverages,Soft Drinks & Non-alcoholic Beverages,2026-07-15
+FLEX,FLEX,Flex Ltd.,S&P 500,Information Technology,"Electronic Equipment, Instruments & Components",Electronic Manufacturing Services,2026-07-15
+FLG,FLG,Flagstar Bank,S&P MidCap 400,Financials,Banks,Regional Banks,2026-07-15
+FLO,FLO,Flowers Foods,S&P SmallCap 600,Consumer Staples,Food Products,Packaged Foods & Meats,2026-07-15
+FLR,FLR,Fluor,S&P MidCap 400,Industrials,Construction & Engineering,Construction & Engineering,2026-07-15
+FLS,FLS,Flowserve,S&P MidCap 400,Industrials,Machinery,Industrial Machinery & Supplies & Components,2026-07-15
+FMC,FMC,FMC Corporation,S&P SmallCap 600,Materials,Chemicals,Fertilizers & Agricultural Chemicals,2026-07-15
+FN,FN,Fabrinet,S&P MidCap 400,Information Technology,"Electronic Equipment, Instruments & Components",Electronic Manufacturing Services,2026-07-15
+FNB,FNB,FNB Corporation,S&P MidCap 400,Financials,Banks,Regional Banks,2026-07-15
+FND,FND,Floor & Decor,S&P MidCap 400,Consumer Discretionary,Specialty Retail,Home Improvement Retail,2026-07-15
+FNF,FNF,Fidelity National Financial,S&P MidCap 400,Financials,Insurance,Property & Casualty Insurance,2026-07-15
+FORM,FORM,"FormFactor, Inc.",S&P SmallCap 600,Information Technology,Semiconductors & Semiconductor Equipment,Semiconductor Materials & Equipment,2026-07-15
+FOUR,FOUR,Shift4,S&P MidCap 400,Financials,Financial Services,Transaction & Payment Processing Services,2026-07-15
+FOX,FOX,Fox Corporation (Class B),S&P 500,Communication Services,Media,Broadcasting,2026-07-15
+FOXA,FOXA,Fox Corporation (Class A),S&P 500,Communication Services,Media,Broadcasting,2026-07-15
+FOXF,FOXF,Fox Factory,S&P SmallCap 600,Consumer Discretionary,Automobile Components,Automotive Parts & Equipment,2026-07-15
+FR,FR,First Industrial Realty Trust,S&P MidCap 400,Real Estate,Industrial REITs,Industrial REITs,2026-07-15
+FRPT,FRPT,Freshpet,S&P SmallCap 600,Consumer Staples,Food Products,Packaged Foods & Meats,2026-07-15
+FRT,FRT,Federal Realty Investment Trust,S&P 500,Real Estate,Retail REITs,Retail REITs,2026-07-15
+FSLR,FSLR,First Solar,S&P 500,Information Technology,Semiconductors & Semiconductor Equipment,Semiconductors,2026-07-15
+FSS,FSS,Federal Signal Corporation,S&P SmallCap 600,Industrials,Machinery,Construction Machinery & Heavy Transportation Equipment,2026-07-15
+FTDR,FTDR,"Frontdoor, Inc.",S&P SmallCap 600,Consumer Discretionary,Diversified Consumer Services,Specialized Consumer Services,2026-07-15
+FTI,FTI,TechnipFMC,S&P MidCap 400,Energy,Energy Equipment & Services,Oil & Gas Equipment & Services,2026-07-15
+FTNT,FTNT,Fortinet,S&P 500,Information Technology,Software,Systems Software,2026-07-15
+FTRE,FTRE,Fortrea,S&P SmallCap 600,Health Care,Biotechnology,Biotechnology,2026-07-15
+FTV,FTV,Fortive,S&P 500,Industrials,Machinery,Industrial Machinery & Supplies & Components,2026-07-15
+FUL,FUL,H.B. Fuller Company,S&P SmallCap 600,Materials,Chemicals,Specialty Chemicals,2026-07-15
+FULT,FULT,Fulton Financial Corporation,S&P SmallCap 600,Financials,Banks,Regional Banks,2026-07-15
+FUN,FUN,Six Flags,S&P SmallCap 600,Consumer Discretionary,"Hotels, Restaurants & Leisure",Leisure Facilities,2026-07-15
+G,G,Genpact,S&P MidCap 400,Industrials,Professional Services,Data Processing & Outsourced Services,2026-07-15
+GAP,GAP,Gap Inc.,S&P MidCap 400,Consumer Discretionary,Specialty Retail,Apparel Retail,2026-07-15
+GATX,GATX,GATX,S&P MidCap 400,Industrials,Machinery,Construction Machinery & Heavy Transportation Equipment,2026-07-15
+GBCI,GBCI,Glacier Bancorp,S&P MidCap 400,Financials,Banks,Regional Banks,2026-07-15
+GBX,GBX,"The Greenbrier Companies, Inc.",S&P SmallCap 600,Industrials,Machinery,Construction Machinery & Heavy Transportation Equipment,2026-07-15
+GD,GD,General Dynamics,S&P 500,Industrials,Aerospace & Defense,Aerospace & Defense,2026-07-15
+GDDY,GDDY,GoDaddy,S&P 500,Information Technology,IT Services,Internet Services & Infrastructure,2026-07-15
+GE,GE,GE Aerospace,S&P 500,Industrials,Aerospace & Defense,Aerospace & Defense,2026-07-15
+GEF,GEF,"Greif, Inc.",S&P MidCap 400,Materials,Containers & Packaging,"Metal, Glass & Plastic Containers",2026-07-15
+GEHC,GEHC,GE HealthCare,S&P 500,Health Care,Health Care Equipment & Supplies,Health Care Equipment,2026-07-15
+GEN,GEN,Gen Digital,S&P 500,Information Technology,Software,Systems Software,2026-07-15
+GEO,GEO,"GEO Group, Inc.",S&P SmallCap 600,Industrials,Commercial Services & Supplies,Environmental & Facilities Services,2026-07-15
+GEV,GEV,GE Vernova,S&P 500,Industrials,Electrical Equipment,Heavy Electrical Equipment,2026-07-15
+GFF,GFF,Griffon Corporation,S&P SmallCap 600,Industrials,Building Products,Building Products,2026-07-15
+GGG,GGG,Graco Inc.,S&P MidCap 400,Industrials,Machinery,Industrial Machinery & Supplies & Components,2026-07-15
+GHC,GHC,Graham Holdings,S&P MidCap 400,Consumer Discretionary,Diversified Consumer Services,Education Services,2026-07-15
+GIII,GIII,"G-III Apparel Group, Ltd.",S&P SmallCap 600,Consumer Discretionary,"Textiles, Apparel & Luxury Goods","Apparel, Accessories & Luxury Goods",2026-07-15
+GILD,GILD,Gilead Sciences,S&P 500,Health Care,Biotechnology,Biotechnology,2026-07-15
+GIS,GIS,General Mills,S&P 500,Consumer Staples,Food Products,Packaged Foods & Meats,2026-07-15
+GKOS,GKOS,Glaukos Corp.,S&P SmallCap 600,Health Care,Health Care Equipment & Supplies,Health Care Equipment,2026-07-15
+GL,GL,Globe Life,S&P 500,Financials,Insurance,Life & Health Insurance,2026-07-15
+GLPI,GLPI,Gaming and Leisure Properties,S&P MidCap 400,Real Estate,Specialized REITs,Other Specialized REITs,2026-07-15
+GLW,GLW,Corning Inc.,S&P 500,Information Technology,"Electronic Equipment, Instruments & Components",Electronic Components,2026-07-15
+GM,GM,General Motors,S&P 500,Consumer Discretionary,Automobiles,Automobile Manufacturers,2026-07-15
+GME,GME,GameStop,S&P MidCap 400,Consumer Discretionary,Specialty Retail,Computer & Electronics Retail,2026-07-15
+GMED,GMED,Globus Medical,S&P MidCap 400,Health Care,Health Care Equipment & Supplies,Health Care Equipment,2026-07-15
+GNL,GNL,"Global Net Lease, Inc.",S&P SmallCap 600,Real Estate,Diversified REITs,Diversified REITs,2026-07-15
+GNRC,GNRC,Generac,S&P 500,Industrials,Electrical Equipment,Heavy Electrical Equipment,2026-07-15
+GNTX,GNTX,Gentex,S&P MidCap 400,Consumer Discretionary,Automobile Components,Automotive Parts & Equipment,2026-07-15
+GNW,GNW,"Genworth Financial, Inc.",S&P SmallCap 600,Financials,Insurance,Multi-line Insurance,2026-07-15
+GO,GO,Grocery Outlet,S&P SmallCap 600,Consumer Staples,Consumer Staples Distribution & Retail,Food Retail,2026-07-15
+GOLF,GOLF,Acushnet Company,S&P SmallCap 600,Consumer Discretionary,Leisure Products,Leisure Products,2026-07-15
+GOOG,GOOG,Alphabet Inc. (Class C),S&P 500,Communication Services,Interactive Media & Services,Interactive Media & Services,2026-07-15
+GOOGL,GOOGL,Alphabet Inc. (Class A),S&P 500,Communication Services,Interactive Media & Services,Interactive Media & Services,2026-07-15
+GPC,GPC,Genuine Parts Company,S&P 500,Consumer Discretionary,Distributors,Distributors,2026-07-15
+GPI,GPI,"Group 1 Automotive, Inc.",S&P SmallCap 600,Consumer Discretionary,Specialty Retail,Automotive Retail,2026-07-15
+GPK,GPK,Graphic Packaging,S&P MidCap 400,Materials,Containers & Packaging,Paper & Plastic Packaging Products & Materials,2026-07-15
+GPN,GPN,Global Payments,S&P 500,Financials,Financial Services,Transaction & Payment Processing Services,2026-07-15
+GPOR,GPOR,Gulfport Energy Corporation,S&P SmallCap 600,Energy,"Oil, Gas & Consumable Fuels",Oil & Gas Exploration & Production,2026-07-15
+GRBK,GRBK,"Green Brick Partners, Inc.",S&P SmallCap 600,Consumer Discretionary,Household Durables,Homebuilding,2026-07-15
+GRMN,GRMN,Garmin,S&P 500,Consumer Discretionary,Household Durables,Consumer Electronics,2026-07-15
+GS,GS,Goldman Sachs,S&P 500,Financials,Capital Markets,Investment Banking & Brokerage,2026-07-15
+GSHD,GSHD,"Goosehead Insurance, Inc.",S&P SmallCap 600,Financials,Insurance,Insurance Brokers,2026-07-15
+GT,GT,Goodyear Tire and Rubber Company,S&P SmallCap 600,Consumer Discretionary,Automobile Components,Tires & Rubber,2026-07-15
+GTES,GTES,Gates Corporation,S&P SmallCap 600,Industrials,Machinery,Industrial Machinery & Supplies & Components,2026-07-15
+GTLS,GTLS,Chart Industries,S&P MidCap 400,Industrials,Machinery,Industrial Machinery & Supplies & Components,2026-07-15
+GTM,GTM,ZoomInfo,S&P SmallCap 600,Communication Services,Interactive Media & Services,Interactive Media & Services,2026-07-15
+GTY,GTY,Getty Realty Corp.,S&P SmallCap 600,Real Estate,Retail REITs,Retail REITs,2026-07-15
+GVA,GVA,"Granite Construction, Inc.",S&P SmallCap 600,Industrials,Construction & Engineering,Construction & Engineering,2026-07-15
+GWRE,GWRE,Guidewire Software,S&P MidCap 400,Information Technology,Software,Application Software,2026-07-15
+GWW,GWW,W. W. Grainger,S&P 500,Industrials,Machinery,Industrial Machinery & Supplies & Components,2026-07-15
+GXO,GXO,GXO Logistics,S&P MidCap 400,Industrials,Air Freight & Logistics,Air Freight & Logistics,2026-07-15
+H,H,Hyatt,S&P MidCap 400,Consumer Discretionary,"Hotels, Restaurants & Leisure","Hotels, Resorts & Cruise Lines",2026-07-15
+HAE,HAE,Haemonetics,S&P MidCap 400,Health Care,Health Care Equipment & Supplies,Health Care Supplies,2026-07-15
+HAFC,HAFC,Hanmi Financial Corporation,S&P SmallCap 600,Financials,Banks,Regional Banks,2026-07-15
+HAL,HAL,Halliburton,S&P 500,Energy,Energy Equipment & Services,Oil & Gas Equipment & Services,2026-07-15
+HALO,HALO,Halozyme,S&P MidCap 400,Health Care,Biotechnology,Biotechnology,2026-07-15
+HAS,HAS,Hasbro,S&P 500,Consumer Discretionary,Leisure Products,Leisure Products,2026-07-15
+HASI,HASI,"Hannon Armstrong Sustainable Infrastructure Capital, Inc.",S&P SmallCap 600,Financials,Financial Services,Specialized Finance,2026-07-15
+HAYW,HAYW,"Hayward Holdings, Inc.",S&P SmallCap 600,Industrials,Electrical Equipment,Electrical Components & Equipment,2026-07-15
+HBAN,HBAN,Huntington Bancshares,S&P 500,Financials,Banks,Regional Banks,2026-07-15
+HCA,HCA,HCA Healthcare,S&P 500,Health Care,Health Care Providers & Services,Health Care Facilities,2026-07-15
+HCC,HCC,"Warrior Met Coal, Inc.",S&P SmallCap 600,Materials,Metals & Mining,Steel,2026-07-15
+HCI,HCI,"HCI Group, Inc.",S&P SmallCap 600,Financials,Insurance,Property & Casualty Insurance,2026-07-15
+HCSG,HCSG,"Healthcare Services Group, Inc.",S&P SmallCap 600,Industrials,Commercial Services & Supplies,Environmental & Facilities Services,2026-07-15
+HD,HD,Home Depot (The),S&P 500,Consumer Discretionary,Specialty Retail,Home Improvement Retail,2026-07-15
+HE,HE,"Hawaiian Electric Industries, Inc.",S&P SmallCap 600,Utilities,Electric Utilities,Electric Utilities,2026-07-15
+HFWA,HFWA,Heritage Financial Corporation,S&P SmallCap 600,Financials,Banks,Regional Banks,2026-07-15
+HGV,HGV,Hilton Grand Vacations,S&P MidCap 400,Consumer Discretionary,"Hotels, Restaurants & Leisure","Hotels, Resorts & Cruise Lines",2026-07-15
+HIG,HIG,Hartford (The),S&P 500,Financials,Insurance,Property & Casualty Insurance,2026-07-15
+HII,HII,Huntington Ingalls Industries,S&P 500,Industrials,Aerospace & Defense,Aerospace & Defense,2026-07-15
+HIMS,HIMS,Hims & Hers Health,S&P MidCap 400,Health Care,Health Care Providers & Services,Health Care Services,2026-07-15
+HIW,HIW,Highwoods Properties,S&P SmallCap 600,Real Estate,Office REITs,Office REITs,2026-07-15
+HL,HL,Hecla Mining,S&P MidCap 400,Materials,Metals & Mining,Silver,2026-07-15
+HLI,HLI,Houlihan Lokey,S&P MidCap 400,Financials,Capital Markets,Investment Banking & Brokerage,2026-07-15
+HLIT,HLIT,Harmonic Inc.,S&P SmallCap 600,Information Technology,Communications Equipment,Communications Equipment,2026-07-15
+HLNE,HLNE,Hamilton Lane,S&P MidCap 400,Financials,Capital Markets,Asset Management & Custody Banks,2026-07-15
+HLT,HLT,Hilton Worldwide,S&P 500,Consumer Discretionary,"Hotels, Restaurants & Leisure","Hotels, Resorts & Cruise Lines",2026-07-15
+HLX,HLX,"Helix Energy Solutions Group, Inc.",S&P SmallCap 600,Energy,Energy Equipment & Services,Oil & Gas Equipment & Services,2026-07-15
+HMN,HMN,Horace Mann Educators Corporation,S&P SmallCap 600,Financials,Insurance,Multi-line Insurance,2026-07-15
+HNI,HNI,HNI Corporation,S&P SmallCap 600,Industrials,Commercial Services & Supplies,Office Services & Supplies,2026-07-15
+HOG,HOG,Harley-Davidson,S&P MidCap 400,Consumer Discretionary,Automobiles,Motorcycle Manufacturers,2026-07-15
+HOMB,HOMB,Home BancShares,S&P MidCap 400,Financials,Banks,Regional Banks,2026-07-15
+HON,HON,Honeywell Technologies,S&P 500,Industrials,Industrial Conglomerates,Industrial Conglomerates,2026-07-15
+HONA,HONA,Honeywell Aerospace,S&P 500,Industrials,Aerospace & Defense,Aerospace & Defense,2026-07-15
+HOOD,HOOD,Robinhood Markets,S&P 500,Financials,Capital Markets,Investment Banking & Brokerage,2026-07-15
+HOPE,HOPE,"Hope Bancorp, Inc.",S&P SmallCap 600,Financials,Banks,Regional Banks,2026-07-15
+HP,HP,"Helmerich & Payne, Inc.",S&P SmallCap 600,Energy,Energy Equipment & Services,Oil & Gas Drilling,2026-07-15
+HPE,HPE,Hewlett Packard Enterprise,S&P 500,Information Technology,"Technology Hardware, Storage & Peripherals","Technology Hardware, Storage & Peripherals",2026-07-15
+HPQ,HPQ,HP Inc.,S&P 500,Information Technology,"Technology Hardware, Storage & Peripherals","Technology Hardware, Storage & Peripherals",2026-07-15
+HQY,HQY,HealthEquity,S&P MidCap 400,Health Care,Health Care Providers & Services,Managed Health Care,2026-07-15
+HR,HR,Healthcare Realty Trust,S&P MidCap 400,Real Estate,Health Care REITs,Health Care REITs,2026-07-15
+HRB,HRB,H&R Block,S&P MidCap 400,Consumer Discretionary,Diversified Consumer Services,Specialized Consumer Services,2026-07-15
+HRL,HRL,Hormel Foods,S&P 500,Consumer Staples,Food Products,Packaged Foods & Meats,2026-07-15
+HRMY,HRMY,"Harmony Biosciences Holdings, Inc.",S&P SmallCap 600,Health Care,Biotechnology,Biotechnology,2026-07-15
+HSIC,HSIC,Henry Schein,S&P 500,Health Care,Health Care Providers & Services,Health Care Distributors,2026-07-15
+HST,HST,Host Hotels & Resorts,S&P 500,Real Estate,Hotel & Resort REITs,Hotel & Resort REITs,2026-07-15
+HSTM,HSTM,"HealthStream, Inc.",S&P SmallCap 600,Health Care,Health Care Technology,Health Care Technology,2026-07-15
+HSY,HSY,Hershey Company (The),S&P 500,Consumer Staples,Food Products,Packaged Foods & Meats,2026-07-15
+HTH,HTH,Hilltop Holdings Inc.,S&P SmallCap 600,Financials,Banks,Regional Banks,2026-07-15
+HTLD,HTLD,"Heartland Express, Inc.",S&P SmallCap 600,Industrials,Ground Transportation,Cargo Ground Transportation,2026-07-15
+HTO,HTO,H2O America,S&P SmallCap 600,Utilities,Water Utilities,Water Utilities,2026-07-15
+HTZ,HTZ,Hertz,S&P SmallCap 600,Industrials,Ground Transportation,Passenger Ground Transportation,2026-07-15
+HUBB,HUBB,Hubbell Incorporated,S&P 500,Industrials,Machinery,Industrial Machinery & Supplies & Components,2026-07-15
+HUBG,HUBG,"Hub Group, Inc.",S&P SmallCap 600,Industrials,Air Freight & Logistics,Air Freight & Logistics,2026-07-15
+HUM,HUM,Humana,S&P 500,Health Care,Health Care Providers & Services,Managed Health Care,2026-07-15
+HWC,HWC,Hancock Whitney,S&P MidCap 400,Financials,Banks,Regional Banks,2026-07-15
+HWKN,HWKN,"Hawkins, Inc.",S&P SmallCap 600,Materials,Chemicals,Commodity Chemicals,2026-07-15
+HWM,HWM,Howmet Aerospace,S&P 500,Industrials,Aerospace & Defense,Aerospace & Defense,2026-07-15
+HXL,HXL,Hexcel,S&P MidCap 400,Industrials,Aerospace & Defense,Aerospace & Defense,2026-07-15
+HZO,HZO,"MarineMax, Inc.",S&P SmallCap 600,Consumer Discretionary,Specialty Retail,Other Specialty Retail,2026-07-15
+IART,IART,Integra Lifesciences Holdings,S&P SmallCap 600,Health Care,Health Care Equipment & Supplies,Health Care Equipment,2026-07-15
+IBKR,IBKR,Interactive Brokers,S&P 500,Financials,Capital Markets,Investment Banking & Brokerage,2026-07-15
+IBM,IBM,IBM,S&P 500,Information Technology,IT Services,IT Consulting & Other Services,2026-07-15
+IBOC,IBOC,Intl Bancshares Corp,S&P MidCap 400,Financials,Banks,Regional Banks,2026-07-15
+IBP,IBP,"Installed Building Products, Inc.",S&P SmallCap 600,Consumer Discretionary,Household Durables,Homebuilding,2026-07-15
+ICE,ICE,Intercontinental Exchange,S&P 500,Financials,Capital Markets,Financial Exchanges & Data,2026-07-15
+ICHR,ICHR,"Ichor Holdings, Ltd.",S&P SmallCap 600,Information Technology,Semiconductors & Semiconductor Equipment,Semiconductor Materials & Equipment,2026-07-15
+ICUI,ICUI,ICU Medical,S&P SmallCap 600,Health Care,Health Care Equipment & Supplies,Health Care Supplies,2026-07-15
+IDA,IDA,Idacorp,S&P MidCap 400,Utilities,Electric Utilities,Electric Utilities,2026-07-15
+IDCC,IDCC,InterDigital,S&P MidCap 400,Information Technology,Communications Equipment,Communications Equipment,2026-07-15
+IDXX,IDXX,Idexx Laboratories,S&P 500,Health Care,Health Care Equipment & Supplies,Health Care Equipment,2026-07-15
+IEX,IEX,IDEX Corporation,S&P 500,Industrials,Machinery,Industrial Machinery & Supplies & Components,2026-07-15
+IFF,IFF,International Flavors & Fragrances,S&P 500,Materials,Chemicals,Specialty Chemicals,2026-07-15
+IIPR,IIPR,"Innovative Industrial Properties, Inc.",S&P SmallCap 600,Real Estate,Industrial REITs,Industrial REITs,2026-07-15
+ILMN,ILMN,"Illumina, Inc.",S&P MidCap 400,Health Care,Life Sciences Tools & Services,Life Sciences Tools & Services,2026-07-15
+INCY,INCY,Incyte,S&P 500,Health Care,Biotechnology,Biotechnology,2026-07-15
+INDB,INDB,Independent Bank Corp.,S&P SmallCap 600,Financials,Banks,Regional Banks,2026-07-15
+INDV,INDV,Indivior,S&P SmallCap 600,Health Care,Pharmaceuticals,Pharmaceuticals,2026-07-15
+INGR,INGR,Ingredion,S&P MidCap 400,Consumer Staples,Food Products,Agricultural Products & Services,2026-07-15
+INSP,INSP,"Inspire Medical Systems, Inc.",S&P SmallCap 600,Health Care,Health Care Equipment & Supplies,Health Care Equipment,2026-07-15
+INSW,INSW,"International Seaways, Inc.",S&P SmallCap 600,Energy,"Oil, Gas & Consumable Fuels",Oil & Gas Storage & Transportation,2026-07-15
+INTC,INTC,Intel,S&P 500,Information Technology,Semiconductors & Semiconductor Equipment,Semiconductors,2026-07-15
+INTU,INTU,Intuit,S&P 500,Information Technology,Software,Application Software,2026-07-15
+INVA,INVA,"Innoviva, Inc.",S&P SmallCap 600,Health Care,Pharmaceuticals,Pharmaceuticals,2026-07-15
+INVH,INVH,Invitation Homes,S&P 500,Real Estate,Residential REITs,Single-Family Residential REITs,2026-07-15
+INVX,INVX,"Innovex International, Inc.",S&P SmallCap 600,Energy,Energy Equipment & Services,Oil & Gas Equipment & Services,2026-07-15
+IOSP,IOSP,"Innospec, Inc.",S&P SmallCap 600,Materials,Chemicals,Specialty Chemicals,2026-07-15
+IP,IP,International Paper,S&P 500,Materials,Containers & Packaging,Paper & Plastic Packaging Products & Materials,2026-07-15
+IPAR,IPAR,"Inter Parfums, Inc.",S&P SmallCap 600,Consumer Staples,Household Products,Household Products,2026-07-15
+IPGP,IPGP,IPG Photonics,S&P MidCap 400,Information Technology,"Electronic Equipment, Instruments & Components",Electronic Manufacturing Services,2026-07-15
+IQV,IQV,IQVIA,S&P 500,Health Care,Life Sciences Tools & Services,Life Sciences Tools & Services,2026-07-15
+IR,IR,Ingersoll Rand,S&P 500,Industrials,Machinery,Industrial Machinery & Supplies & Components,2026-07-15
+IRDM,IRDM,Iridium Communications,S&P SmallCap 600,Communication Services,Diversified Telecommunication Services,Alternative Carriers,2026-07-15
+IRM,IRM,Iron Mountain,S&P 500,Real Estate,Specialized REITs,Other Specialized REITs,2026-07-15
+IRT,IRT,IRT Living,S&P MidCap 400,Real Estate,Residential REITs,Multi-Family Residential REITs,2026-07-15
+ISRG,ISRG,Intuitive Surgical,S&P 500,Health Care,Health Care Equipment & Supplies,Health Care Equipment,2026-07-15
+IT,IT,Gartner,S&P 500,Information Technology,IT Services,IT Consulting & Other Services,2026-07-15
+ITGR,ITGR,Integer Holdings Corporation,S&P SmallCap 600,Health Care,Health Care Equipment & Supplies,Health Care Equipment,2026-07-15
+ITRI,ITRI,"Itron, Inc.",S&P SmallCap 600,Information Technology,"Electronic Equipment, Instruments & Components",Electronic Equipment & Instruments,2026-07-15
+ITT,ITT,ITT Inc.,S&P MidCap 400,Industrials,Machinery,Industrial Machinery & Supplies & Components,2026-07-15
+ITW,ITW,Illinois Tool Works,S&P 500,Industrials,Machinery,Industrial Machinery & Supplies & Components,2026-07-15
+IVT,IVT,InvenTrust Properties,S&P SmallCap 600,Real Estate,Retail REITs,Retail REITs,2026-07-15
+IVZ,IVZ,Invesco,S&P 500,Financials,Capital Markets,Asset Management & Custody Banks,2026-07-15
+J,J,Jacobs Solutions,S&P 500,Industrials,Construction & Engineering,Construction & Engineering,2026-07-15
+JAZZ,JAZZ,Jazz Pharmaceuticals,S&P MidCap 400,Health Care,Pharmaceuticals,Pharmaceuticals,2026-07-15
+JBGS,JBGS,JBG Smith,S&P SmallCap 600,Real Estate,Office REITs,Office REITs,2026-07-15
+JBHT,JBHT,J.B. Hunt,S&P 500,Industrials,Ground Transportation,Cargo Ground Transportation,2026-07-15
+JBL,JBL,Jabil,S&P 500,Information Technology,"Electronic Equipment, Instruments & Components",Electronic Manufacturing Services,2026-07-15
+JBLU,JBLU,JetBlue,S&P SmallCap 600,Industrials,Passenger Airlines,Passenger Airlines,2026-07-15
+JBSS,JBSS,"John B. Sanfilippo & Son, Inc.",S&P SmallCap 600,Consumer Staples,Food Products,Packaged Foods & Meats,2026-07-15
+JBTM,JBTM,JBT Marel Corporation,S&P SmallCap 600,Industrials,Machinery,Industrial Machinery & Supplies & Components,2026-07-15
+JCI,JCI,Johnson Controls,S&P 500,Industrials,Building Products,Building Products,2026-07-15
+JEF,JEF,Jefferies,S&P MidCap 400,Financials,Financial Services,Multi-Sector Holdings,2026-07-15
+JHG,JHG,Janus Henderson,S&P MidCap 400,Financials,Capital Markets,Asset Management & Custody Banks,2026-07-15
+JJSF,JJSF,J&J Snack Foods Corp.,S&P SmallCap 600,Consumer Staples,Food Products,Packaged Foods & Meats,2026-07-15
+JKHY,JKHY,Jack Henry & Associates,S&P 500,Financials,Financial Services,Transaction & Payment Processing Services,2026-07-15
+JLL,JLL,Jones Lang LaSalle,S&P MidCap 400,Real Estate,Real Estate Management & Development,Real Estate Services,2026-07-15
+JNJ,JNJ,Johnson & Johnson,S&P 500,Health Care,Pharmaceuticals,Pharmaceuticals,2026-07-15
+JOE,JOE,St. Joe Company,S&P SmallCap 600,Real Estate,Real Estate Management & Development,Real Estate Development,2026-07-15
+JPM,JPM,JPMorgan Chase,S&P 500,Financials,Banks,Diversified Banks,2026-07-15
+JXN,JXN,"Jackson Financial, Inc.",S&P SmallCap 600,Financials,Insurance,Life & Health Insurance,2026-07-15
+KAI,KAI,Kadant Inc.,S&P SmallCap 600,Industrials,Machinery,Industrial Machinery & Supplies & Components,2026-07-15
+KALU,KALU,Kaiser Aluminum Corporation,S&P SmallCap 600,Materials,Metals & Mining,Aluminum,2026-07-15
+KBH,KBH,KB Home,S&P MidCap 400,Consumer Discretionary,Household Durables,Homebuilding,2026-07-15
+KBR,KBR,"KBR, Inc.",S&P MidCap 400,Industrials,Commercial Services & Supplies,Diversified Support Services,2026-07-15
+KD,KD,Kyndryl,S&P MidCap 400,Information Technology,IT Services,IT Consulting & Other Services,2026-07-15
+KDP,KDP,Keurig Dr Pepper,S&P 500,Consumer Staples,Beverages,Soft Drinks & Non-alcoholic Beverages,2026-07-15
+KEX,KEX,Kirby Corporation,S&P MidCap 400,Industrials,Marine Transportation,Marine Transportation,2026-07-15
+KEY,KEY,KeyCorp,S&P 500,Financials,Banks,Regional Banks,2026-07-15
+KEYS,KEYS,Keysight Technologies,S&P 500,Information Technology,"Electronic Equipment, Instruments & Components",Electronic Equipment & Instruments,2026-07-15
+KFY,KFY,Korn/Ferry International,S&P SmallCap 600,Industrials,Professional Services,Human Resource & Employment Services,2026-07-15
+KGS,KGS,"Kodiak Gas Services, Inc.",S&P SmallCap 600,Energy,Energy Equipment & Services,Oil & Gas Equipment & Services,2026-07-15
+KHC,KHC,Kraft Heinz,S&P 500,Consumer Staples,Food Products,Packaged Foods & Meats,2026-07-15
+KIM,KIM,Kimco Realty,S&P 500,Real Estate,Retail REITs,Retail REITs,2026-07-15
+KKR,KKR,KKR & Co.,S&P 500,Financials,Capital Markets,Asset Management & Custody Banks,2026-07-15
+KLAC,KLAC,KLA Corporation,S&P 500,Information Technology,Semiconductors & Semiconductor Equipment,Semiconductor Materials & Equipment,2026-07-15
+KLIC,KLIC,"Kulicke and Soffa Industries, Inc.",S&P SmallCap 600,Information Technology,Semiconductors & Semiconductor Equipment,Semiconductor Materials & Equipment,2026-07-15
+KMB,KMB,Kimberly-Clark,S&P 500,Consumer Staples,Household Products,Household Products,2026-07-15
+KMI,KMI,Kinder Morgan,S&P 500,Energy,"Oil, Gas & Consumable Fuels",Oil & Gas Storage & Transportation,2026-07-15
+KMPR,KMPR,Kemper Corporation,S&P SmallCap 600,Financials,Insurance,Multi-line Insurance,2026-07-15
+KMT,KMT,Kennametal,S&P SmallCap 600,Industrials,Machinery,Industrial Machinery & Supplies & Components,2026-07-15
+KMX,KMX,"CarMax, Inc.",S&P SmallCap 600,Consumer Discretionary,Specialty Retail,Automotive Retail,2026-07-15
+KN,KN,Knowles Corporation,S&P SmallCap 600,Information Technology,"Electronic Equipment, Instruments & Components",Electronic Components,2026-07-15
+KNF,KNF,Knife River Corporation,S&P MidCap 400,Materials,Construction Materials,Construction Materials,2026-07-15
+KNSL,KNSL,Kinsale Capital Group,S&P MidCap 400,Financials,Insurance,Property & Casualty Insurance,2026-07-15
+KNTK,KNTK,"Kinetik Holdings, Inc.",S&P SmallCap 600,Energy,"Oil, Gas & Consumable Fuels",Oil & Gas Storage & Transportation,2026-07-15
+KNX,KNX,Knight-Swift,S&P MidCap 400,Industrials,Ground Transportation,Cargo Ground Transportation,2026-07-15
+KO,KO,Coca-Cola Company (The),S&P 500,Consumer Staples,Beverages,Soft Drinks & Non-alcoholic Beverages,2026-07-15
+KOP,KOP,"Koppers Holdings, Inc.",S&P SmallCap 600,Materials,Chemicals,Commodity Chemicals,2026-07-15
+KR,KR,Kroger,S&P 500,Consumer Staples,Consumer Staples Distribution & Retail,Food Retail,2026-07-15
+KRC,KRC,Kilroy Realty Corp,S&P MidCap 400,Real Estate,Office REITs,Office REITs,2026-07-15
+KRG,KRG,Kite Realty Group Trust,S&P MidCap 400,Real Estate,Retail REITs,Retail REITs,2026-07-15
+KRYS,KRYS,"Krystal Biotech, Inc.",S&P SmallCap 600,Health Care,Biotechnology,Biotechnology,2026-07-15
+KSS,KSS,Kohl's Corp.,S&P SmallCap 600,Consumer Discretionary,Broadline Retail,Broadline Retail,2026-07-15
+KTB,KTB,Kontoor Brands,S&P SmallCap 600,Consumer Discretionary,"Textiles, Apparel & Luxury Goods","Apparel, Accessories & Luxury Goods",2026-07-15
+KTOS,KTOS,Kratos Defense & Security Solutions,S&P MidCap 400,Industrials,Aerospace & Defense,Aerospace & Defense,2026-07-15
+KVUE,KVUE,Kenvue,S&P 500,Consumer Staples,Personal Care Products,Personal Care Products,2026-07-15
+KWR,KWR,Quaker Chemical Corporation,S&P SmallCap 600,Materials,Chemicals,Specialty Chemicals,2026-07-15
+L,L,Loews Corporation,S&P 500,Financials,Insurance,Multi-line Insurance,2026-07-15
+LAD,LAD,Lithia Motors,S&P MidCap 400,Consumer Discretionary,Specialty Retail,Automotive Retail,2026-07-15
+LAMR,LAMR,Lamar Advertising Company,S&P MidCap 400,Real Estate,Specialized REITs,Other Specialized REITs,2026-07-15
+LAUR,LAUR,"Laureate Education, Inc.",S&P SmallCap 600,Consumer Discretionary,Diversified Consumer Services,Education Services,2026-07-15
+LAZ,LAZ,Lazard,S&P SmallCap 600,Financials,Capital Markets,Diversified Capital Markets,2026-07-15
+LBRT,LBRT,"Liberty Energy, Inc.",S&P SmallCap 600,Energy,Energy Equipment & Services,Oil & Gas Equipment & Services,2026-07-15
+LCII,LCII,LCI Industries,S&P SmallCap 600,Consumer Discretionary,Automobile Components,Automotive Parts & Equipment,2026-07-15
+LDOS,LDOS,Leidos,S&P 500,Industrials,Commercial Services & Supplies,Diversified Support Services,2026-07-15
+LEA,LEA,Lear,S&P MidCap 400,Consumer Discretionary,Automobile Components,Automotive Parts & Equipment,2026-07-15
+LECO,LECO,Lincoln Electric,S&P MidCap 400,Industrials,Machinery,Industrial Machinery & Supplies & Components,2026-07-15
+LEG,LEG,Leggett & Platt,S&P SmallCap 600,Consumer Discretionary,Household Durables,Home Furnishings,2026-07-15
+LEN,LEN,Lennar,S&P 500,Consumer Discretionary,Household Durables,Homebuilding,2026-07-15
+LFST,LFST,Lifestance Health,S&P SmallCap 600,Health Care,Health Care Providers & Services,Health Care Services,2026-07-15
+LFUS,LFUS,Littelfuse,S&P MidCap 400,Information Technology,"Electronic Equipment, Instruments & Components",Electronic Components,2026-07-15
+LGIH,LGIH,LGI Homes,S&P SmallCap 600,Consumer Discretionary,Household Durables,Homebuilding,2026-07-15
+LGND,LGND,"Ligand Pharmaceuticals, Inc.",S&P SmallCap 600,Health Care,Biotechnology,Biotechnology,2026-07-15
+LH,LH,Labcorp,S&P 500,Health Care,Health Care Providers & Services,Health Care Services,2026-07-15
+LHX,LHX,L3Harris,S&P 500,Industrials,Aerospace & Defense,Aerospace & Defense,2026-07-15
+LIF,LIF,Life360,S&P SmallCap 600,Information Technology,Software,Application Software,2026-07-15
+LII,LII,Lennox International,S&P 500,Industrials,Building Products,Building Products,2026-07-15
+LIN,LIN,Linde plc,S&P 500,Materials,Chemicals,Industrial Gases,2026-07-15
+LITE,LITE,Lumentum,S&P 500,Information Technology,Communications Equipment,Communications Equipment,2026-07-15
+LIVN,LIVN,LivaNova,S&P MidCap 400,Health Care,Health Care Equipment & Supplies,Health Care Equipment,2026-07-15
+LKFN,LKFN,Lakeland Financial,S&P SmallCap 600,Financials,Banks,Regional Banks,2026-07-15
+LKQ,LKQ,LKQ Corporation,S&P SmallCap 600,Consumer Discretionary,Distributors,Distributors,2026-07-15
+LLY,LLY,Lilly (Eli),S&P 500,Health Care,Pharmaceuticals,Pharmaceuticals,2026-07-15
+LMAT,LMAT,LeMaitre Vascular,S&P SmallCap 600,Health Care,Health Care Equipment & Supplies,Health Care Equipment,2026-07-15
+LMT,LMT,Lockheed Martin,S&P 500,Industrials,Aerospace & Defense,Aerospace & Defense,2026-07-15
+LNC,LNC,Lincoln Financial,S&P SmallCap 600,Financials,Insurance,Multi-line Insurance,2026-07-15
+LNN,LNN,Lindsay Corporation,S&P SmallCap 600,Industrials,Machinery,Agricultural & Farm Machinery,2026-07-15
+LNT,LNT,Alliant Energy,S&P 500,Utilities,Electric Utilities,Electric Utilities,2026-07-15
+LNTH,LNTH,Lantheus Holdings,S&P MidCap 400,Health Care,Health Care Equipment & Supplies,Health Care Supplies,2026-07-15
+LOPE,LOPE,Grand Canyon Education,S&P MidCap 400,Consumer Discretionary,Diversified Consumer Services,Education Services,2026-07-15
+LOW,LOW,Lowe's,S&P 500,Consumer Discretionary,Specialty Retail,Home Improvement Retail,2026-07-15
+LPG,LPG,Dorian LPG Ltd.,S&P SmallCap 600,Energy,"Oil, Gas & Consumable Fuels",Oil & Gas Storage & Transportation,2026-07-15
+LPX,LPX,Louisiana-Pacific,S&P MidCap 400,Industrials,Building Products,Building Products,2026-07-15
+LQDA,LQDA,Liquidia Corporation,S&P SmallCap 600,Health Care,Pharmaceuticals,Pharmaceuticals,2026-07-15
+LQDT,LQDT,"Liquidity Services, Inc.",S&P SmallCap 600,Industrials,Commercial Services & Supplies,Diversified Support Services,2026-07-15
+LRCX,LRCX,Lam Research,S&P 500,Information Technology,Semiconductors & Semiconductor Equipment,Semiconductor Materials & Equipment,2026-07-15
+LRN,LRN,"Stride, Inc.",S&P SmallCap 600,Consumer Discretionary,Diversified Consumer Services,Education Services,2026-07-15
+LSCC,LSCC,Lattice Semiconductor,S&P MidCap 400,Information Technology,Semiconductors & Semiconductor Equipment,Semiconductors,2026-07-15
+LSTR,LSTR,Landstar System,S&P MidCap 400,Industrials,Ground Transportation,Cargo Ground Transportation,2026-07-15
+LTC,LTC,"LTC Properties, Inc.",S&P SmallCap 600,Real Estate,Health Care REITs,Health Care REITs,2026-07-15
+LTH,LTH,"Life Time Group Holdings, Inc.",S&P SmallCap 600,Consumer Discretionary,"Hotels, Restaurants & Leisure",Leisure Facilities,2026-07-15
+LULU,LULU,Lululemon Athletica,S&P 500,Consumer Discretionary,"Textiles, Apparel & Luxury Goods","Apparel, Accessories & Luxury Goods",2026-07-15
+LUMN,LUMN,Lumen Technologies,S&P SmallCap 600,Communication Services,Diversified Telecommunication Services,Alternative Carriers,2026-07-15
+LUV,LUV,Southwest Airlines,S&P 500,Industrials,Passenger Airlines,Passenger Airlines,2026-07-15
+LVS,LVS,Las Vegas Sands,S&P 500,Consumer Discretionary,"Hotels, Restaurants & Leisure",Casinos & Gaming,2026-07-15
+LW,LW,Lamb Weston,S&P SmallCap 600,Consumer Staples,Food Products,Packaged Foods & Meats,2026-07-15
+LXP,LXP,Lexington Realty Trust,S&P SmallCap 600,Real Estate,Diversified REITs,Diversified REITs,2026-07-15
+LYB,LYB,LyondellBasell,S&P 500,Materials,Chemicals,Specialty Chemicals,2026-07-15
+LYFT,LYFT,"Lyft, Inc.",S&P SmallCap 600,Industrials,Ground Transportation,Passenger Ground Transportation,2026-07-15
+LYV,LYV,Live Nation Entertainment,S&P 500,Communication Services,Entertainment,Movies & Entertainment,2026-07-15
+LZ,LZ,"LegalZoom.com, Inc.",S&P SmallCap 600,Industrials,Professional Services,Research & Consulting Services,2026-07-15
+LZB,LZB,"La-Z-Boy, Inc.",S&P SmallCap 600,Consumer Discretionary,Household Durables,Home Furnishings,2026-07-15
+M,M,Macy's,S&P MidCap 400,Consumer Discretionary,Broadline Retail,Broadline Retail,2026-07-15
+MA,MA,Mastercard,S&P 500,Financials,Financial Services,Transaction & Payment Processing Services,2026-07-15
+MAA,MAA,Mid-America Apartment Communities,S&P 500,Real Estate,Residential REITs,Multi-Family Residential REITs,2026-07-15
+MAC,MAC,Macerich,S&P SmallCap 600,Real Estate,Retail REITs,Retail REITs,2026-07-15
+MAN,MAN,ManpowerGroup,S&P SmallCap 600,Industrials,Professional Services,Human Resource & Employment Services,2026-07-15
+MANH,MANH,Manhattan Associates,S&P MidCap 400,Information Technology,Software,Application Software,2026-07-15
+MAR,MAR,Marriott International,S&P 500,Consumer Discretionary,"Hotels, Restaurants & Leisure","Hotels, Resorts & Cruise Lines",2026-07-15
+MARA,MARA,"MARA Holdings, Inc.",S&P SmallCap 600,Information Technology,IT Services,Internet Services & Infrastructure,2026-07-15
+MAS,MAS,Masco,S&P 500,Industrials,Building Products,Building Products,2026-07-15
+MAT,MAT,Mattel,S&P MidCap 400,Consumer Discretionary,Leisure Products,Leisure Products,2026-07-15
+MATW,MATW,Matthews International Corporation,S&P SmallCap 600,Consumer Discretionary,Diversified Consumer Services,Specialized Consumer Services,2026-07-15
+MATX,MATX,"Matson, Inc.",S&P SmallCap 600,Industrials,Marine Transportation,Marine Transportation,2026-07-15
+MBC,MBC,"MasterBrand, Inc.",S&P SmallCap 600,Industrials,Building Products,Building Products,2026-07-15
+MBGL,MBGL,"Mobility Global, Inc.",S&P SmallCap 600,Industrials,Professional Services,Data Processing & Outsourced Services,2026-07-15
+MBIN,MBIN,Merchants Bancorp,S&P SmallCap 600,Financials,Banks,Regional Banks,2026-07-15
+MC,MC,Moelis & Company,S&P SmallCap 600,Financials,Capital Markets,Investment Banking & Brokerage,2026-07-15
+MCD,MCD,McDonald's,S&P 500,Consumer Discretionary,"Hotels, Restaurants & Leisure",Restaurants,2026-07-15
+MCHP,MCHP,Microchip Technology,S&P 500,Information Technology,Semiconductors & Semiconductor Equipment,Semiconductors,2026-07-15
+MCK,MCK,McKesson Corporation,S&P 500,Health Care,Health Care Providers & Services,Health Care Distributors,2026-07-15
+MCO,MCO,Moody's Corporation,S&P 500,Financials,Capital Markets,Financial Exchanges & Data,2026-07-15
+MCRI,MCRI,"Monarch Casino & Resort, Inc.",S&P SmallCap 600,Consumer Discretionary,"Hotels, Restaurants & Leisure",Casinos & Gaming,2026-07-15
+MCY,MCY,Mercury General,S&P SmallCap 600,Financials,Insurance,Property & Casualty Insurance,2026-07-15
+MD,MD,Pediatrix Medical Group,S&P SmallCap 600,Health Care,Health Care Providers & Services,Health Care Services,2026-07-15
+MDLZ,MDLZ,Mondelez International,S&P 500,Consumer Staples,Food Products,Packaged Foods & Meats,2026-07-15
+MDT,MDT,Medtronic,S&P 500,Health Care,Health Care Equipment & Supplies,Health Care Equipment,2026-07-15
+MDU,MDU,"MDU Resources Group, Inc.",S&P SmallCap 600,Utilities,Multi-Utilities,Multi-Utilities,2026-07-15
+MEDP,MEDP,Medpace,S&P MidCap 400,Health Care,Life Sciences Tools & Services,Life Sciences Tools & Services,2026-07-15
+MET,MET,MetLife,S&P 500,Financials,Insurance,Life & Health Insurance,2026-07-15
+META,META,Meta Platforms,S&P 500,Communication Services,Interactive Media & Services,Interactive Media & Services,2026-07-15
+MFP,MFP,"Midera Food Processing, Inc.",S&P SmallCap 600,Industrials,Machinery,Industrial Machinery & Supplies & Components,2026-07-15
+MGEE,MGEE,"MGE Energy, Inc.",S&P SmallCap 600,Utilities,Electric Utilities,Electric Utilities,2026-07-15
+MGM,MGM,MGM Resorts,S&P 500,Consumer Discretionary,"Hotels, Restaurants & Leisure",Casinos & Gaming,2026-07-15
+MGY,MGY,"Magnolia Oil & Gas, Corp.",S&P SmallCap 600,Energy,"Oil, Gas & Consumable Fuels",Oil & Gas Exploration & Production,2026-07-15
+MHK,MHK,Mohawk Industries,S&P SmallCap 600,Consumer Discretionary,Household Durables,Home Furnishings,2026-07-15
+MHO,MHO,"M/I Homes, Inc.",S&P SmallCap 600,Consumer Discretionary,Household Durables,Homebuilding,2026-07-15
+MIDD,MIDD,Middleby,S&P MidCap 400,Industrials,Machinery,Industrial Machinery & Supplies & Components,2026-07-15
+MIR,MIR,"Mirion Technologies, Inc.",S&P SmallCap 600,Information Technology,"Electronic Equipment, Instruments & Components",Electronic Equipment & Instruments,2026-07-15
+MKC,MKC,McCormick & Company,S&P 500,Consumer Staples,Food Products,Packaged Foods & Meats,2026-07-15
+MKSI,MKSI,MKS Instruments,S&P MidCap 400,Information Technology,Semiconductors & Semiconductor Equipment,Semiconductor Materials & Equipment,2026-07-15
+MKTX,MKTX,MarketAxess,S&P SmallCap 600,Financials,Capital Markets,Financial Exchanges & Data,2026-07-15
+MLI,MLI,Mueller Industries,S&P MidCap 400,Industrials,Machinery,Industrial Machinery & Supplies & Components,2026-07-15
+MLKN,MLKN,"MillerKnoll, Inc.",S&P SmallCap 600,Industrials,Commercial Services & Supplies,Office Services & Supplies,2026-07-15
+MLM,MLM,Martin Marietta Materials,S&P 500,Materials,Construction Materials,Construction Materials,2026-07-15
+MMI,MMI,"Marcus & Millichap, Inc.",S&P SmallCap 600,Real Estate,Real Estate Management & Development,Real Estate Services,2026-07-15
+MMM,MMM,3M,S&P 500,Industrials,Industrial Conglomerates,Industrial Conglomerates,2026-07-15
+MMS,MMS,Maximus Inc.,S&P MidCap 400,Industrials,Professional Services,Data Processing & Outsourced Services,2026-07-15
+MMSI,MMSI,"Merit Medical Systems, Inc.",S&P SmallCap 600,Health Care,Health Care Equipment & Supplies,Health Care Supplies,2026-07-15
+MNST,MNST,Monster Beverage,S&P 500,Consumer Staples,Beverages,Soft Drinks & Non-alcoholic Beverages,2026-07-15
+MO,MO,Altria,S&P 500,Consumer Staples,Tobacco,Tobacco,2026-07-15
+MOG-A,MOG.A,Moog Inc.,S&P MidCap 400,Industrials,Aerospace & Defense,Aerospace & Defense,2026-07-15
+MOH,MOH,Molina Healthcare,S&P SmallCap 600,Health Care,Health Care Providers & Services,Managed Health Care,2026-07-15
+MORN,MORN,"Morningstar, Inc.",S&P MidCap 400,Financials,Capital Markets,Financial Exchanges & Data,2026-07-15
+MOS,MOS,Mosaic Company (The),S&P 500,Materials,Chemicals,Fertilizers & Agricultural Chemicals,2026-07-15
+MP,MP,MP Materials,S&P MidCap 400,Materials,Metals & Mining,Diversified Metals & Mining,2026-07-15
+MPC,MPC,Marathon Petroleum,S&P 500,Energy,"Oil, Gas & Consumable Fuels",Oil & Gas Refining & Marketing,2026-07-15
+MPT,MPT,Medical Properties Trust,S&P SmallCap 600,Real Estate,Health Care REITs,Health Care REITs,2026-07-15
+MPWR,MPWR,Monolithic Power Systems,S&P 500,Information Technology,Semiconductors & Semiconductor Equipment,Semiconductors,2026-07-15
+MRCY,MRCY,Mercury Systems,S&P SmallCap 600,Industrials,Electrical Equipment,Electrical Components & Equipment,2026-07-15
+MRK,MRK,Merck & Co.,S&P 500,Health Care,Pharmaceuticals,Pharmaceuticals,2026-07-15
+MRNA,MRNA,Moderna,S&P 500,Health Care,Biotechnology,Biotechnology,2026-07-15
+MRP,MRP,"Millrose Properties, Inc.",S&P SmallCap 600,Real Estate,Residential REITs,Single-Family Residential REITs,2026-07-15
+MRSH,MRSH,Marsh McLennan,S&P 500,Financials,Insurance,Insurance Brokers,2026-07-15
+MRTN,MRTN,"Marten Transport, Ltd.",S&P SmallCap 600,Industrials,Ground Transportation,Cargo Ground Transportation,2026-07-15
+MRVL,MRVL,Marvell Technology,S&P 500,Information Technology,Semiconductors & Semiconductor Equipment,Semiconductors,2026-07-15
+MS,MS,Morgan Stanley,S&P 500,Financials,Capital Markets,Investment Banking & Brokerage,2026-07-15
+MSA,MSA,MSA Safety,S&P MidCap 400,Industrials,Commercial Services & Supplies,Office Services & Supplies,2026-07-15
+MSCI,MSCI,MSCI Inc.,S&P 500,Financials,Capital Markets,Financial Exchanges & Data,2026-07-15
+MSEX,MSEX,Middlesex Water Company,S&P SmallCap 600,Utilities,Water Utilities,Water Utilities,2026-07-15
+MSFT,MSFT,Microsoft,S&P 500,Information Technology,Software,Systems Software,2026-07-15
+MSGS,MSGS,Madison Square Garden Sports Corp.,S&P SmallCap 600,Communication Services,Entertainment,Movies & Entertainment,2026-07-15
+MSI,MSI,Motorola Solutions,S&P 500,Information Technology,Communications Equipment,Communications Equipment,2026-07-15
+MSM,MSM,MSC Industrial Direct,S&P MidCap 400,Industrials,Trading Companies & Distributors,Trading Companies & Distributors,2026-07-15
+MTB,MTB,M&T Bank,S&P 500,Financials,Banks,Regional Banks,2026-07-15
+MTCH,MTCH,Match Group,S&P SmallCap 600,Communication Services,Interactive Media & Services,Interactive Media & Services,2026-07-15
+MTD,MTD,Mettler Toledo,S&P 500,Health Care,Life Sciences Tools & Services,Life Sciences Tools & Services,2026-07-15
+MTDR,MTDR,Matador Resources,S&P MidCap 400,Energy,"Oil, Gas & Consumable Fuels",Oil & Gas Exploration & Production,2026-07-15
+MTG,MTG,MGIC Investment Corporation,S&P MidCap 400,Financials,Insurance,Reinsurance,2026-07-15
+MTH,MTH,Meritage Homes Corporation,S&P SmallCap 600,Consumer Discretionary,Household Durables,Homebuilding,2026-07-15
+MTN,MTN,Vail Resorts,S&P MidCap 400,Consumer Discretionary,"Hotels, Restaurants & Leisure","Hotels, Resorts & Cruise Lines",2026-07-15
+MTRN,MTRN,Materion Corp.,S&P SmallCap 600,Materials,Metals & Mining,Diversified Metals & Mining,2026-07-15
+MTSI,MTSI,MACOM Technology Solutions,S&P MidCap 400,Information Technology,Semiconductors & Semiconductor Equipment,Semiconductors,2026-07-15
+MTUS,MTUS,Metallus Inc,S&P SmallCap 600,Materials,Metals & Mining,Steel,2026-07-15
+MTX,MTX,Minerals Technologies,S&P SmallCap 600,Materials,Chemicals,Specialty Chemicals,2026-07-15
+MTZ,MTZ,MasTec,S&P MidCap 400,Industrials,Construction & Engineering,Construction & Engineering,2026-07-15
+MU,MU,Micron Technology,S&P 500,Information Technology,Semiconductors & Semiconductor Equipment,Semiconductors,2026-07-15
+MUR,MUR,Murphy Oil,S&P MidCap 400,Energy,"Oil, Gas & Consumable Fuels",Oil & Gas Exploration & Production,2026-07-15
+MUSA,MUSA,Murphy USA,S&P MidCap 400,Consumer Discretionary,Specialty Retail,Automotive Retail,2026-07-15
+MWA,MWA,Mueller Water Products,S&P SmallCap 600,Industrials,Machinery,Industrial Machinery & Supplies & Components,2026-07-15
+MXL,MXL,"MaxLinear, Inc.",S&P SmallCap 600,Information Technology,Semiconductors & Semiconductor Equipment,Semiconductors,2026-07-15
+MYRG,MYRG,"MYR Group, Inc.",S&P SmallCap 600,Industrials,Construction & Engineering,Construction & Engineering,2026-07-15
+MZTI,MZTI,The Marzetti Company,S&P MidCap 400,Consumer Staples,Food Products,Packaged Foods & Meats,2026-07-15
+NABL,NABL,"N-able, Inc.",S&P SmallCap 600,Information Technology,Software,Systems Software,2026-07-15
+NATL,NATL,NCR Atleos,S&P SmallCap 600,Financials,Financial Services,Transaction & Payment Processing Services,2026-07-15
+NAVI,NAVI,Navient,S&P SmallCap 600,Financials,Consumer Finance,Consumer Finance,2026-07-15
+NBHC,NBHC,National Bank Holdings Corporation,S&P SmallCap 600,Financials,Banks,Regional Banks,2026-07-15
+NBIX,NBIX,Neurocrine Biosciences,S&P MidCap 400,Health Care,Biotechnology,Biotechnology,2026-07-15
+NBTB,NBTB,"NBT Bancorp, Inc.",S&P SmallCap 600,Financials,Banks,Regional Banks,2026-07-15
+NCLH,NCLH,Norwegian Cruise Line Holdings,S&P 500,Consumer Discretionary,"Hotels, Restaurants & Leisure","Hotels, Resorts & Cruise Lines",2026-07-15
+NDAQ,NDAQ,"Nasdaq, Inc.",S&P 500,Financials,Capital Markets,Financial Exchanges & Data,2026-07-15
+NDSN,NDSN,Nordson Corporation,S&P 500,Industrials,Machinery,Industrial Machinery & Supplies & Components,2026-07-15
+NE,NE,Noble Corporation,S&P SmallCap 600,Energy,Energy Equipment & Services,Oil & Gas Drilling,2026-07-15
+NEE,NEE,NextEra Energy,S&P 500,Utilities,Multi-Utilities,Multi-Utilities,2026-07-15
+NEM,NEM,Newmont,S&P 500,Materials,Metals & Mining,Gold,2026-07-15
+NEO,NEO,"NeoGenomics Laboratories, Inc.",S&P SmallCap 600,Health Care,Health Care Providers & Services,Health Care Services,2026-07-15
+NEOG,NEOG,Neogen,S&P SmallCap 600,Health Care,Health Care Equipment & Supplies,Health Care Supplies,2026-07-15
+NEU,NEU,NewMarket Corporation,S&P MidCap 400,Materials,Chemicals,Specialty Chemicals,2026-07-15
+NFG,NFG,National Fuel Gas,S&P MidCap 400,Utilities,Gas Utilities,Gas Utilities,2026-07-15
+NFLX,NFLX,Netflix,S&P 500,Communication Services,Entertainment,Movies & Entertainment,2026-07-15
+NGVT,NGVT,"Ingevity, Corp.",S&P SmallCap 600,Materials,Chemicals,Specialty Chemicals,2026-07-15
+NHC,NHC,"National Healthcare, Corp.",S&P SmallCap 600,Health Care,Health Care Providers & Services,Health Care Facilities,2026-07-15
+NHI,NHI,"National Health Investors, Inc.",S&P SmallCap 600,Real Estate,Health Care REITs,Health Care REITs,2026-07-15
+NI,NI,NiSource,S&P 500,Utilities,Multi-Utilities,Multi-Utilities,2026-07-15
+NIC,NIC,Nicolet Bankshares,S&P SmallCap 600,Financials,Banks,Regional Banks,2026-07-15
+NJR,NJR,New Jersey Resources,S&P MidCap 400,Utilities,Gas Utilities,Gas Utilities,2026-07-15
+NKE,NKE,"Nike, Inc.",S&P 500,Consumer Discretionary,"Textiles, Apparel & Luxury Goods","Apparel, Accessories & Luxury Goods",2026-07-15
+NLY,NLY,Annaly Capital Management,S&P MidCap 400,Financials,Mortgage Real Estate Investment Trusts (REITs),Mortgage REITs,2026-07-15
+NMIH,NMIH,"NMI Holdings, Inc.",S&P SmallCap 600,Financials,Financial Services,Commercial & Residential Mortgage Finance,2026-07-15
+NNN,NNN,NNN Reit,S&P MidCap 400,Real Estate,Retail REITs,Retail REITs,2026-07-15
+NOC,NOC,Northrop Grumman,S&P 500,Industrials,Aerospace & Defense,Aerospace & Defense,2026-07-15
+NOG,NOG,"Northern Oil and Gas, Inc.",S&P SmallCap 600,Energy,"Oil, Gas & Consumable Fuels",Oil & Gas Exploration & Production,2026-07-15
+NOV,NOV,NOV Inc.,S&P MidCap 400,Energy,Energy Equipment & Services,Oil & Gas Equipment & Services,2026-07-15
+NOVT,NOVT,Novanta,S&P MidCap 400,Information Technology,"Electronic Equipment, Instruments & Components",Electronic Equipment & Instruments,2026-07-15
+NOW,NOW,ServiceNow,S&P 500,Information Technology,Software,Systems Software,2026-07-15
+NPK,NPK,"National Presto Industries, Inc.",S&P SmallCap 600,Industrials,Aerospace & Defense,Aerospace & Defense,2026-07-15
+NPO,NPO,"EnPro Industries, Inc.",S&P SmallCap 600,Industrials,Machinery,Industrial Machinery & Supplies & Components,2026-07-15
+NRG,NRG,NRG Energy,S&P 500,Utilities,Independent Power and Renewable Electricity Producers,Independent Power Producers & Energy Traders,2026-07-15
+NSA,NSA,National Storage Affiliates Trust,S&P MidCap 400,Real Estate,Specialized REITs,Self-Storage REITs,2026-07-15
+NSC,NSC,Norfolk Southern,S&P 500,Industrials,Ground Transportation,Rail Transportation,2026-07-15
+NSIT,NSIT,"Insight Enterprises, Inc.",S&P SmallCap 600,Information Technology,"Electronic Equipment, Instruments & Components",Technology Distributors,2026-07-15
+NSP,NSP,Insperity,S&P SmallCap 600,Industrials,Professional Services,Human Resource & Employment Services,2026-07-15
+NSSC,NSSC,Napco Security Technologies,S&P SmallCap 600,Information Technology,"Electronic Equipment, Instruments & Components",Electronic Equipment & Instruments,2026-07-15
+NTAP,NTAP,NetApp,S&P 500,Information Technology,"Technology Hardware, Storage & Peripherals","Technology Hardware, Storage & Peripherals",2026-07-15
+NTCT,NTCT,"NETSCOUT Systems, Inc.",S&P SmallCap 600,Information Technology,Communications Equipment,Communications Equipment,2026-07-15
+NTNX,NTNX,Nutanix,S&P MidCap 400,Information Technology,Software,Systems Software,2026-07-15
+NTRS,NTRS,Northern Trust,S&P 500,Financials,Capital Markets,Asset Management & Custody Banks,2026-07-15
+NTST,NTST,NETSTREIT Corp.,S&P SmallCap 600,Real Estate,Retail REITs,Retail REITs,2026-07-15
+NUE,NUE,Nucor,S&P 500,Materials,Metals & Mining,Steel,2026-07-15
+NVDA,NVDA,Nvidia,S&P 500,Information Technology,Semiconductors & Semiconductor Equipment,Semiconductors,2026-07-15
+NVR,NVR,"NVR, Inc.",S&P 500,Consumer Discretionary,Household Durables,Homebuilding,2026-07-15
+NVST,NVST,Envista Holdings,S&P MidCap 400,Health Care,Health Care Equipment & Supplies,Health Care Supplies,2026-07-15
+NVT,NVT,nVent Electric plc,S&P MidCap 400,Industrials,Electrical Equipment,Electrical Components & Equipment,2026-07-15
+NWBI,NWBI,"Northwest Bancshares, Inc.",S&P SmallCap 600,Financials,Banks,Regional Banks,2026-07-15
+NWE,NWE,NorthWestern Energy,S&P MidCap 400,Utilities,Multi-Utilities,Multi-Utilities,2026-07-15
+NWL,NWL,Newell Brands,S&P SmallCap 600,Consumer Discretionary,Household Durables,Housewares & Specialties,2026-07-15
+NWN,NWN,NW Natural,S&P SmallCap 600,Utilities,Gas Utilities,Gas Utilities,2026-07-15
+NWS,NWS,News Corp (Class B),S&P 500,Communication Services,Media,Publishing,2026-07-15
+NWSA,NWSA,News Corp (Class A),S&P 500,Communication Services,Media,Publishing,2026-07-15
+NX,NX,Quanex Building Products Corporation,S&P SmallCap 600,Industrials,Building Products,Building Products,2026-07-15
+NXPI,NXPI,NXP Semiconductors,S&P 500,Information Technology,Semiconductors & Semiconductor Equipment,Semiconductors,2026-07-15
+NXRT,NXRT,"NexPoint Residential Trust, Inc.",S&P SmallCap 600,Real Estate,Residential REITs,Multi-Family Residential REITs,2026-07-15
+NXST,NXST,Nexstar Media Group,S&P MidCap 400,Communication Services,Media,Broadcasting,2026-07-15
+NXT,NXT,Nextpower,S&P MidCap 400,Industrials,Electrical Equipment,Electrical Components & Equipment,2026-07-15
+NYT,NYT,New York Times Company,S&P MidCap 400,Communication Services,Media,Publishing,2026-07-15
+O,O,Realty Income,S&P 500,Real Estate,Retail REITs,Retail REITs,2026-07-15
+OC,OC,Owens Corning,S&P MidCap 400,Industrials,Building Products,Building Products,2026-07-15
+ODFL,ODFL,Old Dominion,S&P 500,Industrials,Ground Transportation,Cargo Ground Transportation,2026-07-15
+OFG,OFG,OFG Bancorp,S&P SmallCap 600,Financials,Banks,Regional Banks,2026-07-15
+OGE,OGE,OGE Energy,S&P MidCap 400,Utilities,Multi-Utilities,Multi-Utilities,2026-07-15
+OGN,OGN,Organon & Co.,S&P SmallCap 600,Health Care,Pharmaceuticals,Pharmaceuticals,2026-07-15
+OGS,OGS,One Gas,S&P MidCap 400,Utilities,Gas Utilities,Gas Utilities,2026-07-15
+OHI,OHI,Omega Healthcare Investors,S&P MidCap 400,Real Estate,Health Care REITs,Health Care REITs,2026-07-15
+OI,OI,"O-I Glass, Inc.",S&P SmallCap 600,Materials,Containers & Packaging,"Metal, Glass & Plastic Containers",2026-07-15
+OII,OII,"Oceaneering International, Inc.",S&P SmallCap 600,Energy,Energy Equipment & Services,Oil & Gas Equipment & Services,2026-07-15
+OKE,OKE,Oneok,S&P 500,Energy,"Oil, Gas & Consumable Fuels",Oil & Gas Storage & Transportation,2026-07-15
+OKTA,OKTA,"Okta, Inc.",S&P MidCap 400,Information Technology,Software,Application Software,2026-07-15
+OLED,OLED,Universal Display,S&P MidCap 400,Information Technology,Semiconductors & Semiconductor Equipment,Semiconductors,2026-07-15
+OLLI,OLLI,Ollie's Bargain Outlet,S&P MidCap 400,Consumer Discretionary,Broadline Retail,Broadline Retail,2026-07-15
+OLN,OLN,Olin Corporation,S&P MidCap 400,Materials,Chemicals,Diversified Chemicals,2026-07-15
+OMC,OMC,Omnicom Group,S&P 500,Communication Services,Media,Advertising,2026-07-15
+OMCL,OMCL,Omnicell,S&P SmallCap 600,Health Care,Health Care Technology,Health Care Technology,2026-07-15
+ON,ON,ON Semiconductor,S&P 500,Information Technology,Semiconductors & Semiconductor Equipment,Semiconductors,2026-07-15
+ONB,ONB,Old National Bank,S&P MidCap 400,Financials,Banks,Regional Banks,2026-07-15
+ONTO,ONTO,Onto Innovation,S&P MidCap 400,Information Technology,Semiconductors & Semiconductor Equipment,Semiconductor Materials & Equipment,2026-07-15
+OPCH,OPCH,Option Care Health,S&P MidCap 400,Health Care,Health Care Providers & Services,Health Care Facilities,2026-07-15
+OPLN,OPLN,"OPENLANE, Inc.",S&P SmallCap 600,Industrials,Commercial Services & Supplies,Diversified Support Services,2026-07-15
+ORA,ORA,Ormat Technologies,S&P MidCap 400,Utilities,Independent Power and Renewable Electricity Producers,Renewable Electricity,2026-07-15
+ORCL,ORCL,Oracle Corporation,S&P 500,Information Technology,Software,Application Software,2026-07-15
+ORI,ORI,Old Republic International,S&P MidCap 400,Financials,Insurance,Property & Casualty Insurance,2026-07-15
+ORLY,ORLY,O’Reilly Automotive,S&P 500,Consumer Discretionary,Specialty Retail,Automotive Retail,2026-07-15
+OSIS,OSIS,"OSI Systems, Inc.",S&P SmallCap 600,Information Technology,"Electronic Equipment, Instruments & Components",Electronic Equipment & Instruments,2026-07-15
+OSK,OSK,Oshkosh,S&P MidCap 400,Industrials,Machinery,Construction Machinery & Heavy Transportation Equipment,2026-07-15
+OSW,OSW,OneSpaWorld Holdings Limited,S&P SmallCap 600,Consumer Discretionary,"Hotels, Restaurants & Leisure",Leisure Facilities,2026-07-15
+OTIS,OTIS,Otis Worldwide,S&P 500,Industrials,Machinery,Industrial Machinery & Supplies & Components,2026-07-15
+OTTR,OTTR,Otter Tail Corporation,S&P SmallCap 600,Utilities,Electric Utilities,Electric Utilities,2026-07-15
+OUT,OUT,Outfront Media,S&P SmallCap 600,Real Estate,Specialized REITs,Other Specialized REITs,2026-07-15
+OVV,OVV,Ovintiv,S&P MidCap 400,Energy,"Oil, Gas & Consumable Fuels",Oil & Gas Exploration & Production,2026-07-15
+OXY,OXY,Occidental Petroleum,S&P 500,Energy,"Oil, Gas & Consumable Fuels",Oil & Gas Exploration & Production,2026-07-15
+OZK,OZK,Bank OZK,S&P MidCap 400,Financials,Banks,Regional Banks,2026-07-15
+P,P,Everpure,S&P MidCap 400,Information Technology,"Technology Hardware, Storage & Peripherals","Technology Hardware, Storage & Peripherals",2026-07-15
+PAG,PAG,Penske Automotive Group,S&P MidCap 400,Consumer Discretionary,Specialty Retail,Automotive Retail,2026-07-15
+PAHC,PAHC,Phibro Animal Health,S&P SmallCap 600,Health Care,Pharmaceuticals,Pharmaceuticals,2026-07-15
+PANW,PANW,Palo Alto Networks,S&P 500,Information Technology,Software,Systems Software,2026-07-15
+PARR,PARR,"Par Pacific Holdings, Inc.",S&P SmallCap 600,Energy,"Oil, Gas & Consumable Fuels",Oil & Gas Refining & Marketing,2026-07-15
+PATH,PATH,UiPath,S&P MidCap 400,Information Technology,Software,Systems Software,2026-07-15
+PATK,PATK,"Patrick Industries, Inc.",S&P SmallCap 600,Consumer Discretionary,Automobile Components,Automotive Parts & Equipment,2026-07-15
+PAYC,PAYC,Paycom,S&P SmallCap 600,Industrials,Professional Services,Human Resource & Employment Services,2026-07-15
+PAYO,PAYO,Payoneer Global Inc.,S&P SmallCap 600,Financials,Financial Services,Transaction & Payment Processing Services,2026-07-15
+PAYX,PAYX,Paychex,S&P 500,Industrials,Professional Services,Human Resource & Employment Services,2026-07-15
+PB,PB,Prosperity Bancshares,S&P MidCap 400,Financials,Banks,Regional Banks,2026-07-15
+PBF,PBF,PBF Energy,S&P MidCap 400,Energy,"Oil, Gas & Consumable Fuels",Oil & Gas Refining & Marketing,2026-07-15
+PBH,PBH,Prestige Consumer Healthcare,S&P SmallCap 600,Health Care,Pharmaceuticals,Pharmaceuticals,2026-07-15
+PBI,PBI,"Pitney Bowes, Inc.",S&P SmallCap 600,Industrials,Commercial Services & Supplies,Office Services & Supplies,2026-07-15
+PCAR,PCAR,Paccar,S&P 500,Industrials,Machinery,Construction Machinery & Heavy Transportation Equipment,2026-07-15
+PCG,PCG,PG&E Corporation,S&P 500,Utilities,Multi-Utilities,Multi-Utilities,2026-07-15
+PCRX,PCRX,"Pacira BioSciences, Inc.",S&P SmallCap 600,Health Care,Pharmaceuticals,Pharmaceuticals,2026-07-15
+PCTY,PCTY,Paylocity,S&P MidCap 400,Industrials,Professional Services,Human Resource & Employment Services,2026-07-15
+PDFS,PDFS,"PDF Solutions, Inc.",S&P SmallCap 600,Information Technology,Semiconductors & Semiconductor Equipment,Semiconductor Materials & Equipment,2026-07-15
+PEB,PEB,Pebblebrook Hotel Trust,S&P SmallCap 600,Real Estate,Hotel & Resort REITs,Hotel & Resort REITs,2026-07-15
+PECO,PECO,Phillips Edison & Company,S&P SmallCap 600,Real Estate,Retail REITs,Retail REITs,2026-07-15
+PEG,PEG,Public Service Enterprise Group,S&P 500,Utilities,Electric Utilities,Electric Utilities,2026-07-15
+PEGA,PEGA,Pegasystems,S&P MidCap 400,Information Technology,Software,Application Software,2026-07-15
+PEN,PEN,"Penumbra, Inc.",S&P MidCap 400,Health Care,Health Care Equipment & Supplies,Health Care Equipment,2026-07-15
+PENG,PENG,"Penguin Solutions, Inc.",S&P SmallCap 600,Information Technology,Semiconductors & Semiconductor Equipment,Semiconductors,2026-07-15
+PENN,PENN,Penn Entertainment,S&P SmallCap 600,Consumer Discretionary,"Hotels, Restaurants & Leisure",Casinos & Gaming,2026-07-15
+PEP,PEP,PepsiCo,S&P 500,Consumer Staples,Beverages,Soft Drinks & Non-alcoholic Beverages,2026-07-15
+PFBC,PFBC,Preferred Bank,S&P SmallCap 600,Financials,Banks,Regional Banks,2026-07-15
+PFE,PFE,Pfizer,S&P 500,Health Care,Pharmaceuticals,Pharmaceuticals,2026-07-15
+PFG,PFG,Principal Financial Group,S&P 500,Financials,Insurance,Life & Health Insurance,2026-07-15
+PFGC,PFGC,Performance Food Group,S&P MidCap 400,Consumer Staples,Consumer Staples Distribution & Retail,Food Distributors,2026-07-15
+PFS,PFS,"Provident Financial Services, Inc.",S&P SmallCap 600,Financials,Banks,Regional Banks,2026-07-15
+PG,PG,Procter & Gamble,S&P 500,Consumer Staples,Personal Care Products,Personal Care Products,2026-07-15
+PGNY,PGNY,Progyny,S&P SmallCap 600,Health Care,Health Care Providers & Services,Health Care Services,2026-07-15
+PGR,PGR,Progressive Corporation,S&P 500,Financials,Insurance,Property & Casualty Insurance,2026-07-15
+PH,PH,Parker Hannifin,S&P 500,Industrials,Machinery,Industrial Machinery & Supplies & Components,2026-07-15
+PHIN,PHIN,"PHINIA, Inc.",S&P SmallCap 600,Consumer Discretionary,Specialty Retail,Automotive Retail,2026-07-15
+PHM,PHM,PulteGroup,S&P 500,Consumer Discretionary,Household Durables,Homebuilding,2026-07-15
+PI,PI,"Impinj, Inc.",S&P SmallCap 600,Information Technology,"Electronic Equipment, Instruments & Components",Electronic Equipment & Instruments,2026-07-15
+PII,PII,Polaris,S&P MidCap 400,Consumer Discretionary,Leisure Products,Leisure Products,2026-07-15
+PINS,PINS,Pinterest,S&P MidCap 400,Communication Services,Entertainment,Interactive Home Entertainment,2026-07-15
+PIPR,PIPR,Piper Sandler Companies,S&P SmallCap 600,Financials,Capital Markets,Investment Banking & Brokerage,2026-07-15
+PJT,PJT,"PJT Partners, Inc.",S&P SmallCap 600,Financials,Capital Markets,Investment Banking & Brokerage,2026-07-15
+PK,PK,Park Hotels & Resorts,S&P MidCap 400,Real Estate,Hotel & Resort REITs,Hotel & Resort REITs,2026-07-15
+PKG,PKG,Packaging Corporation of America,S&P 500,Materials,Containers & Packaging,Paper & Plastic Packaging Products & Materials,2026-07-15
+PLAB,PLAB,"Photronics, Inc.",S&P SmallCap 600,Information Technology,Semiconductors & Semiconductor Equipment,Semiconductor Materials & Equipment,2026-07-15
+PLD,PLD,Prologis,S&P 500,Real Estate,Industrial REITs,Industrial REITs,2026-07-15
+PLMR,PLMR,"Palomar Holdings, Inc.",S&P SmallCap 600,Financials,Insurance,Property & Casualty Insurance,2026-07-15
+PLNT,PLNT,Planet Fitness,S&P MidCap 400,Consumer Discretionary,"Hotels, Restaurants & Leisure",Leisure Facilities,2026-07-15
+PLTR,PLTR,Palantir Technologies,S&P 500,Information Technology,Software,Application Software,2026-07-15
+PLUS,PLUS,"ePlus, Inc.",S&P SmallCap 600,Information Technology,"Electronic Equipment, Instruments & Components",Technology Distributors,2026-07-15
+PLXS,PLXS,Plexus Corp.,S&P SmallCap 600,Information Technology,"Electronic Equipment, Instruments & Components",Electronic Manufacturing Services,2026-07-15
+PM,PM,Philip Morris International,S&P 500,Consumer Staples,Tobacco,Tobacco,2026-07-15
+PMT,PMT,PennyMac Mortgage Investment Trust,S&P SmallCap 600,Financials,Mortgage Real Estate Investment Trusts (REITs),Mortgage REITs,2026-07-15
+PNC,PNC,PNC Financial Services,S&P 500,Financials,Banks,Diversified Banks,2026-07-15
+PNFP,PNFP,Pinnacle Financial Partners,S&P MidCap 400,Financials,Banks,Regional Banks,2026-07-15
+PNR,PNR,Pentair,S&P 500,Industrials,Machinery,Industrial Machinery & Supplies & Components,2026-07-15
+PNW,PNW,Pinnacle West Capital,S&P 500,Utilities,Multi-Utilities,Multi-Utilities,2026-07-15
+PODD,PODD,Insulet Corporation,S&P 500,Health Care,Health Care Equipment & Supplies,Health Care Equipment,2026-07-15
+POOL,POOL,Pool Corporation,S&P SmallCap 600,Consumer Discretionary,Distributors,Distributors,2026-07-15
+POR,POR,Portland General Electric,S&P MidCap 400,Utilities,Electric Utilities,Electric Utilities,2026-07-15
+POST,POST,Post Holdings,S&P MidCap 400,Consumer Staples,Food Products,Packaged Foods & Meats,2026-07-15
+POWI,POWI,Power Integrations,S&P SmallCap 600,Information Technology,Semiconductors & Semiconductor Equipment,Semiconductors,2026-07-15
+POWL,POWL,"Powell Industries, Inc.",S&P SmallCap 600,Industrials,Electrical Equipment,Electrical Components & Equipment,2026-07-15
+PPC,PPC,Pilgrim's Pride,S&P MidCap 400,Consumer Staples,Food Products,Packaged Foods & Meats,2026-07-15
+PPG,PPG,PPG Industries,S&P 500,Materials,Chemicals,Specialty Chemicals,2026-07-15
+PPL,PPL,PPL Corporation,S&P 500,Utilities,Electric Utilities,Electric Utilities,2026-07-15
+PPLI,PPLI,People Inc.,S&P SmallCap 600,Communication Services,Interactive Media & Services,Interactive Media & Services,2026-07-15
+PR,PR,Permian Resources,S&P MidCap 400,Energy,"Oil, Gas & Consumable Fuels",Oil & Gas Exploration & Production,2026-07-15
+PRDO,PRDO,Perdoceo Education Corp.,S&P SmallCap 600,Consumer Discretionary,Diversified Consumer Services,Education Services,2026-07-15
+PRG,PRG,"PROG Holdings, Inc.",S&P SmallCap 600,Financials,Consumer Finance,Consumer Finance,2026-07-15
+PRGO,PRGO,Perrigo,S&P SmallCap 600,Health Care,Pharmaceuticals,Pharmaceuticals,2026-07-15
+PRGS,PRGS,Progress Software Corporation,S&P SmallCap 600,Information Technology,Software,Systems Software,2026-07-15
+PRI,PRI,Primerica,S&P MidCap 400,Financials,Insurance,Life & Health Insurance,2026-07-15
+PRIM,PRIM,Primoris Services Corporation,S&P SmallCap 600,Industrials,Construction & Engineering,Construction & Engineering,2026-07-15
+PRK,PRK,Park National Corp.,S&P SmallCap 600,Financials,Banks,Regional Banks,2026-07-15
+PRKS,PRKS,United Parks & Resorts,S&P SmallCap 600,Consumer Discretionary,"Hotels, Restaurants & Leisure",Leisure Facilities,2026-07-15
+PRLB,PRLB,Protolabs,S&P SmallCap 600,Industrials,Machinery,Industrial Machinery & Supplies & Components,2026-07-15
+PRSU,PRSU,"Pursuit Attractions & Hospitality, Inc.",S&P SmallCap 600,Consumer Discretionary,"Hotels, Restaurants & Leisure","Hotels, Resorts & Cruise Lines",2026-07-15
+PRU,PRU,Prudential Financial,S&P 500,Financials,Insurance,Life & Health Insurance,2026-07-15
+PRVA,PRVA,"Privia Health Group, Inc.",S&P SmallCap 600,Health Care,Health Care Providers & Services,Health Care Services,2026-07-15
+PSA,PSA,Public Storage,S&P 500,Real Estate,Specialized REITs,Self-Storage REITs,2026-07-15
+PSKY,PSKY,Paramount Skydance Corporation,S&P 500,Communication Services,Entertainment,Movies & Entertainment,2026-07-15
+PSMT,PSMT,PriceSmart,S&P SmallCap 600,Consumer Staples,Consumer Staples Distribution & Retail,Consumer Staples Merchandise Retail,2026-07-15
+PSN,PSN,Parsons Corporation,S&P MidCap 400,Industrials,Aerospace & Defense,Aerospace & Defense,2026-07-15
+PSX,PSX,Phillips 66,S&P 500,Energy,"Oil, Gas & Consumable Fuels",Oil & Gas Refining & Marketing,2026-07-15
+PTC,PTC,PTC Inc.,S&P 500,Information Technology,Software,Application Software,2026-07-15
+PTCT,PTCT,"PTC Therapeutics, Inc.",S&P SmallCap 600,Health Care,Pharmaceuticals,Pharmaceuticals,2026-07-15
+PTEN,PTEN,"Patterson-UTI Energy, Inc.",S&P SmallCap 600,Energy,Energy Equipment & Services,Oil & Gas Drilling,2026-07-15
+PTGX,PTGX,"Protagonist Therapeutics, Inc.",S&P SmallCap 600,Health Care,Biotechnology,Biotechnology,2026-07-15
+PTON,PTON,"Peloton Interactive, Inc.",S&P SmallCap 600,Consumer Discretionary,Leisure Products,Leisure Products,2026-07-15
+PVH,PVH,PVH Corp.,S&P MidCap 400,Consumer Discretionary,"Textiles, Apparel & Luxury Goods","Apparel, Accessories & Luxury Goods",2026-07-15
+PWR,PWR,Quanta Services,S&P 500,Industrials,Construction & Engineering,Construction & Engineering,2026-07-15
+PYPL,PYPL,PayPal,S&P 500,Financials,Financial Services,Transaction & Payment Processing Services,2026-07-15
+PZZA,PZZA,Papa John's Pizza,S&P SmallCap 600,Consumer Discretionary,"Hotels, Restaurants & Leisure",Restaurants,2026-07-15
+Q,Q,Qnity Electronics,S&P 500,Information Technology,Semiconductors & Semiconductor Equipment,Semiconductor Materials & Equipment,2026-07-15
+QCOM,QCOM,Qualcomm,S&P 500,Information Technology,Semiconductors & Semiconductor Equipment,Semiconductors,2026-07-15
+QDEL,QDEL,QuidelOrtho,S&P SmallCap 600,Health Care,Health Care Equipment & Supplies,Health Care Supplies,2026-07-15
+QLYS,QLYS,Qualys,S&P MidCap 400,Information Technology,Software,Systems Software,2026-07-15
+QNST,QNST,"QuinStreet, Inc.",S&P SmallCap 600,Communication Services,Interactive Media & Services,Interactive Media & Services,2026-07-15
+QRVO,QRVO,Qorvo,S&P SmallCap 600,Information Technology,Semiconductors & Semiconductor Equipment,Semiconductors,2026-07-15
+QTWO,QTWO,"Q2 Holdings, Inc.",S&P SmallCap 600,Information Technology,Software,Application Software,2026-07-15
+R,R,Ryder,S&P MidCap 400,Industrials,Ground Transportation,Cargo Ground Transportation,2026-07-15
+RAL,RAL,Ralliant Corp,S&P SmallCap 600,Information Technology,"Electronic Equipment, Instruments & Components",Electronic Equipment & Instruments,2026-07-15
+RAMP,RAMP,"LiveRamp Holdings, Inc.",S&P SmallCap 600,Information Technology,Software,Application Software,2026-07-15
+RBA,RBA,RB Global,S&P MidCap 400,Industrials,Commercial Services & Supplies,Diversified Support Services,2026-07-15
+RBC,RBC,RBC Bearings,S&P MidCap 400,Industrials,Machinery,Industrial Machinery & Supplies & Components,2026-07-15
+RCL,RCL,Royal Caribbean Group,S&P 500,Consumer Discretionary,"Hotels, Restaurants & Leisure","Hotels, Resorts & Cruise Lines",2026-07-15
+RCUS,RCUS,"Arcus Biosciences, Inc.",S&P SmallCap 600,Health Care,Biotechnology,Biotechnology,2026-07-15
+RDN,RDN,"Radian Group, Inc.",S&P SmallCap 600,Financials,Insurance,Property & Casualty Insurance,2026-07-15
+RDNT,RDNT,"RadNet, Inc.",S&P SmallCap 600,Health Care,Health Care Providers & Services,Health Care Services,2026-07-15
+REG,REG,Regency Centers,S&P 500,Real Estate,Retail REITs,Retail REITs,2026-07-15
+REGN,REGN,Regeneron Pharmaceuticals,S&P 500,Health Care,Biotechnology,Biotechnology,2026-07-15
+RELY,RELY,Remitly,S&P SmallCap 600,Financials,Financial Services,Transaction & Payment Processing Services,2026-07-15
+RES,RES,"RPC, Inc.",S&P SmallCap 600,Energy,Energy Equipment & Services,Oil & Gas Equipment & Services,2026-07-15
+REX,REX,REX American Resources Corporation,S&P SmallCap 600,Energy,"Oil, Gas & Consumable Fuels",Oil & Gas Refining & Marketing,2026-07-15
+REXR,REXR,Rexford Industrial Realty,S&P MidCap 400,Real Estate,Industrial REITs,Industrial REITs,2026-07-15
+REYN,REYN,Reynolds Consumer Products,S&P SmallCap 600,Consumer Staples,Household Products,Household Products,2026-07-15
+REZI,REZI,"Resideo Technologies, Inc.",S&P SmallCap 600,Industrials,Trading Companies & Distributors,Trading Companies & Distributors,2026-07-15
+RF,RF,Regions Financial Corporation,S&P 500,Financials,Banks,Regional Banks,2026-07-15
+RGA,RGA,Reinsurance Group of America,S&P MidCap 400,Financials,Insurance,Reinsurance,2026-07-15
+RGEN,RGEN,Repligen,S&P MidCap 400,Health Care,Biotechnology,Biotechnology,2026-07-15
+RGLD,RGLD,Royal Gold,S&P MidCap 400,Materials,Metals & Mining,Gold,2026-07-15
+RH,RH,RH,S&P MidCap 400,Consumer Discretionary,Specialty Retail,Homefurnishing Retail,2026-07-15
+RHI,RHI,Robert Half,S&P SmallCap 600,Industrials,Professional Services,Human Resource & Employment Services,2026-07-15
+RHP,RHP,Ryman Hospitality Properties,S&P SmallCap 600,Real Estate,Hotel & Resort REITs,Hotel & Resort REITs,2026-07-15
+RITM,RITM,Rithm Capital,S&P SmallCap 600,Financials,Mortgage Real Estate Investment Trusts (REITs),Mortgage REITs,2026-07-15
+RJF,RJF,Raymond James Financial,S&P 500,Financials,Capital Markets,Investment Banking & Brokerage,2026-07-15
+RL,RL,Ralph Lauren Corporation,S&P 500,Consumer Discretionary,"Textiles, Apparel & Luxury Goods","Apparel, Accessories & Luxury Goods",2026-07-15
+RLI,RLI,RLI Corp.,S&P MidCap 400,Financials,Insurance,Property & Casualty Insurance,2026-07-15
+RMBS,RMBS,Rambus,S&P MidCap 400,Information Technology,Semiconductors & Semiconductor Equipment,Semiconductors,2026-07-15
+RMD,RMD,ResMed,S&P 500,Health Care,Health Care Equipment & Supplies,Health Care Equipment,2026-07-15
+RNG,RNG,"RingCentral, Inc.",S&P SmallCap 600,Information Technology,Software,Application Software,2026-07-15
+RNR,RNR,RenaissanceRe,S&P MidCap 400,Financials,Insurance,Reinsurance,2026-07-15
+RNST,RNST,Renasant Corp.,S&P SmallCap 600,Financials,Banks,Regional Banks,2026-07-15
+ROCK,ROCK,"Gibraltar Industries, Inc.",S&P SmallCap 600,Industrials,Building Products,Building Products,2026-07-15
+ROG,ROG,Rogers Corporation,S&P SmallCap 600,Information Technology,"Electronic Equipment, Instruments & Components",Electronic Components,2026-07-15
+ROIV,ROIV,Roivant Sciences,S&P MidCap 400,Health Care,Biotechnology,Biotechnology,2026-07-15
+ROK,ROK,Rockwell Automation,S&P 500,Industrials,Electrical Equipment,Electrical Components & Equipment,2026-07-15
+ROKU,ROKU,"Roku, Inc.",S&P MidCap 400,Communication Services,Entertainment,Movies & Entertainment,2026-07-15
+ROL,ROL,"Rollins, Inc.",S&P 500,Industrials,Commercial Services & Supplies,Environmental & Facilities Services,2026-07-15
+ROP,ROP,Roper Technologies,S&P 500,Information Technology,"Electronic Equipment, Instruments & Components",Electronic Equipment & Instruments,2026-07-15
+ROST,ROST,Ross Stores,S&P 500,Consumer Discretionary,Specialty Retail,Apparel Retail,2026-07-15
+RPM,RPM,RPM International,S&P MidCap 400,Materials,Chemicals,Specialty Chemicals,2026-07-15
+RRC,RRC,Range Resources,S&P MidCap 400,Energy,"Oil, Gas & Consumable Fuels",Oil & Gas Exploration & Production,2026-07-15
+RRR,RRR,"Red Rock Resorts, Inc.",S&P SmallCap 600,Consumer Discretionary,"Hotels, Restaurants & Leisure",Casinos & Gaming,2026-07-15
+RRX,RRX,Regal Rexnord,S&P MidCap 400,Industrials,Electrical Equipment,Electrical Components & Equipment,2026-07-15
+RS,RS,"Reliance, Inc.",S&P MidCap 400,Materials,Metals & Mining,Steel,2026-07-15
+RSG,RSG,Republic Services,S&P 500,Industrials,Commercial Services & Supplies,Environmental & Facilities Services,2026-07-15
+RSI,RSI,"Rush Street Interactive, Inc.",S&P SmallCap 600,Consumer Discretionary,"Hotels, Restaurants & Leisure",Casinos & Gaming,2026-07-15
+RTX,RTX,RTX Corporation,S&P 500,Industrials,Aerospace & Defense,Aerospace & Defense,2026-07-15
+RUN,RUN,Sunrun,S&P SmallCap 600,Industrials,Building Products,Building Products,2026-07-15
+RUSHA,RUSHA,Rush Enterprises,S&P SmallCap 600,Industrials,Machinery,Construction Machinery & Heavy Transportation Equipment,2026-07-15
+RVTY,RVTY,Revvity,S&P 500,Health Care,Health Care Equipment & Supplies,Health Care Equipment,2026-07-15
+RXO,RXO,"RXO, Inc.",S&P SmallCap 600,Industrials,Ground Transportation,Cargo Ground Transportation,2026-07-15
+RYAN,RYAN,Ryan Specialty,S&P MidCap 400,Financials,Insurance,Insurance Brokers,2026-07-15
+RYN,RYN,Rayonier,S&P MidCap 400,Real Estate,Specialized REITs,Timber REITs,2026-07-15
+SABR,SABR,Sabre,S&P SmallCap 600,Consumer Discretionary,"Hotels, Restaurants & Leisure","Hotels, Resorts & Cruise Lines",2026-07-15
+SAFE,SAFE,"Safehold, Inc.",S&P SmallCap 600,Real Estate,Specialized REITs,Other Specialized REITs,2026-07-15
+SAFT,SAFT,"Safety Insurance Group, Inc.",S&P SmallCap 600,Financials,Insurance,Property & Casualty Insurance,2026-07-15
+SAH,SAH,"Sonic Automotive, Inc.",S&P SmallCap 600,Consumer Discretionary,Specialty Retail,Automotive Retail,2026-07-15
+SAIA,SAIA,Saia,S&P MidCap 400,Industrials,Ground Transportation,Cargo Ground Transportation,2026-07-15
+SAIC,SAIC,Science Applications Intl Corp,S&P MidCap 400,Industrials,Commercial Services & Supplies,Diversified Support Services,2026-07-15
+SAM,SAM,Boston Beer Company,S&P MidCap 400,Consumer Staples,Beverages,Brewers,2026-07-15
+SANM,SANM,Sanmina Corporation,S&P MidCap 400,Information Technology,"Electronic Equipment, Instruments & Components",Electronic Manufacturing Services,2026-07-15
+SARO,SARO,StandardAero,S&P MidCap 400,Industrials,Aerospace & Defense,Aerospace & Defense,2026-07-15
+SBAC,SBAC,SBA Communications,S&P 500,Real Estate,Specialized REITs,Telecom Tower REITs,2026-07-15
+SBCF,SBCF,Seacoast Banking Corporation of Florida,S&P SmallCap 600,Financials,Banks,Regional Banks,2026-07-15
+SBH,SBH,"Sally Beauty Holdings, Inc.",S&P SmallCap 600,Consumer Discretionary,Specialty Retail,Other Specialty Retail,2026-07-15
+SBRA,SBRA,Sabra Health Care REIT,S&P MidCap 400,Real Estate,Health Care REITs,Health Care REITs,2026-07-15
+SBSI,SBSI,"Southside Bancshares, Inc.",S&P SmallCap 600,Financials,Banks,Regional Banks,2026-07-15
+SBUX,SBUX,Starbucks,S&P 500,Consumer Discretionary,"Hotels, Restaurants & Leisure",Restaurants,2026-07-15
+SCHL,SCHL,Scholastic Corporation,S&P SmallCap 600,Communication Services,Media,Publishing,2026-07-15
+SCHW,SCHW,Charles Schwab Corporation,S&P 500,Financials,Capital Markets,Investment Banking & Brokerage,2026-07-15
+SCI,SCI,Service Corp Intl,S&P MidCap 400,Consumer Discretionary,Diversified Consumer Services,Specialized Consumer Services,2026-07-15
+SCL,SCL,Stepan Company,S&P SmallCap 600,Materials,Chemicals,Specialty Chemicals,2026-07-15
+SCSC,SCSC,"ScanSource, Inc.",S&P SmallCap 600,Information Technology,"Electronic Equipment, Instruments & Components",Technology Distributors,2026-07-15
+SDGR,SDGR,"Schrödinger, Inc.",S&P SmallCap 600,Health Care,Health Care Providers & Services,Health Care Services,2026-07-15
+SEDG,SEDG,SolarEdge,S&P SmallCap 600,Information Technology,Semiconductors & Semiconductor Equipment,Semiconductor Materials & Equipment,2026-07-15
+SEIC,SEIC,SEI Investments Company,S&P MidCap 400,Financials,Capital Markets,Asset Management & Custody Banks,2026-07-15
+SEZL,SEZL,Sezzle,S&P SmallCap 600,Financials,Financial Services,Transaction & Payment Processing Services,2026-07-15
+SF,SF,Stifel,S&P MidCap 400,Financials,Capital Markets,Investment Banking & Brokerage,2026-07-15
+SFBS,SFBS,"ServisFirst Bancshares, Inc.",S&P SmallCap 600,Financials,Banks,Regional Banks,2026-07-15
+SFM,SFM,Sprouts Farmers Market,S&P MidCap 400,Consumer Staples,Consumer Staples Distribution & Retail,Food Retail,2026-07-15
+SFNC,SFNC,Simmons First National Corporation,S&P SmallCap 600,Financials,Banks,Regional Banks,2026-07-15
+SGI,SGI,Somnigroup International,S&P MidCap 400,Consumer Discretionary,Household Durables,Home Furnishings,2026-07-15
+SHAK,SHAK,"Shake Shack, Inc.",S&P SmallCap 600,Consumer Discretionary,"Hotels, Restaurants & Leisure",Restaurants,2026-07-15
+SHC,SHC,Sotera Health,S&P MidCap 400,Health Care,Health Care Providers & Services,Health Care Services,2026-07-15
+SHEN,SHEN,Shenandoah Telecommunications Co,S&P SmallCap 600,Communication Services,Wireless Telecommunication Services,Wireless Telecommunication Services,2026-07-15
+SHO,SHO,"Sunstone Hotel Investors, Inc.",S&P SmallCap 600,Real Estate,Hotel & Resort REITs,Hotel & Resort REITs,2026-07-15
+SHOO,SHOO,"Steven Madden, Ltd.",S&P SmallCap 600,Consumer Discretionary,"Textiles, Apparel & Luxury Goods",Footwear,2026-07-15
+SHW,SHW,Sherwin-Williams,S&P 500,Materials,Chemicals,Specialty Chemicals,2026-07-15
+SIG,SIG,Signet Jewelers,S&P SmallCap 600,Consumer Discretionary,Specialty Retail,Other Specialty Retail,2026-07-15
+SIGI,SIGI,Selective Insurance Group,S&P MidCap 400,Financials,Insurance,Property & Casualty Insurance,2026-07-15
+SIRI,SIRI,SiriusXM,S&P MidCap 400,Communication Services,Media,Broadcasting,2026-07-15
+SITM,SITM,SiTime,S&P MidCap 400,Information Technology,Semiconductors & Semiconductor Equipment,Semiconductors,2026-07-15
+SJM,SJM,J.M. Smucker Company (The),S&P 500,Consumer Staples,Food Products,Packaged Foods & Meats,2026-07-15
+SKT,SKT,"Tanger Factory Outlet Centers, Inc.",S&P SmallCap 600,Real Estate,Retail REITs,Retail REITs,2026-07-15
+SKY,SKY,"Champion Homes, Inc.",S&P SmallCap 600,Consumer Discretionary,Household Durables,Homebuilding,2026-07-15
+SKYW,SKYW,"SkyWest, Inc.",S&P SmallCap 600,Industrials,Passenger Airlines,Passenger Airlines,2026-07-15
+SLAB,SLAB,Silicon Labs,S&P MidCap 400,Information Technology,Semiconductors & Semiconductor Equipment,Semiconductors,2026-07-15
+SLB,SLB,Schlumberger,S&P 500,Energy,Energy Equipment & Services,Oil & Gas Equipment & Services,2026-07-15
+SLG,SLG,SL Green Realty,S&P SmallCap 600,Real Estate,Office REITs,Office REITs,2026-07-15
+SLGN,SLGN,Silgan Holdings,S&P MidCap 400,Materials,Containers & Packaging,"Metal, Glass & Plastic Containers",2026-07-15
+SLM,SLM,SLM Corp,S&P MidCap 400,Financials,Consumer Finance,Consumer Finance,2026-07-15
+SLVM,SLVM,Sylvamo Corp.,S&P SmallCap 600,Materials,Paper & Forest Products,Paper Products,2026-07-15
+SM,SM,SM Energy Company,S&P SmallCap 600,Energy,"Oil, Gas & Consumable Fuels",Oil & Gas Exploration & Production,2026-07-15
+SMCI,SMCI,Supermicro,S&P 500,Information Technology,"Technology Hardware, Storage & Peripherals","Technology Hardware, Storage & Peripherals",2026-07-15
+SMG,SMG,Scotts Miracle-Gro Company,S&P MidCap 400,Materials,Chemicals,Fertilizers & Agricultural Chemicals,2026-07-15
+SMP,SMP,"Standard Motor Products, Inc.",S&P SmallCap 600,Consumer Discretionary,Automobile Components,Automotive Parts & Equipment,2026-07-15
+SMPL,SMPL,Simply Good Foods Company,S&P SmallCap 600,Consumer Staples,Food Products,Packaged Foods & Meats,2026-07-15
+SMTC,SMTC,Semtech,S&P MidCap 400,Information Technology,Semiconductors & Semiconductor Equipment,Semiconductors,2026-07-15
+SN,SN,SharkNinja,S&P MidCap 400,Consumer Discretionary,Household Durables,Household Appliances,2026-07-15
+SNA,SNA,Snap-on,S&P 500,Industrials,Machinery,Industrial Machinery & Supplies & Components,2026-07-15
+SNDK,SNDK,Sandisk,S&P 500,Information Technology,"Technology Hardware, Storage & Peripherals","Technology Hardware, Storage & Peripherals",2026-07-15
+SNDR,SNDR,Schneider National,S&P SmallCap 600,Industrials,Ground Transportation,Cargo Ground Transportation,2026-07-15
+SNEX,SNEX,StoneX Group Inc.,S&P SmallCap 600,Financials,Capital Markets,Investment Banking & Brokerage,2026-07-15
+SNPS,SNPS,Synopsys,S&P 500,Information Technology,Software,Application Software,2026-07-15
+SNX,SNX,TD Synnex,S&P MidCap 400,Information Technology,"Electronic Equipment, Instruments & Components",Technology Distributors,2026-07-15
+SO,SO,Southern Company,S&P 500,Utilities,Electric Utilities,Electric Utilities,2026-07-15
+SOLS,SOLS,Solstice Advanced Materials,S&P MidCap 400,Materials,Chemicals,Specialty Chemicals,2026-07-15
+SOLV,SOLV,Solventum,S&P 500,Health Care,Health Care Technology,Health Care Technology,2026-07-15
+SON,SON,Sonoco,S&P MidCap 400,Materials,Containers & Packaging,Paper & Plastic Packaging Products & Materials,2026-07-15
+SONO,SONO,"Sonos, Inc.",S&P SmallCap 600,Consumer Discretionary,Household Durables,Consumer Electronics,2026-07-15
+SPG,SPG,Simon Property Group,S&P 500,Real Estate,Retail REITs,Retail REITs,2026-07-15
+SPGI,SPGI,S&P Global,S&P 500,Financials,Capital Markets,Financial Exchanges & Data,2026-07-15
+SPHR,SPHR,Sphere Entertainment,S&P SmallCap 600,Communication Services,Entertainment,Movies & Entertainment,2026-07-15
+SPNT,SPNT,SiriusPoint Ltd.,S&P SmallCap 600,Financials,Insurance,Reinsurance,2026-07-15
+SPSC,SPSC,"SPS Commerce, Inc.",S&P SmallCap 600,Information Technology,Software,Application Software,2026-07-15
+SPXC,SPXC,SPX Technologies,S&P MidCap 400,Industrials,Machinery,Industrial Machinery & Supplies & Components,2026-07-15
+SR,SR,Spire,S&P MidCap 400,Utilities,Gas Utilities,Gas Utilities,2026-07-15
+SRE,SRE,Sempra,S&P 500,Utilities,Multi-Utilities,Multi-Utilities,2026-07-15
+SRPT,SRPT,Sarepta Therapeutics,S&P SmallCap 600,Health Care,Biotechnology,Biotechnology,2026-07-15
+SSB,SSB,South State Bank,S&P MidCap 400,Financials,Banks,Regional Banks,2026-07-15
+SSD,SSD,Simpson Manufacturing,S&P MidCap 400,Industrials,Building Products,Building Products,2026-07-15
+ST,ST,Sensata Technologies,S&P MidCap 400,Industrials,Electrical Equipment,Electrical Components & Equipment,2026-07-15
+STAA,STAA,STAAR Surgical Company,S&P SmallCap 600,Health Care,Health Care Equipment & Supplies,Health Care Equipment,2026-07-15
+STAG,STAG,STAG Industrial,S&P MidCap 400,Real Estate,Industrial REITs,Industrial REITs,2026-07-15
+STBA,STBA,"S&T Bancorp, Inc.",S&P SmallCap 600,Financials,Banks,Regional Banks,2026-07-15
+STC,STC,Stewart Information Services Corporation,S&P SmallCap 600,Financials,Insurance,Property & Casualty Insurance,2026-07-15
+STE,STE,Steris,S&P 500,Health Care,Health Care Equipment & Supplies,Health Care Equipment,2026-07-15
+STEP,STEP,StepStone Group,S&P SmallCap 600,Financials,Capital Markets,Asset Management & Custody Banks,2026-07-15
+STLD,STLD,Steel Dynamics,S&P 500,Materials,Metals & Mining,Steel,2026-07-15
+STRA,STRA,"Strategic Education, Inc.",S&P SmallCap 600,Consumer Discretionary,Diversified Consumer Services,Education Services,2026-07-15
+STRL,STRL,Sterling Infrastructure,S&P MidCap 400,Industrials,Construction & Engineering,Construction & Engineering,2026-07-15
+STT,STT,State Street Corporation,S&P 500,Financials,Capital Markets,Asset Management & Custody Banks,2026-07-15
+STWD,STWD,Starwood Property Trust,S&P MidCap 400,Financials,Mortgage Real Estate Investment Trusts (REITs),Mortgage REITs,2026-07-15
+STX,STX,Seagate Technology,S&P 500,Information Technology,"Technology Hardware, Storage & Peripherals","Technology Hardware, Storage & Peripherals",2026-07-15
+STZ,STZ,Constellation Brands,S&P 500,Consumer Staples,Beverages,Distillers & Vintners,2026-07-15
+SUPN,SUPN,"Supernus Pharmaceuticals, Inc.",S&P SmallCap 600,Health Care,Pharmaceuticals,Pharmaceuticals,2026-07-15
+SW,SW,Smurfit Westrock,S&P 500,Materials,Containers & Packaging,Paper & Plastic Packaging Products & Materials,2026-07-15
+SWK,SWK,Stanley Black & Decker,S&P 500,Industrials,Machinery,Industrial Machinery & Supplies & Components,2026-07-15
+SWKS,SWKS,Skyworks Solutions,S&P 500,Information Technology,Semiconductors & Semiconductor Equipment,Semiconductors,2026-07-15
+SWX,SWX,Southwest Gas Corp,S&P MidCap 400,Utilities,Gas Utilities,Gas Utilities,2026-07-15
+SXI,SXI,Standex International Corporation,S&P SmallCap 600,Industrials,Machinery,Industrial Machinery & Supplies & Components,2026-07-15
+SXT,SXT,Sensient Technologies,S&P SmallCap 600,Materials,Chemicals,Specialty Chemicals,2026-07-15
+SYF,SYF,Synchrony Financial,S&P 500,Financials,Consumer Finance,Consumer Finance,2026-07-15
+SYK,SYK,Stryker Corporation,S&P 500,Health Care,Health Care Equipment & Supplies,Health Care Equipment,2026-07-15
+SYNA,SYNA,Synaptics,S&P MidCap 400,Information Technology,Semiconductors & Semiconductor Equipment,Semiconductors,2026-07-15
+SYY,SYY,Sysco,S&P 500,Consumer Staples,Consumer Staples Distribution & Retail,Food Distributors,2026-07-15
+T,T,AT&T,S&P 500,Communication Services,Diversified Telecommunication Services,Integrated Telecommunication Services,2026-07-15
+TALO,TALO,"Talos Energy, Inc.",S&P SmallCap 600,Energy,"Oil, Gas & Consumable Fuels",Oil & Gas Exploration & Production,2026-07-15
+TAP,TAP,Molson Coors Beverage Company,S&P 500,Consumer Staples,Beverages,Brewers,2026-07-15
+TBBK,TBBK,"The Bancorp, Inc.",S&P SmallCap 600,Financials,Banks,Regional Banks,2026-07-15
+TCBI,TCBI,Texas Capital Bancshares,S&P MidCap 400,Financials,Banks,Regional Banks,2026-07-15
+TDC,TDC,Teradata,S&P SmallCap 600,Information Technology,IT Services,IT Consulting & Other Services,2026-07-15
+TDG,TDG,TransDigm Group,S&P 500,Industrials,Aerospace & Defense,Aerospace & Defense,2026-07-15
+TDS,TDS,"Telephone and Data Systems, Inc.",S&P SmallCap 600,Communication Services,Diversified Telecommunication Services,Integrated Telecommunication Services,2026-07-15
+TDW,TDW,"Tidewater, Inc.",S&P SmallCap 600,Energy,Energy Equipment & Services,Oil & Gas Equipment & Services,2026-07-15
+TDY,TDY,Teledyne Technologies,S&P 500,Information Technology,"Electronic Equipment, Instruments & Components",Electronic Equipment & Instruments,2026-07-15
+TECH,TECH,Bio-Techne,S&P 500,Health Care,Life Sciences Tools & Services,Life Sciences Tools & Services,2026-07-15
+TEL,TEL,TE Connectivity,S&P 500,Information Technology,"Electronic Equipment, Instruments & Components",Electronic Manufacturing Services,2026-07-15
+TER,TER,Teradyne,S&P 500,Information Technology,Semiconductors & Semiconductor Equipment,Semiconductor Materials & Equipment,2026-07-15
+TEX,TEX,Terex,S&P MidCap 400,Industrials,Machinery,Construction Machinery & Heavy Transportation Equipment,2026-07-15
+TFC,TFC,Truist Financial,S&P 500,Financials,Banks,Diversified Banks,2026-07-15
+TFIN,TFIN,"Triumph Bancorp, Inc.",S&P SmallCap 600,Financials,Banks,Regional Banks,2026-07-15
+TFX,TFX,Teleflex,S&P SmallCap 600,Health Care,Health Care Equipment & Supplies,Health Care Equipment,2026-07-15
+TGT,TGT,Target Corporation,S&P 500,Consumer Staples,Consumer Staples Distribution & Retail,Consumer Staples Merchandise Retail,2026-07-15
+TGTX,TGTX,"TG Therapeutics, Inc.",S&P SmallCap 600,Health Care,Biotechnology,Biotechnology,2026-07-15
+THC,THC,Tenet Health,S&P MidCap 400,Health Care,Health Care Providers & Services,Health Care Facilities,2026-07-15
+THG,THG,Hanover Insurance,S&P MidCap 400,Financials,Insurance,Property & Casualty Insurance,2026-07-15
+THO,THO,Thor Industries,S&P MidCap 400,Consumer Discretionary,Leisure Products,Leisure Products,2026-07-15
+THRM,THRM,Gentherm Incorporated,S&P SmallCap 600,Consumer Discretionary,Automobile Components,Automotive Parts & Equipment,2026-07-15
+TILE,TILE,"Interface, Inc.",S&P SmallCap 600,Industrials,Commercial Services & Supplies,Office Services & Supplies,2026-07-15
+TJX,TJX,TJX Companies,S&P 500,Consumer Discretionary,Specialty Retail,Apparel Retail,2026-07-15
+TKO,TKO,TKO Group Holdings,S&P 500,Communication Services,Entertainment,Movies & Entertainment,2026-07-15
+TKR,TKR,Timken,S&P MidCap 400,Industrials,Machinery,Industrial Machinery & Supplies & Components,2026-07-15
+TLN,TLN,Talen Energy,S&P MidCap 400,Utilities,Independent Power and Renewable Electricity Producers,Independent Power Producers & Energy Traders,2026-07-15
+TMDX,TMDX,"TransMedics Group, Inc.",S&P SmallCap 600,Health Care,Health Care Equipment & Supplies,Health Care Equipment,2026-07-15
+TMHC,TMHC,Taylor Morrison,S&P MidCap 400,Consumer Discretionary,Household Durables,Homebuilding,2026-07-15
+TMO,TMO,Thermo Fisher Scientific,S&P 500,Health Care,Life Sciences Tools & Services,Life Sciences Tools & Services,2026-07-15
+TMP,TMP,Tompkins Financial Corporation,S&P SmallCap 600,Financials,Banks,Regional Banks,2026-07-15
+TMUS,TMUS,T-Mobile US,S&P 500,Communication Services,Wireless Telecommunication Services,Wireless Telecommunication Services,2026-07-15
+TNC,TNC,Tennant Company,S&P SmallCap 600,Industrials,Machinery,Industrial Machinery & Supplies & Components,2026-07-15
+TNDM,TNDM,Tandem Diabetes Care,S&P SmallCap 600,Health Care,Health Care Equipment & Supplies,Health Care Equipment,2026-07-15
+TNL,TNL,Travel + Leisure Co.,S&P MidCap 400,Consumer Discretionary,"Hotels, Restaurants & Leisure","Hotels, Resorts & Cruise Lines",2026-07-15
+TOL,TOL,Toll Brothers,S&P MidCap 400,Consumer Discretionary,Household Durables,Homebuilding,2026-07-15
+TPL,TPL,Texas Pacific Land Corporation,S&P 500,Energy,"Oil, Gas & Consumable Fuels",Oil & Gas Exploration & Production,2026-07-15
+TPR,TPR,"Tapestry, Inc.",S&P 500,Consumer Discretionary,"Textiles, Apparel & Luxury Goods","Apparel, Accessories & Luxury Goods",2026-07-15
+TR,TR,"Tootsie Roll Industries, Inc.",S&P SmallCap 600,Consumer Staples,Food Products,Packaged Foods & Meats,2026-07-15
+TREX,TREX,Trex,S&P MidCap 400,Industrials,Building Products,Building Products,2026-07-15
+TRGP,TRGP,Targa Resources,S&P 500,Energy,"Oil, Gas & Consumable Fuels",Oil & Gas Storage & Transportation,2026-07-15
+TRIP,TRIP,TripAdvisor,S&P SmallCap 600,Communication Services,Interactive Media & Services,Interactive Media & Services,2026-07-15
+TRMB,TRMB,Trimble Inc.,S&P 500,Information Technology,Software,Application Software,2026-07-15
+TRMK,TRMK,Trustmark Corp.,S&P SmallCap 600,Financials,Banks,Regional Banks,2026-07-15
+TRN,TRN,"Trinity Industries, Inc.",S&P SmallCap 600,Industrials,Machinery,Construction Machinery & Heavy Transportation Equipment,2026-07-15
+TRNO,TRNO,Terreno Realty Corporation,S&P SmallCap 600,Real Estate,Industrial REITs,Industrial REITs,2026-07-15
+TROW,TROW,T. Rowe Price,S&P 500,Financials,Capital Markets,Asset Management & Custody Banks,2026-07-15
+TRST,TRST,TrustCo Bank Corp NY,S&P SmallCap 600,Financials,Banks,Regional Banks,2026-07-15
+TRU,TRU,TransUnion,S&P MidCap 400,Industrials,Professional Services,Research & Consulting Services,2026-07-15
+TRUP,TRUP,Trupanion,S&P SmallCap 600,Financials,Insurance,Life & Health Insurance,2026-07-15
+TRV,TRV,Travelers Companies (The),S&P 500,Financials,Insurance,Property & Casualty Insurance,2026-07-15
+TSCO,TSCO,Tractor Supply,S&P 500,Consumer Discretionary,Specialty Retail,Other Specialty Retail,2026-07-15
+TSLA,TSLA,"Tesla, Inc.",S&P 500,Consumer Discretionary,Automobiles,Automobile Manufacturers,2026-07-15
+TSN,TSN,Tyson Foods,S&P 500,Consumer Staples,Food Products,Packaged Foods & Meats,2026-07-15
+TT,TT,Trane Technologies,S&P 500,Industrials,Building Products,Building Products,2026-07-15
+TTC,TTC,Toro,S&P MidCap 400,Industrials,Machinery,Agricultural & Farm Machinery,2026-07-15
+TTD,TTD,Trade Desk (The),S&P 500,Communication Services,Media,Advertising,2026-07-15
+TTEK,TTEK,Tetra Tech,S&P MidCap 400,Industrials,Construction & Engineering,Construction & Engineering,2026-07-15
+TTMI,TTMI,TTM Technologies,S&P MidCap 400,Information Technology,"Electronic Equipment, Instruments & Components",Electronic Manufacturing Services,2026-07-15
+TTWO,TTWO,Take-Two Interactive,S&P 500,Communication Services,Entertainment,Interactive Home Entertainment,2026-07-15
+TWLO,TWLO,Twilio,S&P MidCap 400,Information Technology,Software,Systems Software,2026-07-15
+TWO,TWO,Two Harbors Investment Corp.,S&P SmallCap 600,Financials,Mortgage Real Estate Investment Trusts (REITs),Mortgage REITs,2026-07-15
+TXN,TXN,Texas Instruments,S&P 500,Information Technology,Semiconductors & Semiconductor Equipment,Semiconductors,2026-07-15
+TXNM,TXNM,TXNM Energy,S&P MidCap 400,Utilities,Electric Utilities,Electric Utilities,2026-07-15
+TXRH,TXRH,Texas Roadhouse,S&P MidCap 400,Consumer Discretionary,"Hotels, Restaurants & Leisure",Restaurants,2026-07-15
+TXT,TXT,Textron,S&P 500,Industrials,Aerospace & Defense,Aerospace & Defense,2026-07-15
+TYL,TYL,Tyler Technologies,S&P 500,Information Technology,Software,Application Software,2026-07-15
+UA,UA,Under Armour (Class C),S&P SmallCap 600,Consumer Discretionary,"Textiles, Apparel & Luxury Goods","Apparel, Accessories & Luxury Goods",2026-07-15
+UAA,UAA,Under Armour (Class A),S&P SmallCap 600,Consumer Discretionary,"Textiles, Apparel & Luxury Goods","Apparel, Accessories & Luxury Goods",2026-07-15
+UAL,UAL,United Airlines Holdings,S&P 500,Industrials,Passenger Airlines,Passenger Airlines,2026-07-15
+UBER,UBER,Uber,S&P 500,Industrials,Ground Transportation,Passenger Ground Transportation,2026-07-15
+UBSI,UBSI,United Bankshares,S&P MidCap 400,Financials,Banks,Regional Banks,2026-07-15
+UCB,UCB,"United Community Banks, Inc.",S&P SmallCap 600,Financials,Banks,Regional Banks,2026-07-15
+UCTT,UCTT,"Ultra Clean Holdings, Inc.",S&P SmallCap 600,Information Technology,Semiconductors & Semiconductor Equipment,Semiconductor Materials & Equipment,2026-07-15
+UDR,UDR,"UDR, Inc.",S&P 500,Real Estate,Residential REITs,Multi-Family Residential REITs,2026-07-15
+UE,UE,Urban Edge Properties,S&P SmallCap 600,Real Estate,Retail REITs,Retail REITs,2026-07-15
+UFCS,UFCS,"United Fire Group, Inc.",S&P SmallCap 600,Financials,Insurance,Property & Casualty Insurance,2026-07-15
+UFPI,UFPI,UFP Industries,S&P MidCap 400,Industrials,Building Products,Building Products,2026-07-15
+UFPT,UFPT,"UFP Technologies, Inc.",S&P SmallCap 600,Health Care,Health Care Equipment & Supplies,Health Care Equipment,2026-07-15
+UGI,UGI,UGI Corp,S&P MidCap 400,Utilities,Gas Utilities,Gas Utilities,2026-07-15
+UHS,UHS,Universal Health Services,S&P 500,Health Care,Health Care Providers & Services,Health Care Facilities,2026-07-15
+ULS,ULS,UL Solutions,S&P MidCap 400,Industrials,Professional Services,Research & Consulting Services,2026-07-15
+ULTA,ULTA,Ulta Beauty,S&P 500,Consumer Discretionary,Specialty Retail,Other Specialty Retail,2026-07-15
+UMBF,UMBF,UMB Financial Corp.,S&P MidCap 400,Financials,Banks,Regional Banks,2026-07-15
+UNF,UNF,UniFirst Corporation,S&P SmallCap 600,Industrials,Commercial Services & Supplies,Diversified Support Services,2026-07-15
+UNFI,UNFI,United Natural Foods Inc,S&P SmallCap 600,Consumer Staples,Consumer Staples Distribution & Retail,Food Retail,2026-07-15
+UNH,UNH,UnitedHealth Group,S&P 500,Health Care,Health Care Providers & Services,Managed Health Care,2026-07-15
+UNIT,UNIT,Uniti Group,S&P SmallCap 600,Communication Services,Diversified Telecommunication Services,Alternative Carriers,2026-07-15
+UNM,UNM,Unum,S&P MidCap 400,Financials,Insurance,Life & Health Insurance,2026-07-15
+UNP,UNP,Union Pacific Corporation,S&P 500,Industrials,Ground Transportation,Rail Transportation,2026-07-15
+UPBD,UPBD,"Upbound Group, Inc.",S&P SmallCap 600,Consumer Discretionary,Specialty Retail,Computer & Electronics Retail,2026-07-15
+UPS,UPS,United Parcel Service,S&P 500,Industrials,Air Freight & Logistics,Air Freight & Logistics,2026-07-15
+UPWK,UPWK,"Upwork, Inc.",S&P SmallCap 600,Industrials,Professional Services,Human Resource & Employment Services,2026-07-15
+URBN,URBN,"Urban Outfitters, Inc.",S&P SmallCap 600,Consumer Discretionary,Specialty Retail,Apparel Retail,2026-07-15
+URI,URI,United Rentals,S&P 500,Industrials,Trading Companies & Distributors,Trading Companies & Distributors,2026-07-15
+USB,USB,U.S. Bancorp,S&P 500,Financials,Banks,Diversified Banks,2026-07-15
+USFD,USFD,US Foods,S&P MidCap 400,Consumer Staples,Consumer Staples Distribution & Retail,Food Distributors,2026-07-15
+USLM,USLM,"United States Lime & Minerals, Inc.",S&P SmallCap 600,Materials,Construction Materials,Construction Materials,2026-07-15
+USPH,USPH,"U.S. Physical Therapy, Inc.",S&P SmallCap 600,Health Care,Health Care Providers & Services,Health Care Facilities,2026-07-15
+UTHR,UTHR,United Therapeutics,S&P MidCap 400,Health Care,Biotechnology,Biotechnology,2026-07-15
+UTI,UTI,Universal Technical Institute,S&P SmallCap 600,Consumer Discretionary,Diversified Consumer Services,Education Services,2026-07-15
+UTL,UTL,Unitil Corporation,S&P SmallCap 600,Utilities,Electric Utilities,Electric Utilities,2026-07-15
+UVV,UVV,Universal Corporation,S&P SmallCap 600,Consumer Staples,Tobacco,Tobacco,2026-07-15
+V,V,Visa Inc.,S&P 500,Financials,Financial Services,Transaction & Payment Processing Services,2026-07-15
+VAC,VAC,Marriott Vacations Worldwide,S&P SmallCap 600,Consumer Discretionary,"Hotels, Restaurants & Leisure","Hotels, Resorts & Cruise Lines",2026-07-15
+VAL,VAL,Valaris,S&P MidCap 400,Energy,Energy Equipment & Services,Oil & Gas Drilling,2026-07-15
+VC,VC,Visteon,S&P MidCap 400,Consumer Discretionary,Automobile Components,Automotive Parts & Equipment,2026-07-15
+VCEL,VCEL,Vericel,S&P SmallCap 600,Health Care,Biotechnology,Biotechnology,2026-07-15
+VCTR,VCTR,"Victory Capital Holdings, Inc.",S&P SmallCap 600,Financials,Capital Markets,Asset Management & Custody Banks,2026-07-15
+VCYT,VCYT,"Veracyte, Inc.",S&P SmallCap 600,Health Care,Health Care Providers & Services,Health Care Services,2026-07-15
+VECO,VECO,Veeco Instruments Inc.,S&P SmallCap 600,Information Technology,Semiconductors & Semiconductor Equipment,Semiconductor Materials & Equipment,2026-07-15
+VEEV,VEEV,Veeva Systems,S&P 500,Health Care,Health Care Technology,Health Care Technology,2026-07-15
+VFC,VFC,VF Corporation,S&P MidCap 400,Consumer Discretionary,"Textiles, Apparel & Luxury Goods","Apparel, Accessories & Luxury Goods",2026-07-15
+VGNT,VGNT,Versigent PLC,S&P SmallCap 600,Consumer Discretionary,Specialty Retail,Other Specialty Retail,2026-07-15
+VIAV,VIAV,Viavi Solutions,S&P MidCap 400,Information Technology,Communications Equipment,Communications Equipment,2026-07-15
+VICI,VICI,Vici Properties,S&P 500,Real Estate,Hotel & Resort REITs,Hotel & Resort REITs,2026-07-15
+VICR,VICR,Vicor Corporation,S&P MidCap 400,Industrials,Electrical Equipment,Electrical Components & Equipment,2026-07-15
+VIR,VIR,"Vir Biotechnology, Inc.",S&P SmallCap 600,Health Care,Biotechnology,Biotechnology,2026-07-15
+VIRT,VIRT,"Virtu Financial, Inc.",S&P SmallCap 600,Financials,Capital Markets,Financial Exchanges & Data,2026-07-15
+VLO,VLO,Valero Energy,S&P 500,Energy,"Oil, Gas & Consumable Fuels",Oil & Gas Refining & Marketing,2026-07-15
+VLTO,VLTO,Veralto,S&P 500,Industrials,Commercial Services & Supplies,Environmental & Facilities Services,2026-07-15
+VLY,VLY,Valley Bank,S&P MidCap 400,Financials,Banks,Regional Banks,2026-07-15
+VMC,VMC,Vulcan Materials Company,S&P 500,Materials,Construction Materials,Construction Materials,2026-07-15
+VMI,VMI,Valmont Industries,S&P MidCap 400,Industrials,Machinery,Industrial Machinery & Supplies & Components,2026-07-15
+VNO,VNO,Vornado Realty Trust,S&P MidCap 400,Real Estate,Office REITs,Office REITs,2026-07-15
+VNOM,VNOM,Viper Energy,S&P MidCap 400,Energy,"Oil, Gas & Consumable Fuels",Oil & Gas Storage & Transportation,2026-07-15
+VNT,VNT,Vontier,S&P MidCap 400,Information Technology,"Electronic Equipment, Instruments & Components",Electronic Equipment & Instruments,2026-07-15
+VOYA,VOYA,Voya Financial,S&P MidCap 400,Financials,Financial Services,Multi-Sector Holdings,2026-07-15
+VRRM,VRRM,Verra Mobility Corporation,S&P SmallCap 600,Industrials,Professional Services,Data Processing & Outsourced Services,2026-07-15
+VRSK,VRSK,Verisk Analytics,S&P 500,Industrials,Professional Services,Research & Consulting Services,2026-07-15
+VRSN,VRSN,Verisign,S&P 500,Information Technology,IT Services,Internet Services & Infrastructure,2026-07-15
+VRT,VRT,Vertiv,S&P 500,Industrials,Electrical Equipment,Electrical Components & Equipment,2026-07-15
+VRTS,VRTS,"Virtus Investment Partners, Inc.",S&P SmallCap 600,Financials,Capital Markets,Asset Management & Custody Banks,2026-07-15
+VRTX,VRTX,Vertex Pharmaceuticals,S&P 500,Health Care,Biotechnology,Biotechnology,2026-07-15
+VSAT,VSAT,"Viasat, Inc.",S&P SmallCap 600,Information Technology,Communications Equipment,Communications Equipment,2026-07-15
+VSEC,VSEC,VSE Corporation,S&P SmallCap 600,Industrials,Aerospace & Defense,Aerospace & Defense,2026-07-15
+VSH,VSH,Vishay Intertechnology,S&P SmallCap 600,Information Technology,"Electronic Equipment, Instruments & Components",Electronic Components,2026-07-15
+VSNT,VSNT,"Versant Media Group, Inc.",S&P SmallCap 600,Communication Services,Media,Cable & Satellite,2026-07-15
+VST,VST,Vistra Corp.,S&P 500,Utilities,Electric Utilities,Electric Utilities,2026-07-15
+VSTS,VSTS,Vestis,S&P SmallCap 600,Industrials,Commercial Services & Supplies,Diversified Support Services,2026-07-15
+VSXY,VSXY,Victoria's Secret,S&P SmallCap 600,Consumer Discretionary,Specialty Retail,Apparel Retail,2026-07-15
+VTOL,VTOL,Bristow Group Inc.,S&P SmallCap 600,Energy,Energy Equipment & Services,Oil & Gas Equipment & Services,2026-07-15
+VTR,VTR,Ventas,S&P 500,Real Estate,Health Care REITs,Health Care REITs,2026-07-15
+VTRS,VTRS,Viatris,S&P 500,Health Care,Pharmaceuticals,Pharmaceuticals,2026-07-15
+VVV,VVV,Valvoline,S&P MidCap 400,Consumer Discretionary,Specialty Retail,Automotive Retail,2026-07-15
+VYX,VYX,NCR Voyix,S&P SmallCap 600,Information Technology,IT Services,IT Consulting & Other Services,2026-07-15
+VZ,VZ,Verizon,S&P 500,Communication Services,Diversified Telecommunication Services,Integrated Telecommunication Services,2026-07-15
+WAB,WAB,Wabtec,S&P 500,Industrials,Machinery,Construction Machinery & Heavy Transportation Equipment,2026-07-15
+WABC,WABC,Westamerica Bank,S&P SmallCap 600,Financials,Banks,Regional Banks,2026-07-15
+WAFD,WAFD,"WaFd, Inc.",S&P SmallCap 600,Financials,Banks,Regional Banks,2026-07-15
+WAL,WAL,Western Alliance Bancorporation,S&P MidCap 400,Financials,Banks,Regional Banks,2026-07-15
+WAT,WAT,Waters Corporation,S&P 500,Health Care,Life Sciences Tools & Services,Life Sciences Tools & Services,2026-07-15
+WAY,WAY,Waystar Holding Corp,S&P SmallCap 600,Health Care,Health Care Technology,Health Care Technology,2026-07-15
+WBD,WBD,Warner Bros. Discovery,S&P 500,Communication Services,Media,Broadcasting,2026-07-15
+WBS,WBS,Webster Bank,S&P MidCap 400,Financials,Banks,Regional Banks,2026-07-15
+WCC,WCC,WESCO International,S&P MidCap 400,Industrials,Trading Companies & Distributors,Trading Companies & Distributors,2026-07-15
+WD,WD,"Walker & Dunlop, Inc.",S&P SmallCap 600,Financials,Financial Services,Commercial & Residential Mortgage Finance,2026-07-15
+WDAY,WDAY,"Workday, Inc.",S&P 500,Information Technology,Software,Application Software,2026-07-15
+WDC,WDC,Western Digital,S&P 500,Information Technology,"Technology Hardware, Storage & Peripherals","Technology Hardware, Storage & Peripherals",2026-07-15
+WDFC,WDFC,WD-40 Company,S&P SmallCap 600,Consumer Staples,Household Products,Household Products,2026-07-15
+WEC,WEC,WEC Energy Group,S&P 500,Utilities,Electric Utilities,Electric Utilities,2026-07-15
+WELL,WELL,Welltower,S&P 500,Real Estate,Health Care REITs,Health Care REITs,2026-07-15
+WEN,WEN,The Wendy's Company,S&P SmallCap 600,Consumer Discretionary,"Hotels, Restaurants & Leisure",Restaurants,2026-07-15
+WERN,WERN,Werner Enterprises,S&P SmallCap 600,Industrials,Ground Transportation,Cargo Ground Transportation,2026-07-15
+WEX,WEX,WEX Inc.,S&P MidCap 400,Financials,Financial Services,Transaction & Payment Processing Services,2026-07-15
+WFC,WFC,Wells Fargo,S&P 500,Financials,Banks,Diversified Banks,2026-07-15
+WFRD,WFRD,Weatherford International,S&P MidCap 400,Energy,Energy Equipment & Services,Oil & Gas Equipment & Services,2026-07-15
+WGO,WGO,"Winnebago Industries, Inc.",S&P SmallCap 600,Consumer Discretionary,Automobiles,Automobile Manufacturers,2026-07-15
+WH,WH,Wyndham Hotels & Resorts,S&P MidCap 400,Consumer Discretionary,"Hotels, Restaurants & Leisure","Hotels, Resorts & Cruise Lines",2026-07-15
+WHD,WHD,"Cactus, Inc.",S&P SmallCap 600,Energy,Energy Equipment & Services,Oil & Gas Equipment & Services,2026-07-15
+WHR,WHR,Whirlpool Corporation,S&P MidCap 400,Consumer Discretionary,Household Durables,Household Appliances,2026-07-15
+WINA,WINA,Winmark,S&P SmallCap 600,Consumer Discretionary,Specialty Retail,Other Specialty Retail,2026-07-15
+WING,WING,Wingstop,S&P MidCap 400,Consumer Discretionary,"Hotels, Restaurants & Leisure",Restaurants,2026-07-15
+WKC,WKC,World Kinect Corporation,S&P SmallCap 600,Energy,"Oil, Gas & Consumable Fuels",Oil & Gas Refining & Marketing,2026-07-15
+WLK,WLK,Westlake Corporation,S&P MidCap 400,Materials,Chemicals,Specialty Chemicals,2026-07-15
+WLY,WLY,John Wiley & Sons,S&P SmallCap 600,Communication Services,Media,Publishing,2026-07-15
+WM,WM,Waste Management,S&P 500,Industrials,Commercial Services & Supplies,Environmental & Facilities Services,2026-07-15
+WMB,WMB,Williams Companies,S&P 500,Energy,"Oil, Gas & Consumable Fuels",Oil & Gas Storage & Transportation,2026-07-15
+WMG,WMG,Warner Music Group,S&P MidCap 400,Communication Services,Entertainment,Movies & Entertainment,2026-07-15
+WMS,WMS,Advanced Drainage Systems,S&P MidCap 400,Industrials,Building Products,Building Products,2026-07-15
+WMT,WMT,Walmart,S&P 500,Consumer Staples,Consumer Staples Distribution & Retail,Consumer Staples Merchandise Retail,2026-07-15
+WOR,WOR,Worthington Enterprises,S&P SmallCap 600,Industrials,Building Products,Building Products,2026-07-15
+WPC,WPC,W. P. Carey,S&P MidCap 400,Real Estate,Diversified REITs,Diversified REITs,2026-07-15
+WRB,WRB,W. R. Berkley Corporation,S&P 500,Financials,Insurance,Property & Casualty Insurance,2026-07-15
+WRBY,WRBY,Warby Parker,S&P SmallCap 600,Consumer Discretionary,"Textiles, Apparel & Luxury Goods","Apparel, Accessories & Luxury Goods",2026-07-15
+WRLD,WRLD,World Acceptance Corporation,S&P SmallCap 600,Financials,Consumer Finance,Consumer Finance,2026-07-15
+WS,WS,Worthington Steel,S&P SmallCap 600,Materials,Metals & Mining,Steel,2026-07-15
+WSBC,WSBC,WesBanco,S&P SmallCap 600,Financials,Banks,Regional Banks,2026-07-15
+WSC,WSC,WillScot Holdings Corp.,S&P SmallCap 600,Industrials,Commercial Services & Supplies,Office Services & Supplies,2026-07-15
+WSFS,WSFS,WSFS Financial Corporation,S&P SmallCap 600,Financials,Banks,Regional Banks,2026-07-15
+WSM,WSM,"Williams-Sonoma, Inc.",S&P 500,Consumer Discretionary,Specialty Retail,Homefurnishing Retail,2026-07-15
+WSO,WSO,Watsco,S&P MidCap 400,Industrials,Trading Companies & Distributors,Trading Companies & Distributors,2026-07-15
+WSR,WSR,Whitestone REIT,S&P SmallCap 600,Real Estate,Retail REITs,Retail REITs,2026-07-15
+WST,WST,West Pharmaceutical Services,S&P 500,Health Care,Health Care Equipment & Supplies,Health Care Supplies,2026-07-15
+WT,WT,"WisdomTree Investments, Inc.",S&P SmallCap 600,Financials,Capital Markets,Asset Management & Custody Banks,2026-07-15
+WTFC,WTFC,Wintrust Financial,S&P MidCap 400,Financials,Banks,Regional Banks,2026-07-15
+WTRG,WTRG,Essential Utilities,S&P MidCap 400,Utilities,Water Utilities,Water Utilities,2026-07-15
+WTS,WTS,Watts Water Technologies,S&P MidCap 400,Industrials,Building Products,Building Products,2026-07-15
+WTW,WTW,Willis Towers Watson,S&P 500,Financials,Insurance,Insurance Brokers,2026-07-15
+WU,WU,Western Union,S&P SmallCap 600,Financials,Financial Services,Transaction & Payment Processing Services,2026-07-15
+WWD,WWD,"Woodward, Inc.",S&P MidCap 400,Industrials,Electrical Equipment,Electrical Components & Equipment,2026-07-15
+WWW,WWW,"Wolverine World Wide, Inc.",S&P SmallCap 600,Consumer Discretionary,"Textiles, Apparel & Luxury Goods",Footwear,2026-07-15
+WY,WY,Weyerhaeuser,S&P 500,Real Estate,Specialized REITs,Timber REITs,2026-07-15
+WYNN,WYNN,Wynn Resorts,S&P 500,Consumer Discretionary,"Hotels, Restaurants & Leisure",Casinos & Gaming,2026-07-15
+XEL,XEL,Xcel Energy,S&P 500,Utilities,Multi-Utilities,Multi-Utilities,2026-07-15
+XHR,XHR,"Xenia Hotels & Resorts, Inc.",S&P SmallCap 600,Real Estate,Hotel & Resort REITs,Hotel & Resort REITs,2026-07-15
+XNCR,XNCR,Xencor Inc,S&P SmallCap 600,Health Care,Biotechnology,Biotechnology,2026-07-15
+XOM,XOM,ExxonMobil,S&P 500,Energy,"Oil, Gas & Consumable Fuels",Integrated Oil & Gas,2026-07-15
+XPEL,XPEL,"XPEL, Inc.",S&P SmallCap 600,Consumer Discretionary,Automobile Components,Automotive Parts & Equipment,2026-07-15
+XPO,XPO,"XPO, Inc.",S&P MidCap 400,Industrials,Ground Transportation,Cargo Ground Transportation,2026-07-15
+XRAY,XRAY,Dentsply Sirona,S&P MidCap 400,Health Care,Health Care Equipment & Supplies,Health Care Supplies,2026-07-15
+XYL,XYL,Xylem Inc.,S&P 500,Industrials,Machinery,Industrial Machinery & Supplies & Components,2026-07-15
+XYZ,XYZ,"Block, Inc.",S&P 500,Financials,Financial Services,Transaction & Payment Processing Services,2026-07-15
+YELP,YELP,"Yelp, Inc.",S&P SmallCap 600,Communication Services,Interactive Media & Services,Interactive Media & Services,2026-07-15
+YETI,YETI,Yeti Holdings,S&P MidCap 400,Consumer Discretionary,Leisure Products,Leisure Products,2026-07-15
+YOU,YOU,"Clear Secure, Inc.",S&P SmallCap 600,Information Technology,Software,Application Software,2026-07-15
+YUM,YUM,Yum! Brands,S&P 500,Consumer Discretionary,"Hotels, Restaurants & Leisure",Restaurants,2026-07-15
+ZBH,ZBH,Zimmer Biomet,S&P 500,Health Care,Health Care Equipment & Supplies,Health Care Equipment,2026-07-15
+ZBRA,ZBRA,Zebra Technologies,S&P 500,Information Technology,"Electronic Equipment, Instruments & Components",Electronic Equipment & Instruments,2026-07-15
+ZD,ZD,Ziff Davis,S&P SmallCap 600,Communication Services,Media,Advertising,2026-07-15
+ZION,ZION,Zions Bancorporation,S&P MidCap 400,Financials,Banks,Regional Banks,2026-07-15
+ZTS,ZTS,Zoetis,S&P 500,Health Care,Pharmaceuticals,Pharmaceuticals,2026-07-15
+ZWS,ZWS,Zurn Elkay Water Solutions Corp.,S&P SmallCap 600,Industrials,Machinery,Industrial Machinery & Supplies & Components,2026-07-15
