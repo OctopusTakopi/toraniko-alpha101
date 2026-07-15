@@ -13,6 +13,7 @@ import datetime as dt
 import hashlib
 import json
 import logging
+import sys
 import time
 from io import StringIO
 from pathlib import Path
@@ -21,8 +22,14 @@ import numpy as np
 import pandas as pd
 import polars as pl
 
-from toraniko.alpha101 import factor_alpha101
-from toraniko.alpha101_report import (
+# Allow running as a plain script (``python examples/alpha101_full_market/run.py``)
+# from any working directory by putting the repository root on the import path.
+_REPO_ROOT = Path(__file__).resolve().parents[2]
+if str(_REPO_ROOT) not in sys.path:
+    sys.path.insert(0, str(_REPO_ROOT))
+
+from toraniko.alpha101 import factor_alpha101  # noqa: E402
+from toraniko.alpha101_report import (  # noqa: E402
     analyze_alpha101,
     analyze_alpha101_paper,
     latest_alpha101_weights,
