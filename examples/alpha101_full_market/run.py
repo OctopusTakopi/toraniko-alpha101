@@ -28,7 +28,7 @@ _REPO_ROOT = Path(__file__).resolve().parents[2]
 if str(_REPO_ROOT) not in sys.path:
     sys.path.insert(0, str(_REPO_ROOT))
 
-from toraniko.alpha101 import factor_alpha101  # noqa: E402
+from toraniko.alpha101 import ALPHA101_FORMULA_VERSION, factor_alpha101  # noqa: E402
 from toraniko.alpha101_report import (  # noqa: E402
     analyze_alpha101,
     analyze_alpha101_paper,
@@ -49,6 +49,15 @@ GICS_PAGE = "https://en.wikipedia.org/wiki/Global_Industry_Classification_Standa
 USER_AGENT = "toraniko-alpha101-research/1.0"
 LOGGER = logging.getLogger(__name__)
 SUBINDUSTRY_ALIASES = {"Specialty Stores": "Other Specialty Retail"}
+
+
+def _score_cache_version(path: Path) -> str | None:
+    try:
+        metadata = json.loads(path.read_text())
+    except (FileNotFoundError, json.JSONDecodeError, OSError):
+        return None
+    version = metadata.get("formula_version") if isinstance(metadata, dict) else None
+    return version if isinstance(version, str) else None
 
 
 def fetch_universe(snapshot_path: Path, *, refresh: bool = False) -> pd.DataFrame:
@@ -162,6 +171,7 @@ def load_prices(
             )
             collected.update(_split_yahoo_download(data, [symbol]))
         except Exception:
+            LOGGER.debug("single-symbol price fallback failed for %s", symbol, exc_info=True)
             continue
     if not collected:
         raise RuntimeError("Yahoo returned no price histories")
@@ -313,8 +323,13 @@ def run_report(args: argparse.Namespace) -> None:
     )
 
     scores_path = args.cache_dir / "scores.parquet"
+    scores_metadata_path = args.cache_dir / "scores.json"
     refresh_scores = args.refresh_scores or args.refresh_prices or args.refresh_shares or args.refresh_universe
-    if scores_path.exists() and not refresh_scores:
+    use_cached_scores = scores_path.exists() and not refresh_scores
+    if use_cached_scores and _score_cache_version(scores_metadata_path) != ALPHA101_FORMULA_VERSION:
+        LOGGER.info("factors: cached score formula version is stale; recomputing")
+        use_cached_scores = False
+    if use_cached_scores:
         LOGGER.info("factors: loading cached Alpha101 scores")
         scores = pl.read_parquet(scores_path)
         score_bounds = scores.select(
@@ -330,12 +345,12 @@ def run_report(args: argparse.Namespace) -> None:
         )
         if not cache_is_current:
             LOGGER.info("factors: cached scores are stale; recomputing")
-            scores = factor_alpha101(market, classifications).collect().filter(pl.col("date") >= args.start)
-            scores.write_parquet(scores_path)
-    else:
+            use_cached_scores = False
+    if not use_cached_scores:
         LOGGER.info("factors: computing 101 alphas over %d symbols", len(downloaded))
         scores = factor_alpha101(market, classifications).collect().filter(pl.col("date") >= args.start)
         scores.write_parquet(scores_path)
+        scores_metadata_path.write_text(json.dumps({"formula_version": ALPHA101_FORMULA_VERSION}, indent=2))
     summary, daily = analyze_alpha101(
         scores,
         market.select("date", "symbol", pl.col("returns").alias("asset_returns")),

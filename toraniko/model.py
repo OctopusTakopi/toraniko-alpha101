@@ -29,33 +29,39 @@ def _factor_returns(
     tuple of arrays: (market/sector/style factor returns, residual returns)
     """
     n_assets = returns.shape[0]
-    m_sectors, m_styles = sector_scores.shape[1], style_scores.shape[1]
+    m_sectors = sector_scores.shape[1]
 
     # Proxy for the inverse of asset idiosyncratic variances
-    W = np.diag(np.sqrt(mkt_caps.ravel()))
+    weights = np.diag(np.sqrt(mkt_caps.ravel()))
 
     # Estimate sector factor returns with a constraint that the sector factors sum to 0
     # Economically, we assert that the market return is completely spanned by the sector returns
     beta_sector = np.hstack([np.ones(n_assets).reshape(-1, 1), sector_scores])
     a = np.concatenate([np.array([0]), (-1 * np.ones(m_sectors - 1))])
-    Imat = np.identity(m_sectors)
-    R_sector = np.vstack([Imat, a])
+    identity = np.identity(m_sectors)
+    sector_constraint = np.vstack([identity, a])
     # Change of variables to add the constraint
-    B_sector = beta_sector @ R_sector
+    constrained_sector_scores = beta_sector @ sector_constraint
 
-    V_sector, _, _, _ = np.linalg.lstsq(B_sector.T @ W @ B_sector, B_sector.T @ W, rcond=None)
+    sector_regression, _, _, _ = np.linalg.lstsq(
+        constrained_sector_scores.T @ weights @ constrained_sector_scores,
+        constrained_sector_scores.T @ weights,
+        rcond=None,
+    )
     # Change of variables to recover all sectors
-    g = V_sector @ returns
-    fac_ret_sector = R_sector @ g
+    g = sector_regression @ returns
+    fac_ret_sector = sector_constraint @ g
 
-    sector_resid_returns = returns - (B_sector @ g)
+    sector_resid_returns = returns - (constrained_sector_scores @ g)
 
     # Estimate style factor returns without constraints
-    V_style, _, _, _ = np.linalg.lstsq(style_scores.T @ W @ style_scores, style_scores.T @ W, rcond=None)
+    style_regression, _, _, _ = np.linalg.lstsq(
+        style_scores.T @ weights @ style_scores, style_scores.T @ weights, rcond=None
+    )
     if residualize_styles:
-        fac_ret_style = V_style @ sector_resid_returns
+        fac_ret_style = style_regression @ sector_resid_returns
     else:
-        fac_ret_style = V_style @ returns
+        fac_ret_style = style_regression @ returns
 
     # Combine factor returns
     fac_ret = np.concatenate([fac_ret_sector, fac_ret_style])

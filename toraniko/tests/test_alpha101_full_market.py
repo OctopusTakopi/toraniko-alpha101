@@ -18,6 +18,21 @@ def test_yahoo_symbol_normalization():
     assert module.normalize_yahoo_symbol(" brk.b ") == "BRK-B"
 
 
+def test_score_cache_formula_version(tmp_path):
+    module = _load_module()
+    metadata = tmp_path / "scores.json"
+    assert module._score_cache_version(metadata) is None
+
+    metadata.write_text('{"formula_version": "old"}')
+    assert module._score_cache_version(metadata) == "old"
+
+    metadata.write_text("not json")
+    assert module._score_cache_version(metadata) is None
+
+    metadata.write_text("[]")
+    assert module._score_cache_version(metadata) is None
+
+
 def test_yahoo_download_conversion_and_point_in_time_market_cap():
     module = _load_module()
     dates = pd.date_range("2024-01-02", periods=30)

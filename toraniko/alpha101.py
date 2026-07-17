@@ -14,6 +14,7 @@ import numpy as np
 import polars as pl
 
 Array = np.ndarray
+ALPHA101_FORMULA_VERSION = "share-volume-v1"
 _PRICE_COLUMNS = ("open", "high", "low", "close", "volume", "vwap", "returns", "market_cap")
 _CLASS_COLUMNS = ("sector", "industry", "subindustry")
 _NEUTRALIZED_ALPHAS = {

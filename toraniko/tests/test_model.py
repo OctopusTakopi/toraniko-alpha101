@@ -1,8 +1,9 @@
 """Tests functions in the model module."""
 
+import numpy as np
 import polars as pl
 import pytest
-import numpy as np
+
 from toraniko.model import _factor_returns, estimate_factor_returns
 
 ###

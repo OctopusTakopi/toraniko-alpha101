@@ -10,6 +10,24 @@ import polars as pl
 from toraniko.alpha101 import _rank_1d
 
 
+def _quantile_weights(values: np.ndarray, quantile: float) -> np.ndarray:
+    """Build a dollar-neutral tail portfolio without splitting equal scores."""
+    weights = np.zeros(len(values), dtype=float)
+    tail = max(1, int(np.floor(len(values) * quantile)))
+    ordered = np.sort(values)
+    lower, upper = ordered[tail - 1], ordered[-tail]
+    if lower >= upper:
+        lower, upper = ordered[0], ordered[-1]
+    if lower >= upper:
+        return weights
+
+    short = values <= lower
+    long = values >= upper
+    weights[short] = -0.5 / short.sum()
+    weights[long] = 0.5 / long.sum()
+    return weights
+
+
 def analyze_alpha101(
     scores_df: pl.DataFrame | pl.LazyFrame,
     returns_df: pl.DataFrame | pl.LazyFrame,
@@ -28,6 +46,8 @@ def analyze_alpha101(
     cents-per-share definitions, assuming one dollar of gross investment.
     Portfolio membership depends only on signal availability at ``t``;
     missing next-session returns are conservatively realized as zero.
+    Securities tied at a tail boundary are included together and each side is
+    renormalized; a constant cross-section produces no position.
     """
     if not 0 < quantile <= 0.5:
         raise ValueError("`quantile` must be in (0, 0.5]")
@@ -97,21 +117,21 @@ def analyze_alpha101(
                 continue
             s, r = signal[valid], future[valid]
             valid_ic = np.isfinite(r)
-            if valid_ic.sum() < 5:
+            if not valid_ic.any():
                 continue
             valid_positions = context["positions"][valid]
-            tail = max(1, int(np.floor(len(s) * quantile)))
-            order = np.argsort(s, kind="mergesort")
-            short_idx, long_idx = order[:tail], order[-tail:]
+            local_weights = _quantile_weights(s, quantile)
             weights = np.zeros(len(symbols), dtype=float)
-            weights[valid_positions[long_idx]] = 0.5 / tail
-            weights[valid_positions[short_idx]] = -0.5 / tail
+            weights[valid_positions] = local_weights
             turnover = 0.5 * np.abs(weights - previous).sum()
             previous = weights
             filled_returns = np.where(valid_ic, r, 0.0)
-            pnl = 0.5 * (filled_returns[long_idx].mean() - filled_returns[short_idx].mean())
-            ic = _corr(s[valid_ic], r[valid_ic])
-            rank_ic = _corr(_rank_1d(s[valid_ic]), _rank_1d(r[valid_ic]))
+            pnl = float(np.dot(local_weights, filled_returns))
+            if valid_ic.sum() >= 5:
+                ic = _corr(s[valid_ic], r[valid_ic])
+                rank_ic = _corr(_rank_1d(s[valid_ic]), _rank_1d(r[valid_ic]))
+            else:
+                ic = rank_ic = np.nan
             row: dict[str, object] = {
                 "date": context["date"],
                 "alpha": alpha,
@@ -145,6 +165,37 @@ def analyze_alpha101(
                 previous_shares = target_shares
             daily_rows.append(row)
 
+    if not daily_rows:
+        summary_schema = {
+            "alpha": pl.String,
+            "days": pl.Int64,
+            "annual_return": pl.Float64,
+            "annual_volatility": pl.Float64,
+            "sharpe": pl.Float64,
+            "max_drawdown": pl.Float64,
+            "mean_ic": pl.Float64,
+            "ic_ir": pl.Float64,
+            "mean_rank_ic": pl.Float64,
+            "rank_ic_ir": pl.Float64,
+            "mean_turnover": pl.Float64,
+            "mean_coverage": pl.Float64,
+            "mean_return_coverage": pl.Float64,
+        }
+        daily_schema = {
+            "date": scores.schema["date"],
+            "alpha": pl.String,
+            "pnl": pl.Float64,
+            "ic": pl.Float64,
+            "rank_ic": pl.Float64,
+            "turnover": pl.Float64,
+            "coverage": pl.Float64,
+            "return_coverage": pl.Float64,
+        }
+        if has_prices:
+            summary_schema.update({"paper_turnover": pl.Float64, "cents_per_share": pl.Float64})
+            daily_schema.update({"shares_traded": pl.Float64, "dollar_volume": pl.Float64})
+        return pl.DataFrame(schema=summary_schema), pl.DataFrame(schema=daily_schema)
+
     daily = pl.DataFrame(daily_rows)
     summaries = [_summarize(group, annualization) for group in daily.partition_by("alpha", maintain_order=True)]
     summary = pl.DataFrame(summaries).sort("alpha")
@@ -176,13 +227,10 @@ def latest_alpha101_weights(
                 continue
             valid_symbols = np.asarray(cross["symbol"].to_list(), dtype=object)[valid]
             values = signal[valid]
-            tail = max(1, int(np.floor(len(values) * quantile)))
-            order = np.argsort(values, kind="mergesort")
+            local_weights = _quantile_weights(values, quantile)
             weights = {symbol: 0.0 for symbol in symbols}
-            for index in order[-tail:]:
-                weights[valid_symbols[index]] = 0.5 / tail
-            for index in order[:tail]:
-                weights[valid_symbols[index]] = -0.5 / tail
+            for symbol, weight in zip(valid_symbols, local_weights):
+                weights[symbol] = weight
             date = cross["date"][0]
             rows.extend(
                 {"date": date, "alpha": alpha, "symbol": symbol, "weight": weight}
@@ -759,7 +807,7 @@ def _summarize(group: pl.DataFrame, annualization: int) -> dict[str, object]:
     pnl = group["pnl"].to_numpy()
     ic = group["ic"].to_numpy()
     rank_ic = group["rank_ic"].to_numpy()
-    pnl_std = np.nanstd(pnl, ddof=1)
+    pnl_std = pnl.std(ddof=1) if len(pnl) > 1 else np.nan
     wealth = np.cumprod(1 + pnl)
     drawdown = wealth / np.maximum.accumulate(wealth) - 1
     result = {
@@ -769,9 +817,9 @@ def _summarize(group: pl.DataFrame, annualization: int) -> dict[str, object]:
         "annual_volatility": float(pnl_std * np.sqrt(annualization)),
         "sharpe": float(np.nanmean(pnl) / pnl_std * np.sqrt(annualization)) if pnl_std > 0 else np.nan,
         "max_drawdown": float(np.nanmin(drawdown)),
-        "mean_ic": float(np.nanmean(ic)),
+        "mean_ic": _finite_mean(ic),
         "ic_ir": _information_ratio(ic, annualization),
-        "mean_rank_ic": float(np.nanmean(rank_ic)),
+        "mean_rank_ic": _finite_mean(rank_ic),
         "rank_ic_ir": _information_ratio(rank_ic, annualization),
         "mean_turnover": float(group["turnover"].mean()),
         "mean_coverage": float(group["coverage"].mean()),
@@ -785,8 +833,16 @@ def _summarize(group: pl.DataFrame, annualization: int) -> dict[str, object]:
 
 
 def _information_ratio(values: np.ndarray, annualization: int) -> float:
-    std = np.nanstd(values, ddof=1)
-    return float(np.nanmean(values) / std * np.sqrt(annualization)) if std > 0 else np.nan
+    finite = values[np.isfinite(values)]
+    if len(finite) < 2:
+        return np.nan
+    std = finite.std(ddof=1)
+    return float(finite.mean() / std * np.sqrt(annualization)) if std > 0 else np.nan
+
+
+def _finite_mean(values: np.ndarray) -> float:
+    finite = values[np.isfinite(values)]
+    return float(finite.mean()) if len(finite) else np.nan
 
 
 def render_alpha101_report(
@@ -797,12 +853,17 @@ def render_alpha101_report(
     rows: int = 20,
 ) -> str:
     """Render a compact Markdown report from :func:`analyze_alpha101`."""
-    ranked = summary.sort("sharpe", descending=True, nulls_last=True)
     lines = [f"# {title}", "", dataset_note, ""] if dataset_note else [f"# {title}", ""]
+    if summary.is_empty():
+        lines.extend(["Alphas analyzed: 0", "", "No analyzable forward-return observations.", ""])
+        return "\n".join(lines)
+
+    ranked = summary.sort("sharpe", descending=True, nulls_last=True)
     lines.extend(
         [
             "Method: signals at *t*, next-session returns at *t+1*, equal-weight top/bottom quintiles, "
-            "50% long and 50% short. Returns exclude costs.",
+            "50% long and 50% short. Boundary ties remain together; constant signals hold no position. "
+            "Returns exclude costs.",
             "",
             f"Alphas analyzed: {summary.height}",
             "",

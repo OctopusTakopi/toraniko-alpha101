@@ -42,7 +42,12 @@ changelog = "https://github.com/0xfdf/toraniko/releases"
 [tool.ruff]
 line-length = 120
 fix = false
-select = ["E", "F", "I", "N", "Q", "R", "S", "T", "U", "W", "Y"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "N", "Q", "R", "S", "T", "U", "W"]
+
+[tool.ruff.lint.per-file-ignores]
+"toraniko/tests/*" = ["S101"]
 
 [tool.black]
 line-length = 120

@@ -1,8 +1,8 @@
 """Test functions in the math module."""
 
-import pytest
-import polars as pl
 import numpy as np
+import polars as pl
+import pytest
 from polars.testing import assert_frame_equal
 
 from toraniko.math import (
@@ -257,7 +257,6 @@ def test_norm_xsection_mixed_data_types():
     normalized_df = data.with_columns(norm_xsection("value", "group"))
     expected_normalized_values = [0.0, 1.0, 0.0, 1.0]
     actual_values = normalized_df["value"].to_numpy()
-    print(actual_values)
     assert np.allclose(actual_values, expected_normalized_values)
     assert all(normalized_df["category"] == data["category"])
 

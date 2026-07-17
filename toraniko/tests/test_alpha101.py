@@ -5,6 +5,7 @@ import polars as pl
 import pytest
 
 from toraniko.alpha101 import (
+    Alpha101,
     _window,
     alpha_neutralization_levels,
     correlation,
@@ -87,6 +88,20 @@ def test_decay_linear_gives_the_most_recent_observation_the_largest_weight():
     result = decay_linear(values, 3)
     assert np.isnan(result[:2]).all()
     np.testing.assert_allclose(result[-1], [14 / 6, 16 / 6])
+
+
+def test_adv_uses_the_same_share_volume_units_as_current_volume():
+    shape = (3, 1)
+    data = {
+        name: np.ones(shape)
+        for name in ("open", "high", "low", "close", "volume", "vwap", "returns", "market_cap")
+    }
+    data["volume"][:, 0] = [10.0, 20.0, 30.0]
+
+    result = Alpha101(data, {})._adv(2)
+
+    np.testing.assert_allclose(result[1:, 0], [15.0, 25.0])
+    assert np.isnan(result[0, 0])
 
 
 def test_indneutralize_is_group_demeaning():

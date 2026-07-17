@@ -54,16 +54,13 @@ def norm_xsection(
     min_col = pl.col(target_col).drop_nans().min().over(over_col)
     max_col = pl.col(target_col).drop_nans().max().over(over_col)
 
-    norm_col = (
+    return (
         pl.when(pl.col(target_col).is_nan())
         .then(pl.col(target_col))  # Preserve NaN values
         .when(max_col != min_col)  # Avoid division by zero by making sure min != max
         .then((pl.col(target_col) - min_col) / (max_col - min_col) * (upper - lower) + lower)
         .otherwise(lower)
     )
-
-    return norm_col
-
 
 def winsorize(data: np.ndarray, percentile: float = 0.05, axis: int = 0) -> np.ndarray:
     """Windorize each vector of a 2D numpy array to symmetric percentiles given by `percentile`.
@@ -182,17 +179,13 @@ def exp_weights(window: int, half_life: int) -> np.ndarray:
     -------
     numpy array
     """
-    try:
-        assert isinstance(window, int)
-        if not window > 0:
-            raise ValueError("`window` must be a strictly positive integer")
-    except (AttributeError, AssertionError) as e:
-        raise TypeError("`window` must be an integer type") from e
-    try:
-        assert isinstance(half_life, int)
-        if not half_life > 0:
-            raise ValueError("`half_life` must be a strictly positive integer")
-    except (AttributeError, AssertionError) as e:
-        raise TypeError("`half_life` must be an integer type") from e
+    if not isinstance(window, int):
+        raise TypeError("`window` must be an integer type")
+    if window <= 0:
+        raise ValueError("`window` must be a strictly positive integer")
+    if not isinstance(half_life, int):
+        raise TypeError("`half_life` must be an integer type")
+    if half_life <= 0:
+        raise ValueError("`half_life` must be a strictly positive integer")
     decay = np.log(2) / half_life
     return np.exp(-decay * np.arange(window))[::-1]

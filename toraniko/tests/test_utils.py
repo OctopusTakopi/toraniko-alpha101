@@ -1,9 +1,8 @@
 """Test functions in the utils module."""
 
-import pytest
-import polars as pl
 import numpy as np
-from polars.testing import assert_frame_equal
+import polars as pl
+import pytest
 
 from toraniko.utils import fill_features, smooth_features, top_n_by_group
 
@@ -283,3 +282,12 @@ def test_tie_handling(top_n_df):
     )
     assert result.shape == (3, 3)
     assert result["value"].to_list() == [30, 35, 26]
+
+
+def test_top_n_returns_exactly_n_rows_when_cutoff_values_are_tied():
+    frame = pl.DataFrame({"group": ["A"] * 4, "value": [10, 10, 9, 8]})
+
+    result = top_n_by_group(frame, n=1, rank_var="value", group_var=("group",), filter=True).collect()
+
+    assert result.height == 1
+    assert result["value"].to_list() == [10]

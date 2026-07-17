@@ -17,24 +17,25 @@ advice. Reported returns exclude transaction costs and are not live trading resu
 Like the original paper, this report runs on a broad U.S. equity cross-section: a current-constituent
 [S&P Composite 1500](https://www.spglobal.com/spdji/en/indices/equity/sp-composite-1500/) snapshot
 (the S&P 500, MidCap 400, and SmallCap 600, roughly 90% of U.S. market capitalization). The
-2026-07-15 snapshot contains 1,506 securities; 1,502 have complete usable Yahoo OHLCV and
-historical-share histories. The analysis runs from 2023-01-03 through 2026-07-13 with warm-up data
+2026-07-15 snapshot contains 1,506 securities; 1,501 have complete usable Yahoo OHLCV and
+historical-share histories. The analysis runs from 2023-01-03 through 2026-07-16 with warm-up data
 from 2021-12-30.
 
 Method: signals at *t*, next-session returns at *t+1*, equal-weight top/bottom quintiles, 50% long
 and 50% short. Portfolio membership uses information available at *t* only; a missing next-session
-return is realized as zero. All formula-mandated sector, industry, and subindustry neutralizations
-use the current GICS hierarchy.
+return is realized as zero. Securities tied at a quintile boundary are kept together and each side
+is renormalized; a constant signal holds no position. All formula-mandated sector, industry, and
+subindustry neutralizations use the current GICS hierarchy.
 
 | Statistic | This report | Paper |
 |---|---:|---:|
-| Maximum Sharpe | 2.200 | 4.162 |
-| Median Sharpe | 0.582 | 2.224 |
-| Mean Sharpe | 0.478 | 2.265 |
-| Median rank IC | 0.0040 | Not reported |
-| Positive-Sharpe alphas | 78/101 | 101/101 |
+| Maximum Sharpe | 2.120 | 4.162 |
+| Median Sharpe | 0.518 | 2.224 |
+| Mean Sharpe | 0.411 | 2.265 |
+| Median rank IC | 0.0039 | Not reported |
+| Positive-Sharpe alphas | 74/101 | 101/101 |
 
-The strongest result is Alpha21 at a before-cost Sharpe of 2.20. This does not reproduce the paper's
+The strongest result is Alpha21 at a before-cost Sharpe of 2.12. This does not reproduce the paper's
 entire Sharpe distribution because WorldQuant's universe, execution timing, score-to-weight
 conversion, risk constraints, and selection process remain proprietary.
 
@@ -49,11 +50,11 @@ reproduced with this report's data. The definitions follow Section 3 of the pape
 daily dollars traded per dollar of gross investment, and cents-per-share is 100 times mean daily PnL
 divided by mean daily shares traded (buys plus sells).
 
-- Mean / median pairwise alpha-return correlation: 0.2106 / 0.1945 across 5,050 pairs
-- `log(Return) ~ log(Volatility)`: slope 1.910, R² 0.464, 78 positive-return alphas
-- Adding `log(Turnover)` to that regression: coefficient -0.064, t-stat -0.295
-- Turnover-tensor correlation model: R² 0.038 across 5,050 alpha pairs
-- `log(Volatility) ~ log(Turnover)`: slope 0.375, R² 0.201
+- Mean / median pairwise alpha-return correlation: 0.1942 / 0.1711 across 5,050 pairs
+- `log(Return) ~ log(Volatility)`: slope 1.857, R² 0.510, 74 positive-return alphas
+- Adding `log(Turnover)` to that regression: coefficient -0.016, t-stat -0.072
+- Turnover-tensor correlation model: R² 0.033 across 5,050 alpha pairs
+- `log(Volatility) ~ log(Turnover)`: slope 0.474, R² 0.214
 
 ![Full-market paper Figure 1](reports/full_market/paper_figure1_distributions.png)
 
@@ -90,6 +91,7 @@ caches the computed Alpha101 score matrix. Later report regenerations reuse both
 - All 101 formulas are exposed through `factor_alpha101(...)` in a Toraniko-compatible long-form
   `date × symbol` panel.
 - Fractional lookbacks follow the paper's floor convention.
+- Average daily volume lookbacks remain in share-volume units, matching the current-volume inputs used by the formulas.
 - Time-series ranks, rolling correlations, linear decay, conditional formulas, and warm-up
   behavior have dedicated tests.
 - The formulas that prescribe sector, industry, or subindustry neutralization are checked against

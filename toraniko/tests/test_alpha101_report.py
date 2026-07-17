@@ -54,6 +54,21 @@ def test_markdown_report_contains_performance_sections():
     assert "alpha001" in report
 
 
+def test_empty_analysis_renders_without_numeric_formatting_errors():
+    scores = pl.DataFrame(
+        [{"date": 1, "symbol": f"S{symbol}", "alpha001": float(symbol)} for symbol in range(10)]
+    )
+    returns = scores.select("date", "symbol").with_columns(pl.lit(0.0).alias("asset_returns"))
+
+    summary, daily = analyze_alpha101(scores, returns)
+    report = render_alpha101_report(summary)
+
+    assert summary.is_empty()
+    assert daily.is_empty()
+    assert "Alphas analyzed: 0" in report
+    assert "No analyzable forward-return observations" in report
+
+
 def test_paper_turnover_and_cents_per_share_follow_section_three_definitions():
     scores = pl.DataFrame(
         [
@@ -107,6 +122,77 @@ def test_portfolio_membership_does_not_use_future_return_availability():
     _, daily = analyze_alpha101(scores, returns)
     np.testing.assert_allclose(daily["pnl"][0], 0.0075)
     np.testing.assert_allclose(daily["return_coverage"][0], 0.9)
+
+
+def test_sparse_forward_returns_are_zero_filled_without_suppressing_pnl():
+    scores = pl.DataFrame(
+        [
+            {"date": date, "symbol": f"S{symbol}", "alpha001": float(symbol)}
+            for date in range(2)
+            for symbol in range(10)
+        ]
+    )
+    returns = pl.DataFrame(
+        [
+            {
+                "date": date,
+                "symbol": f"S{symbol}",
+                "asset_returns": (-0.01 if date == 1 and symbol < 2 else (0.0 if date == 1 and symbol < 4 else np.nan)),
+            }
+            for date in range(2)
+            for symbol in range(10)
+        ]
+    )
+
+    _, daily = analyze_alpha101(scores, returns)
+
+    assert daily.height == 1
+    np.testing.assert_allclose(daily["pnl"], [0.005])
+    np.testing.assert_allclose(daily["return_coverage"], [0.4])
+    assert daily["ic"].is_nan().all()
+    assert daily["rank_ic"].is_nan().all()
+
+
+def test_constant_scores_do_not_create_symbol_order_portfolios():
+    scores = pl.DataFrame(
+        [
+            {"date": date, "symbol": f"S{symbol}", "alpha001": 1.0}
+            for date in range(3)
+            for symbol in range(10)
+        ]
+    )
+    returns = pl.DataFrame(
+        [
+            {"date": date, "symbol": f"S{symbol}", "asset_returns": (symbol - 4.5) / 100}
+            for date in range(3)
+            for symbol in range(10)
+        ]
+    )
+
+    _, daily = analyze_alpha101(scores, returns)
+    weights = latest_alpha101_weights(scores)
+
+    np.testing.assert_allclose(daily["pnl"], 0.0)
+    np.testing.assert_allclose(daily["turnover"], 0.0)
+    np.testing.assert_allclose(weights["weight"], 0.0)
+
+
+def test_tail_portfolios_include_boundary_ties_without_splitting_them():
+    values = [0.0] * 3 + [1.0] * 4 + [2.0] * 3
+    scores = pl.DataFrame(
+        [
+            {"date": date, "symbol": f"S{symbol}", "alpha001": values[symbol]}
+            for date in range(2)
+            for symbol in range(10)
+        ]
+    )
+
+    weights = latest_alpha101_weights(scores)
+    active = weights.filter(pl.col("weight") != 0)
+
+    assert active.height == 6
+    np.testing.assert_allclose(active.filter(pl.col("weight") < 0)["weight"], -1 / 6)
+    np.testing.assert_allclose(active.filter(pl.col("weight") > 0)["weight"], 1 / 6)
 
 
 def test_ic_correlation_is_stable_for_large_formula_values():

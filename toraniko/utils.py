@@ -22,32 +22,31 @@ def fill_features(
     Polars LazyFrame containing the original columns with cleaned feature data
     """
     try:
-        # eagerly check all `features`, `sort_col`, `over_col` present: can't catch ColumNotFoundError in lazy context
-        assert all(c in df.columns for c in features + (sort_col, over_col))
-        return (
-            df.lazy()
-            .with_columns([pl.col(f).cast(float).alias(f) for f in features])
-            .with_columns(
-                [
-                    pl.when(
-                        (pl.col(f).abs() == np.inf)
-                        | (pl.col(f) == np.nan)
-                        | (pl.col(f).is_null())
-                        | (pl.col(f).cast(str) == "NaN")
-                    )
-                    .then(None)
-                    .otherwise(pl.col(f))
-                    .alias(f)
-                    for f in features
-                ]
-            )
-            .sort(by=sort_col)
-            .with_columns([pl.col(f).forward_fill().over(over_col).alias(f) for f in features])
-        )
+        columns = df.collect_schema().names() if isinstance(df, pl.LazyFrame) else df.columns
     except AttributeError as e:
         raise TypeError("`df` must be a Polars DataFrame | LazyFrame, but it's missing required attributes") from e
-    except AssertionError as e:
-        raise ValueError(f"`df` must have all of {[over_col, sort_col] + list(features)} as columns") from e
+    if not all(c in columns for c in features + (sort_col, over_col)):
+        raise ValueError(f"`df` must have all of {[over_col, sort_col] + list(features)} as columns")
+    return (
+        df.lazy()
+        .with_columns([pl.col(f).cast(float).alias(f) for f in features])
+        .with_columns(
+            [
+                pl.when(
+                    (pl.col(f).abs() == np.inf)
+                    | (pl.col(f) == np.nan)
+                    | (pl.col(f).is_null())
+                    | (pl.col(f).cast(str) == "NaN")
+                )
+                .then(None)
+                .otherwise(pl.col(f))
+                .alias(f)
+                for f in features
+            ]
+        )
+        .sort(by=sort_col)
+        .with_columns([pl.col(f).forward_fill().over(over_col).alias(f) for f in features])
+    )
 
 
 def smooth_features(
@@ -73,17 +72,16 @@ def smooth_features(
     Polars LazyFrame containing the original columns, with each of `features` replaced with moving average
     """
     try:
-        # eagerly check `over_col`, `sort_col`, `features` present: can't catch pl.ColumnNotFoundError in lazy context
-        assert all(c in df.columns for c in features + (over_col, sort_col))
-        return (
-            df.lazy()
-            .sort(by=sort_col)
-            .with_columns([pl.col(f).rolling_mean(window_size=window_size).over(over_col).alias(f) for f in features])
-        )
+        columns = df.collect_schema().names() if isinstance(df, pl.LazyFrame) else df.columns
     except AttributeError as e:
         raise TypeError("`df` must be a Polars DataFrame | LazyFrame, but it's missing required attributes") from e
-    except AssertionError as e:
-        raise ValueError(f"`df` must have all of {[over_col, sort_col] + list(features)} as columns") from e
+    if not all(c in columns for c in features + (over_col, sort_col)):
+        raise ValueError(f"`df` must have all of {[over_col, sort_col] + list(features)} as columns")
+    return (
+        df.lazy()
+        .sort(by=sort_col)
+        .with_columns([pl.col(f).rolling_mean(window_size=window_size).over(over_col).alias(f) for f in features])
+    )
 
 
 def top_n_by_group(
@@ -112,25 +110,26 @@ def top_n_by_group(
     Polars LazyFrame containing original columns and optional filter column
     """
     try:
-        # eagerly check `rank_var`, `group_var` are present: we can't catch a ColumnNotFoundError in a lazy context
-        assert all(c in df.columns for c in (rank_var,) + group_var)
-        rdf = (
-            df.lazy()
-            .sort(by=list(group_var) + [rank_var])
-            .with_columns(pl.col(rank_var).rank(descending=True).over(group_var).cast(int).alias("rank"))
-        )
-        match filter:
-            case True:
-                return rdf.filter(pl.col("rank") <= n).drop("rank").sort(by=list(group_var) + [rank_var])
-            case False:
-                return (
-                    rdf.with_columns(
-                        pl.when(pl.col("rank") <= n).then(pl.lit(1)).otherwise(pl.lit(0)).alias("rank_mask")
-                    )
-                    .drop("rank")
-                    .sort(by=list(group_var) + [rank_var])
-                )
-    except AssertionError as e:
-        raise ValueError(f"`df` is missing one or more required columns: '{rank_var}' and '{group_var}'") from e
+        columns = df.collect_schema().names() if isinstance(df, pl.LazyFrame) else df.columns
     except AttributeError as e:
         raise TypeError("`df` must be a Polars DataFrame or LazyFrame but is missing a required attribute") from e
+    if not all(c in columns for c in (rank_var,) + group_var):
+        raise ValueError(f"`df` is missing one or more required columns: '{rank_var}' and '{group_var}'")
+    rdf = (
+        df.lazy()
+        .sort(by=list(group_var) + [rank_var])
+        .with_columns(
+            pl.col(rank_var).rank(method="ordinal", descending=True).over(group_var).cast(int).alias("rank")
+        )
+    )
+    match filter:
+        case True:
+            return rdf.filter(pl.col("rank") <= n).drop("rank").sort(by=list(group_var) + [rank_var])
+        case False:
+            return (
+                rdf.with_columns(
+                    pl.when(pl.col("rank") <= n).then(pl.lit(1)).otherwise(pl.lit(0)).alias("rank_mask")
+                )
+                .drop("rank")
+                .sort(by=list(group_var) + [rank_var])
+            )
